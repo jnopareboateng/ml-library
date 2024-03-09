@@ -1,24 +1,31 @@
-# Comparative Analysis of Short-term Forecasting Models For Brent Crude Oil Prices in Ghana.
+# Brent Crude Oil Prices Forecasting - Ghana
 
-This repository is dedicated to our final year projects on Time Series Analysis. It is intended for educational purposes only. 
+## Overview
+- This project is a deep dive into forecasting Brent Crude Oil prices in Ghana. 
+- It's a part of our final year project, and we're excited to share our findings and methodologies.
 
-## Note for Vanessa 🫡🫡
-> Vanessa, this note is specifically for you. Feel free to explore and make tweaks as you wish.
+## For Vanessa
+Vanessa, this section is for you. Feel free to dig in, modify, and experiment as you see fit.
 
-## Project Files
-The main file that contains our work is `tsa.ipynb`. 
+## Project Contents
+- `tsa.ipynb`: Our main analysis notebook.
+- `Commodity Prices Monthly.csv`: The original dataset.
+- `Pre-processed Data`: The dataset after cleaning and pre-processing.
 
-## Data Preprocessing
-I have preprocessed the data into a format suitable for time series analysis.
+## Data Notes
+> - **Notice the missing values for the year 2001?**
+> - **That's something we inherited from the original dataset.**
+> - **Keep an eye on that as you analyze.**
 
-## Model Selection
-I are uncertain about which variant of modeling to use for decomposing the data: multiplicative or additive. Therefore, I have included the results of both models for your consideration.
+## Model Options
+We're debating between multiplicative and additive models for data decomposition. Check out the results for both in:
+- `additive model.png`
+- `multiplicative model.png`
 
-- `additive model.png` - Results of the additive model.
-- `multiplicative model.png` - Results of the multiplicative model.
+## Get in Touch
+Got questions? Call me. I might not reply to texts right away, but I'll answer calls when I can.
 
-## Contact
-If you need further information, please call me. I may not be able to respond to your text immediately.
+## Thanks!
+Appreciate your interest in our work. Wishing you all the best!
 
-## Acknowledgements
-Thank you for your interest in this project. Good luck! 🫡
+*Note: This project is for educational purposes only.*
