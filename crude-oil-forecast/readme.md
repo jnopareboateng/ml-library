@@ -28,4 +28,4 @@ Got questions? Call me. I might not reply to texts right away, but I'll answer c
 ## Thanks!
 Appreciate your interest in our work. Wishing you all the best!
 
-*Note: This project is for educational purposes only.*
+*Note: This project is for research and educational purposes only.*
