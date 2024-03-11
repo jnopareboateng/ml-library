@@ -57,6 +57,3 @@ SSxx = sum( (brentoil.times - mean(brentoil.times) ) * (brentoil.times - mean(br
 SSxy = sum( (brentoil.values - mean(brentoil.values) ) * (brentoil.times - mean(brentoil.times) ) )
 ( slope = SSxy / SSxx )
 ( intercept = mean(brentoil.values) - slope*mean(brentoil.times) )
-
-
-
