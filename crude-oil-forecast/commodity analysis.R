@@ -57,3 +57,12 @@ SSxx = sum( (brentoil.times - mean(brentoil.times) ) * (brentoil.times - mean(br
 SSxy = sum( (brentoil.values - mean(brentoil.values) ) * (brentoil.times - mean(brentoil.times) ) )
 ( slope = SSxy / SSxx )
 ( intercept = mean(brentoil.values) - slope*mean(brentoil.times) )
+
+
+## Prophet model
+library(prophet)
+data.ts <- rename(df, ds = date, y = price)
+model <- prophet(df)
+future <- make_future_dataframe(model, periods = 10, freq = "month")
+forecast <- predict(model, future)
+plot(model, forecast)
