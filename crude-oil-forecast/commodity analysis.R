@@ -1,5 +1,13 @@
 install.packages("tseries")
 install.packages("forecast")
+# # Install TensorFlow
+# install.packages('tensorflow')
+
+# # Install keras, which provides a high-level interface to TensorFlow
+# install.packages('keras')
+
+# # Install e1071 for Support Vector Machines
+# install.packages('e1071')
 library(tseries)
 library(forecast)
 
