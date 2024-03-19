@@ -12,33 +12,33 @@ data
 str(data)
 
 
-data.ts<-ts(data = data$Price, start = c(2000, 1), frequency = 12)
-View(data.ts)
-str(data.ts)
+data_ts<-ts(data = data$Price, start = c(2000, 1), frequency = 12)
+View(data_ts)
+str(data_ts)
 
 ?autoplot
-plot(data.ts)
-autoplot(data.ts)
+plot(data_ts)
+autoplot(data_ts)
 
-plot(decompose(data.ts))
-seasonplot(data.ts,col=1:20,pch=19)
+plot(decompose(data_ts))
+seasonplot(data_ts,col=1:20,pch=19)
 
-shapiro.test(data.ts)
+shapiro.test(data_ts)
 library(astsa)
 ?astsa
-ndiffs(data.ts)
-hist(data.ts)
-acf(data.ts)
-pacf(data.ts)
-adf_data<- adf.test(data.ts)
+ndiffs(data_ts)
+hist(data_ts)
+acf(data_ts)
+pacf(data_ts)
+adf_data<- adf.test(data_ts)
 print(adf_data)
-differenced_data<-diff(data.ts)
+differenced_data<-diff(data_ts)
 adf_differenced<-adf.test(differenced_data)
 
 
 
 
-model=auto.arima(data.ts, trace = T)
+model=auto.arima(data_ts, trace = T)
 
 
 pre=forecast(model, h=10)
@@ -46,13 +46,13 @@ plot(pre)
 
 
 
-hist(data.ts, xlab = "My Data", freq = F, col ="Blue", main = "Histogram of Commodity Data")
-density(data.ts)
-lines(density(data.ts))
-lines(density(data.ts), col = "green", lwd =7)
+hist(data_ts, xlab = "My Data", freq = F, col ="Blue", main = "Histogram of Commodity Data")
+density(data_ts)
+lines(density(data_ts))
+lines(density(data_ts), col = "green", lwd =7)
 ?round
-brentoil.times = as.numeric( time(data.ts) )
-brentoil.values = as.numeric(data.ts)
+brentoil.times = as.numeric( time(data_ts) )
+brentoil.values = as.numeric(data_ts)
 SSxx = sum( (brentoil.times - mean(brentoil.times) ) * (brentoil.times - mean(brentoil.times) ) )
 SSxy = sum( (brentoil.values - mean(brentoil.values) ) * (brentoil.times - mean(brentoil.times) ) )
 ( slope = SSxy / SSxx )
@@ -61,7 +61,7 @@ SSxy = sum( (brentoil.values - mean(brentoil.values) ) * (brentoil.times - mean(
 
 ## Prophet model
 library(prophet)
-data.ts <- rename(df, ds = date, y = price)
+data_ts <- rename(df, ds = date, y = price)
 model <- prophet(df)
 future <- make_future_dataframe(model, periods = 10, freq = "month")
 forecast <- predict(model, future)
