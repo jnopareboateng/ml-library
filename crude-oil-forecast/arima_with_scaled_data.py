@@ -195,6 +195,7 @@ mse = mean_squared_error(test, predictions)
 print(f'MSE: {mse}')
 
 # %%
+
 # Plot the results
 plt.figure(figsize=(12, 5))
 plt.plot(train, label='Training')

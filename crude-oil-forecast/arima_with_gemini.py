@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import warnings
 import pmdarima as pm
+import time
 from pmdarima import auto_arima
 from statsmodels.tsa.arima.model import ARIMA
 from common.preprocessor import load_data, mape
@@ -20,6 +21,7 @@ np.set_printoptions(precision=2)
 warnings.filterwarnings("ignore")
 
 # %%
+start_time = time.time()
 data = pd.read_csv('Modified Data.csv', parse_dates=True, index_col=[0])
 
 # %%
@@ -150,6 +152,9 @@ plt.plot(predictions, label='Predictions')
 plt.legend()
 plt.show()
 
+end_time = time.time()
+total_time = end_time - start_time
+print(f'Total time taken: {total_time} seconds')
 # Additional steps (optional):
 # - Save the model for future use
 # - Implement error handling for potential issues
