@@ -33,12 +33,6 @@ def load_data(dir_path, file_name):
     return data
 
 
-def mape(predictions, actuals):
-    """Mean absolute percentage error"""
-    return ((predictions - actuals).abs() / actuals).mean()
-
-
-
 # %%
 
 
