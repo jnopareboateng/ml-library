@@ -112,3 +112,24 @@ print(f'Random Forest forecast for next 5 months: {rf_forecast}')
 # XGBoost
 xgb_forecast = forecast_next_months(xgb_model, x_test, scaler)
 print(f'XGBoost forecast for next 5 months: {xgb_forecast}')
+
+from datetime import datetime, timedelta
+
+# Get the last date in the dataset
+last_date = data.index[-1]
+
+# Generate dates for the next 5 months
+next_dates = [last_date + pd.DateOffset(months=i) for i in range(1, 6)]
+
+# Create a DataFrame for the forecasted values
+forecast_df = pd.DataFrame({
+    'Date': next_dates,
+    'SVR': svr_forecast,
+    'Random Forest': rf_forecast,
+    'XGBoost': xgb_forecast
+})
+
+# Set Date as the index
+forecast_df.set_index('Date', inplace=True)
+
+print(forecast_df)
