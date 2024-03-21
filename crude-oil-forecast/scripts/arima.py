@@ -325,5 +325,3 @@ fig.update_layout(title='Actual vs Predicted', xaxis_title='Timestamp', yaxis_ti
 
 # Show the figure
 fig.show()
-
-
