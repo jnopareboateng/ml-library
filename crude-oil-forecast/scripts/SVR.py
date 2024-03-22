@@ -19,32 +19,26 @@ plt.ylabel('Price', fontsize=12)
 plt.show()
 
 # %%
-# Create training and testing datasets
-train, test = train_test_split(data, test_size=0.2, shuffle=False)
-print(f'Training set:{train.shape} \nTesting set:{test.shape}')
-
-# %%
-train.head()
-
-# %%
-test.head()
-
-# %%
+# set the train and test data with start dates
 train_start_date = '2002-01-01'
-test_start_date = '2018-10-01'
-
-# train[2002-01]
+test_start_date = '2019-01-01'
 
 # %%
-# Visualize the training and testing datasets
-plt.figure(figsize=(12, 6))
-plt.plot(train, label='Training')
-plt.plot(test, label='Testing')
-plt.title('Commodity Prices Monthly')
-plt.xlabel('Date', fontsize=12)
+# visualize the train and test data
+data[(data.index < test_start_date) & (data.index >= train_start_date)][['Price']].rename(columns={'Price':'train'}) \
+    .join(data[test_start_date:][['Price']].rename(columns={'Price':'test'}), how='outer') \
+    .plot(y=['train', 'test'], figsize=(15, 8), fontsize=12)
+plt.xlabel('timestamp', fontsize=12)
 plt.ylabel('Price', fontsize=12)
-plt.legend()
 plt.show()
+
+# %%
+# set the train and test data and print the dimensions of it
+train = data.copy()[(data.index >= train_start_date) & (data.index < test_start_date)][['Price']]
+test = data.copy()[data.index >= test_start_date][['Price']]
+
+print('Training data shape: ', train.shape)
+print('Test data shape: ', test.shape)
 
 # %%
 # Prepare data for training
@@ -129,6 +123,9 @@ mape = mean_absolute_percentage_error(y_train_pred,y_train)
 mape
 
 # %%
+y_test_pred
+
+# %%
 plt.figure(figsize=(10,3))
 plt.plot(test_timestamps, y_test, color = 'red', linewidth=2.0, alpha = 0.6)
 plt.plot(test_timestamps, y_test_pred, color = 'blue', linewidth=0.8)
@@ -175,8 +172,5 @@ print(f'MAE : {mean_absolute_error(Y, Y_pred)}')
 
 # %%
 print(f'MAPE : {mean_absolute_percentage_error(Y_pred,Y)}%')
-
-# %%
-
 
 
