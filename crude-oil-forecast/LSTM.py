@@ -5,11 +5,8 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 import plotly.offline as py
 import plotly.graph_objs as go
-
 import keras_tuner as kt
-
 import tensorflow as tf
-
 from math import sqrt
 from sklearn.metrics import mean_squared_error
 from common.preprocessor import load_data

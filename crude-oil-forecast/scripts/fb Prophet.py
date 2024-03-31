@@ -55,11 +55,6 @@ train.head()
 
 # %%
 test.head()
-
-# %%
-# train = pd.read_csv('train_data.csv')
-# test = pd.read_csv('test_data.csv')
-
 # %%
 Prophet??
 
@@ -111,8 +106,6 @@ model = Prophet()
 model.fit(train)
 
 # %%
-
-
 # Create an empty dataframe to hold your future predictions
 future = model.make_future_dataframe(periods=len(test), freq= 'MS')
 
