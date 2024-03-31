@@ -3,6 +3,13 @@ import numpy as np
 import pandas as pd 
 from matplotlib import pyplot as plt
 import seaborn as sns
+import plotly.offline as py
+import plotly.graph_objs as go
+
+import keras_tuner as kt
+
+import tensorflow as tf
+
 from math import sqrt
 from sklearn.metrics import mean_squared_error
 from common.preprocessor import load_data
@@ -10,12 +17,6 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM, Dropout, BatchNormalization
-import plotly.offline as py
-import plotly.graph_objs as go
-
-import keras_tuner as kt
-
-import tensorflow as tf
 
 # %%
 data = load_data('data', 'Commodity Prices Monthly.csv')

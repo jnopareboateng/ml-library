@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+sklearn
+statsmodels
+pmdarima
+plotly
+prophet
+seaborn
+tensorflow
+keras
+keras-tuner
