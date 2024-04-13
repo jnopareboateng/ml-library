@@ -36,18 +36,19 @@ print(adf_data)
 differenced_data <- diff(data_ts)
 adf_differenced <- adf.test(differenced_data)
 
-acf2(differenced_data)
+acf2(differenced_data)[]
 acf(differenced_data, lag = 300)
 
-model <- auto.arima(data_ts, trace = T)
-m1 <- arima(data_ts, order = c(1, 1, 0))
+
+model <- auto.arima(differenced_data, trace = T)
+m1 <- arima(differenced_data, order = c(1, 1, 0))
 m1
 resd <- residuals(model)
 plot(resd)
 checkresiduals(model)
 pre <- forecast(m1, h = 24)
 plot(pre)
-sarima.for(data_ts, 10, 1, 1)
+sarima.for(differenced_data, 10, 1, 1)
 
 accuracy(pre)
 
