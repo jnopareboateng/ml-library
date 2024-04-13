@@ -4,9 +4,9 @@ matplotlib==3.7.4
 sklearn==1.4.0
 statsmodels==0.14.1
 pmdarima==2.0.4
-plotly==5.18.0
+plotly==5.20.0
 prophet==1.1.5
 seaborn==0.13.2
 tensorflow==2.15.0
-keras==2.15.0
+keras==3.2.1
 keras-tuner==1.4.7
