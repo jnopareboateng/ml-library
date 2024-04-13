@@ -7,6 +7,6 @@ pmdarima==2.0.4
 plotly==5.20.0
 prophet==1.1.5
 seaborn==0.13.2
-tensorflow==2.15.0
+tensorflow==2.16.1
 keras==3.2.1
 keras-tuner==1.4.7
