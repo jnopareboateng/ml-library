@@ -1,0 +1,40 @@
+name: Auto Merge Pull Requests
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Run every day at midnight (UTC time)
+
+jobs:
+  merge-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Fetch the entire repository history
+
+      - name: Get pull requests
+        id: get_prs
+        run: |
+          # Get pull requests that are open, not merged, and have dependabot as the author
+          prs=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls?state=open&sort=updated&direction=desc" \
+            | jq -r '.[] | select(.merged == false and .user.login == "dependabot[bot]") | @base64')
+
+          echo "prs=$prs" >> $GITHUB_ENV
+
+      - name: Merge pull requests
+        if: env.prs != ''
+        run: |
+          # Decode the base64-encoded pull requests and merge them
+          for pr in $(echo $prs | base64 --decode); do
+            pr=$(echo $pr | jq -r '.')
+            pr_number=$(echo $pr | jq -r '.number')
+            pr_title=$(echo $pr | jq -r '.title')
+            echo "Merging pull request #$pr_number: $pr_title"
+            curl -s -X POST \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              --data "{\"merge_method\": \"merge\", \"merge_commit_message\": \"Auto-merge: $pr_title\"}" \
+              "https://api.github.com/repos/${{ github.repository }}/pulls/$pr_number/merge"
+          done
