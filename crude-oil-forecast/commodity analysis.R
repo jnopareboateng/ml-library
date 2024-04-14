@@ -6,7 +6,7 @@ library(urca)
 library(astsa)
 
 # Load data
-data_path <- "crude-oil-forecast/Modified Data.csv"  # Replace with your file path
+data_path <- "Modified Data.csv"  # Replace with your file path
 data <- read.csv(data_path)
 str(data)
 
