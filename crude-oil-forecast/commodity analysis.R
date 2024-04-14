@@ -1,66 +1,71 @@
-install.packages("tseries")
-install.packages("forecast")
+# Install and load necessary packages
+install.packages(c("tseries", "forecast", "urca", "astsa"))
 library(tseries)
 library(forecast)
+library(urca)
+library(astsa)
 
-
-data <- read.csv(file.choose())
-?attach
-View(data)
-attach(data)
-data
+# Load data
+data_path <- "crude-oil-forecast/Modified Data.csv"  # Replace with your file path
+data <- read.csv(data_path)
 str(data)
 
+# Convert to time series
+price_ts <- ts(data = data$Price, start = c(2002, 1), frequency = 12)
+str(price_ts)
 
-data_ts <- ts(data = data$Price, start = c(2002, 1), frequency = 12)
-View(data_ts)
-str(data_ts)
-data_ts
-?autoplot
-plot(data_ts)
-autoplot(data_ts)
+# Plot time series
+plot(price_ts)
+autoplot(price_ts)
 
-plot(decompose(data_ts))
-seasonplot(data_ts, col = 1:20, pch = 19)
+# Decompose time series
+plot(decompose(price_ts))
+seasonplot(price_ts, col = 1:20, pch = 19)
 
-shapiro.test(data_ts)
-library(astsa)
-?astsa
-ndiffs(data_ts)
-nsdiffs(data_ts)
-hist(data_ts)
-acf(data_ts)
-pacf(data_ts)
-adf_data <- adf.test(data_ts)
-print(adf_data)
-differenced_data <- diff(data_ts)
-adf_differenced <- adf.test(differenced_data)
+# Test for normality
+shapiro.test(price_ts)
 
-acf2(differenced_data)[]
-acf(differenced_data, lag = 300)
+# Test for stationarity
+ndiffs(price_ts)
+nsdiffs(price_ts)
 
+hist(price_ts)
+acf(price_ts)
+pacf(price_ts)
+adf_price <- adf.test(price_ts)
+print(adf_price)
 
-model <- auto.arima(differenced_data, trace = T)
-m1 <- arima(differenced_data, order = c(1, 1, 0))
-m1
-resd <- residuals(model)
-plot(resd)
+# Differencing data
+differenced_price <- diff(price_ts)
+adf_differenced <- adf.test(differenced_price)
+
+# Autocorrelation of differenced data
+acf2(differenced_price)
+acf(differenced_price, lag = 300)
+
+# Fit ARIMA model
+model <- auto.arima(differenced_price, trace = T)
+arima_model <- arima(differenced_price, order = c(1, 1, 0))
+residuals <- residuals(model)
+plot(residuals)
 checkresiduals(model)
-pre <- forecast(m1, h = 24)
-plot(pre)
-sarima.for(differenced_data, 10, 1, 1)
 
-accuracy(pre)
+# Forecast
+forecasted <- forecast(arima_model, h = 24)
+plot(forecasted)
+sarima.for(differenced_price, 10, 1, 1)
 
+# Check accuracy
+accuracy(forecasted)
 
-hist(data.ts, xlab = "My Data", freq = F, col = "Blue", main = "Histogram of Commodity Data")
-density(data.ts)
-lines(density(data.ts))
-lines(density(data.ts), col = "green", lwd = 7)
-?round
-brentoil.times <- as.numeric(time(data.ts))
-brentoil.values <- as.numeric(data.ts)
-SSxx <- sum((brentoil.times - mean(brentoil.times)) * (brentoil.times - mean(brentoil.times)))
-SSxy <- sum((brentoil.values - mean(brentoil.values)) * (brentoil.times - mean(brentoil.times)))
-(slope <- SSxy / SSxx)
-(intercept <- mean(brentoil.values) - slope * mean(brentoil.times))
+# Plot histogram
+hist(price_ts, xlab = "Price", freq = F, col = "Blue", main = "Histogram of Commodity Price")
+lines(density(price_ts), col = "green", lwd = 7)
+
+# Calculate slope and intercept
+price_times <- as.numeric(time(price_ts))
+price_values <- as.numeric(price_ts)
+SSxx <- sum((price_times - mean(price_times)) * (price_times - mean(price_times)))
+SSxy <- sum((price_values - mean(price_values)) * (price_times - mean(price_times)))
+slope <- SSxy / SSxx
+intercept <- mean(price_values) - slope * mean(price_times)
