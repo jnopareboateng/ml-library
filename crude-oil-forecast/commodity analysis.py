@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.stattools import adfuller
-from pmdarima.arima import auto_arima
+from pmdarima.arima import auto_arima, ndiffs, nsdiffs
 from statsmodels.tsa.arima_model import ARIMA
 from scipy.stats import shapiro
 
@@ -26,7 +26,18 @@ plt.show()
 print(shapiro(data_ts))
 
 #%% Differencing
-differenced_data = data_ts.diff().dropna()
+n_diffs = ndiffs(data_ts, test='adf')
+print(f"\nNumber of differences required: {n_diffs}")
+
+nsdiff= nsdiffs(data_ts, m=12, test='ch')
+print(f"\nSeasonal differences required: {nsdiff}")
+
+# %% Perform differencing if required
+if n_diffs > 0:
+    differenced_data = data_ts.diff(n_diffs).dropna()
+else:
+    differenced_data = data_ts.copy()
+
 
 #%% ACF and PACF
 plot_acf(data_ts)
