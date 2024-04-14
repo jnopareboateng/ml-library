@@ -1,4 +1,4 @@
-# Brent Crude Oil Prices Forecasting - Ghana
+# Brent Crude Oil Prices Forecasting with ARIMA and Prophet in Ghana
 
 ## Overview
 
