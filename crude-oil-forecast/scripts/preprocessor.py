@@ -35,10 +35,3 @@ def preprocess_data(dir_path, file_name):
 preprocess_data('crude-oil-forecast', 'Commodity Prices Monthly.csv')
 
 
-# %%
-data = pd.read.csv('Commodity Prices Monthly.csv')
-
-# %%
-
-
-
