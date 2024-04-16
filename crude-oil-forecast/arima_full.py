@@ -204,8 +204,6 @@ forecast_summary = forecast.summary_frame(alpha=0.05)
 forecast_summary.head()
 
 # %%
-import matplotlib.pyplot as plt
-
 # Assuming 'data' is a DataFrame with a 'Price' column
 history = data['Price']
 HORIZON = 24
@@ -254,8 +252,6 @@ plt.show()
 
 
 # %%
-import plotly.graph_objects as go
-
 # Create a new figure
 fig = go.Figure()
 
