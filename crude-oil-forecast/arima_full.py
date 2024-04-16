@@ -275,7 +275,6 @@ fig.update_layout(title='Forecast with Confidence Intervals')
 # Show the figure
 fig.show()
 
-# %%
 
 
 
