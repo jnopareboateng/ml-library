@@ -33,13 +33,6 @@ data.head() # display the first 5 rows of the data
 data.describe() # display the summary statistics of the data
 
 # %%
-# # visualize the data
-# data.plot(y='Price', title='Commodity Prices Monthly', figsize=(12, 6))
-# plt.xlabel('Date', fontsize=12)
-# plt.ylabel('Price', fontsize=12)
-# plt.show()
-
-# %%
 
 # visualize the data
 
