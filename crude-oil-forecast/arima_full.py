@@ -39,9 +39,10 @@ data.describe() # display the summary statistics of the data
 px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
 
 # %%
-# visualize the components of the data
-decomposition = seasonal_decompose(data["Price"], model="additive")  # "Price" is likely your column name for oil prices
-decomposition.plot()  # Visualize the trend, seasonal component, and residuals
+# Visualize the trend, seasonal component, and residuals
+decomposition = seasonal_decompose(data["Price"], model="additive")
+decomposition.plot()
+plt.show()  
 
 # %%
 # Check for stationarity with ADF test
@@ -54,7 +55,7 @@ def adf_test(series):
     else:
         print("Data may be non-stationary. Consider differencing.")
 
-print(f"""Testing stationarity of data:""")
+print("""Testing stationarity of data:""")
 adf_test(data)
 
 
@@ -96,21 +97,21 @@ nsdiff= nsdiffs(data['Price'], m=12, test='ch')
 print(f"Seasonal differences required: {nsdiff}")
 
 # %%
-# visualize the components of the differenced data
+# Visualize the trend, seasonal component, and residual after differencing
 decomposition = seasonal_decompose(differenced_data["Price"], model="additive")  # "Price" is likely your column name for oil prices
-decomposition.plot()  # Visualize the trend, seasonal component, and residuals
+decomposition.plot()
+plt.show()  
 
 
 # %%
-# ACF and PACF plots (optional) using lags of 60 (5 years)
+# ACF and PACF plots (optional) on differenced data)
 plot_acf(differenced_data['Price'], title='ACF Plot')
 plt.show()
 plot_pacf(differenced_data['Price'], title='PACF Plot ')
 plt.show()
 
 # %%
-
-
+# visually inspect the seasonality of the data
 df_2002 = data['2002']
 df_2003 = data['2003']
 df_2004 = data['2004']
@@ -182,21 +183,13 @@ print(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order
 # decide tradeoff between time and aic
 
 # %%
-auto_arima??
-
-# %%
+# show the model order and seasonal order
 print(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
 
 # %%
 # plot the residuals of the model
 model.plot_diagnostics(figsize=(12, 8))
 plt.show()
-
-# %%
-# check residuals
-residuals = model.resid()
-residuals
-
 
 # %%
 # Fit the SARIMA model on the differenced training data
