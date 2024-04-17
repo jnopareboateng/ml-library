@@ -105,9 +105,13 @@ forecast_summary = forecast.summary_frame(alpha=0.05)
 
 #%%
 # Inverse transform predictions if differencing was performed
-if n_diffs > 0:
-    predictions = results.predict(steps=24) + differenced_data.iloc[-n_diffs:].values
+# if n_diffs > 0:
+#     predictions = results.predict(steps=24) + differenced_data.iloc[-n_diffs:].values
 
+# Inverse transform predictions if differencing was performed
+if n_diffs > 0:
+    predictions = pd.Series(results.predict(steps=24), index=differenced_data.index[-24:])
+    predictions = predictions.cumsum() + data.iloc[-n_diffs]
 #%%
 # Evaluate model performance on validation data (e.g., MSE, MAPE)
 mae = mean_squared_error(data, predictions, squared=False)
