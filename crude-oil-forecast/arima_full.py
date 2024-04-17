@@ -277,11 +277,16 @@ fig.show()
 
 #%%
 # calculate the errors using mean absolute error and mean absolute percentage error
-mae = mean_squared_error(, squared=False)
-mape = mean_absolute_percentage_error()
+from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error
+mae = mean_absolute_error(data, predictions)
+mape = mean_absolute_percentage_error(data, predictions)
 print(f"Mean Absolute Error: {mae}")
 print(f"Mean Absolute Percentage Error: {mape}")
 
+# TODO
+# FIGURE OUT THE ERROR METRICS FOR THE ANALYSIS
 
 
 
+
+# %%

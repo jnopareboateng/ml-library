@@ -114,10 +114,6 @@ if n_diffs > 0:
     predictions = predictions.cumsum() + data.iloc[-n_diffs]
 #%%
 # Evaluate model performance on validation data (e.g., MSE, MAPE)
-mae = mean_squared_error(data, predictions, squared=False)
-mape = mean_absolute_percentage_error(data, predictions)
-print(f"Mean Absolute Error (validation): {mae}")
-print(f"Mean Absolute Percentage Error (validation): {mape}")
 
 # Plot forecast with confidence intervals
 # (Similar to previous code, but using validation_data and predicted values)
