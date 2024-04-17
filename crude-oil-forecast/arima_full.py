@@ -276,17 +276,12 @@ fig.update_layout(title='Forecast with Confidence Intervals')
 fig.show()
 
 #%%
+# FIXME: FIGURE OUT THE ERROR METRICS FOR THE ANALYSIS 
 # calculate the errors using mean absolute error and mean absolute percentage error
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error
 mae = mean_absolute_error(data, predictions)
 mape = mean_absolute_percentage_error(data, predictions)
 print(f"Mean Absolute Error: {mae}")
 print(f"Mean Absolute Percentage Error: {mape}")
-
-# TODO
-# FIGURE OUT THE ERROR METRICS FOR THE ANALYSIS
-
-
-
 
 # %%
