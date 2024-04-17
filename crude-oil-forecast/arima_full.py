@@ -1,5 +1,5 @@
 # %%
-# IMPORT NEEDED LIBRARIES 
+# Import necessary libraries
 import pandas as pd
 import numpy as np
 import warnings
@@ -274,6 +274,13 @@ fig.update_layout(title='Forecast with Confidence Intervals')
 
 # Show the figure
 fig.show()
+
+#%%
+# calculate the errors using mean absolute error and mean absolute percentage error
+mae = mean_squared_error(data['Price'], forecast_summary['mean'], squared=False)
+mape = mean_absolute_percentage_error(data['Price'], forecast_summary['mean'])
+print(f"Mean Absolute Error: {mae}")
+print(f"Mean Absolute Percentage Error: {mape}")
 
 
 
