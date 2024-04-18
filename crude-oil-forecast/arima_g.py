@@ -4,6 +4,7 @@ import numpy as np
 import pmdarima as pm
 import warnings
 from pmdarima import auto_arima
+from pmdarima.arima.utils import nsdiffs
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
@@ -26,8 +27,6 @@ data = pd.read_csv('Modified data.csv', parse_dates=True, index_col=[0])
 # Check for missing values
 if data.isnull().sum().any():
     print("Missing values detected. Consider handling them (e.g., drop, interpolation).")
-    # Handle missing values (example: dropping rows with missing values)
-    # data.dropna(inplace=True)
 
 # Explore data (descriptive statistics, visualizations)
 print(data.describe())
@@ -66,7 +65,6 @@ else:
 
 #%%
 # Check for seasonal differencing
-from pmdarima.arima.utils import nsdiffs
 
 nsdiff = nsdiffs(differenced_data['Price'], m=12, test='ch')
 print(f"Seasonal differences required: {nsdiff}")
