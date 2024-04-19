@@ -112,11 +112,11 @@ if n_diffs > 0:
     predictions = predictions.cumsum() + data.iloc[-n_diffs]
 #%%
 # Evaluate model performance on validation data (e.g., MSE, MAPE)
+actual_values = validation_data['Price']
+mse = mean_squared_error(actual_values, predictions)
 
 # Plot forecast with confidence intervals
 # (Similar to previous code, but using validation_data and predicted values)
 
 # ... (plotting and interpretation of forecast and confidence intervals)
 
-
-# %%
