@@ -1,4 +1,4 @@
-# Brent Crude Oil Prices Forecasting - Ghana
+# Brent Crude Oil Prices Forecasting with Mixture of Models (ARIMA,Prophet,XGBoost,RF Regressor etc) - Ghana
 
 ## Overview
 
