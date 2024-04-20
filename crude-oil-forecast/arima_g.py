@@ -93,62 +93,6 @@ model = auto_arima(differenced_data['Price'], trace=True)
 print(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
 
 # Consider hyperparameter tuning for more robustness (e.g., grid search, randomized search)
-#%%
-# # Fit the SARIMA model on the differenced training data
-# model = SARIMAX(endog=differenced_data, order=model.order, seasonal_order=model.seasonal_order, freq="MS")
-# results = model.fit(disp=0)  # Suppress convergence output
-# print(results.summary())
-
-# #%%
-# # Inverse transform predictions if differencing was performed
-# if n_diffs > 0:
-#     predictions = pd.Series(results.predict(steps=24), index=differenced_data.index[-24:])
-#     predictions = predictions.cumsum() + data.iloc[-n_diffs]
-# #%%
-# # Evaluate model performance on validation data (e.g., MSE, MAPE)
-
-
-# # Plot forecast with confidence intervals
-# # (Similar to previous code, but using validation_data and predicted values)
-# # Get forecasts and confidence intervals on validation data
-# # Get confidence intervals of forecasts at 90% and 95%
-# HORIZON = 24
-# history = data['Price']
-
-# # Create a date range for the forecast period
-# forecast_period = pd.date_range(start=history.index[-1], periods=HORIZON+1, freq='MS')[1:]
-
-# # Convert predictions to a pandas Series with the forecast period as index
-# predictions = pd.Series(predictions, index=forecast_period)
-
-# forecast_90 = results.get_forecast(steps=HORIZON)
-# forecast_summary_90 = forecast_90.summary_frame(alpha=0.10)
-
-# forecast_95 = results.get_forecast(steps=HORIZON)
-# forecast_summary_95 = forecast_95.summary_frame(alpha=0.05)
-
-# # Plotting the historical data
-# plt.plot(history.index, history, label='Historical Data')
-
-# # Plotting the forecasted values
-# plt.plot(predictions.index, predictions, color='red', label='Forecasted Values')
-
-# # Plotting the 90% confidence intervals
-# plt.fill_between(forecast_summary_90.index,
-#                  forecast_summary_90['mean_ci_lower'],
-#                  forecast_summary_90['mean_ci_upper'], color='pink', alpha=0.3, label='90% Confidence Interval')
-
-# # Plotting the 95% confidence intervals
-# plt.fill_between(forecast_summary_95.index,
-#                  forecast_summary_95['mean_ci_lower'],
-#                  forecast_summary_95['mean_ci_upper'], color='blue', alpha=0.2, label='95% Confidence Interval')
-
-# plt.title('Forecast with Confidence Intervals')
-# plt.legend()
-# plt.show()
-
-# ... (plotting and interpretation of forecast and confidence intervals)
-
 
 # %%
 # Split data into training and validation sets
@@ -172,3 +116,59 @@ mape = mean_absolute_percentage_error(test, predictions)
 
 print(f"MSE: {mse}")
 print(f"MAPE: {mape}")
+
+
+# todo fix this!
+# %%
+# Get confidence intervals of forecasts at 90% and 95%
+forecast_90 = results.get_forecast(steps=len(test))
+forecast_summary_90 = forecast_90.summary_frame(alpha=0.10)
+
+forecast_95 = results.get_forecast(steps=len(test))
+forecast_summary_95 = forecast_95.summary_frame(alpha=0.05)
+
+# Plotting the historical data
+plt.plot(differenced_data.index, differenced_data['Price'], label='Historical Data')
+
+# Plotting the forecasted values
+plt.plot(predictions.index, predictions, color='red', label='Forecasted Values')
+
+# Plotting the 90% confidence intervals
+plt.fill_between(forecast_summary_90.index,
+                 forecast_summary_90['mean_ci_lower'],
+                 forecast_summary_90['mean_ci_upper'], color='pink', alpha=0.3, label='90% Confidence Interval')
+
+# Plotting the 95% confidence intervals
+plt.fill_between(forecast_summary_95.index,
+                 forecast_summary_95['mean_ci_lower'],
+                 forecast_summary_95['mean_ci_upper'], color='blue', alpha=0.2, label='95% Confidence Interval')
+
+plt.title('Forecast with Confidence Intervals')
+plt.legend()
+plt.show()
+
+
+# %%
+# Convert predictions to a pandas Series
+predictions = pd.Series(predictions, index=test.index)
+
+# Plotting the historical data
+plt.plot(differenced_data.index, differenced_data['Price'], label='Historical Data')
+
+# Plotting the forecasted values
+plt.plot(predictions.index, predictions, color='red', label='Forecasted Values')
+
+# Plotting the 90% confidence intervals
+plt.fill_between(forecast_summary_90.index,
+                 forecast_summary_90['mean_ci_lower'],
+                 forecast_summary_90['mean_ci_upper'], color='pink', alpha=0.3, label='90% Confidence Interval')
+
+# Plotting the 95% confidence intervals
+plt.fill_between(forecast_summary_95.index,
+                 forecast_summary_95['mean_ci_lower'],
+                 forecast_summary_95['mean_ci_upper'], color='blue', alpha=0.2, label='95% Confidence Interval')
+
+plt.title('Forecast with Confidence Intervals')
+plt.legend()
+plt.show()
+# %%
