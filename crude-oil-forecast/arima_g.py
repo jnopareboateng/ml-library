@@ -22,7 +22,10 @@ warnings.filterwarnings("ignore")
 %matplotlib inline
 #%%
 # Load data
-data = pd.read_csv('Modified data.csv', parse_dates=True, index_col=[0])
+# data = pd.read_csv('Modified data.csv', parse_dates=True, index_col=[0])
+
+# set data this url link ` https://github.com/jnopareboateng/ml-library/blob/master/crude-oil-forecast/Modified%20Data.csv`
+data = pd.read_csv('https://github.com/jnopareboateng/ml-library/blob/master/crude-oil-forecast/Modified Data.csv', parse_dates=True, index_col=[0])
 
 # Check for missing values
 if data.isnull().sum().any():
@@ -97,26 +100,54 @@ results = model.fit(disp=0)  # Suppress convergence output
 print(results.summary())
 
 #%%
-# Get forecasts and confidence intervals on validation data
-forecast = results.get_forecast(steps=24)
-forecast_summary = forecast.summary_frame(alpha=0.05)
-
-#%%
-# Inverse transform predictions if differencing was performed
-# if n_diffs > 0:
-#     predictions = results.predict(steps=24) + differenced_data.iloc[-n_diffs:].values
-
 # Inverse transform predictions if differencing was performed
 if n_diffs > 0:
     predictions = pd.Series(results.predict(steps=24), index=differenced_data.index[-24:])
     predictions = predictions.cumsum() + data.iloc[-n_diffs]
 #%%
 # Evaluate model performance on validation data (e.g., MSE, MAPE)
-actual_values = validation_data['Price']
-mse = mean_squared_error(actual_values, predictions)
+
 
 # Plot forecast with confidence intervals
 # (Similar to previous code, but using validation_data and predicted values)
+# Get forecasts and confidence intervals on validation data
+# Get confidence intervals of forecasts at 90% and 95%
+HORIZON = 24
+history = data['Price']
+
+# Create a date range for the forecast period
+forecast_period = pd.date_range(start=history.index[-1], periods=HORIZON+1, freq='MS')[1:]
+
+# Convert predictions to a pandas Series with the forecast period as index
+predictions = pd.Series(predictions, index=forecast_period)
+
+forecast_90 = results.get_forecast(steps=HORIZON)
+forecast_summary_90 = forecast_90.summary_frame(alpha=0.10)
+
+forecast_95 = results.get_forecast(steps=HORIZON)
+forecast_summary_95 = forecast_95.summary_frame(alpha=0.05)
+
+# Plotting the historical data
+plt.plot(history.index, history, label='Historical Data')
+
+# Plotting the forecasted values
+plt.plot(predictions.index, predictions, color='red', label='Forecasted Values')
+
+# Plotting the 90% confidence intervals
+plt.fill_between(forecast_summary_90.index,
+                 forecast_summary_90['mean_ci_lower'],
+                 forecast_summary_90['mean_ci_upper'], color='pink', alpha=0.3, label='90% Confidence Interval')
+
+# Plotting the 95% confidence intervals
+plt.fill_between(forecast_summary_95.index,
+                 forecast_summary_95['mean_ci_lower'],
+                 forecast_summary_95['mean_ci_upper'], color='blue', alpha=0.2, label='95% Confidence Interval')
+
+plt.title('Forecast with Confidence Intervals')
+plt.legend()
+plt.show()
 
 # ... (plotting and interpretation of forecast and confidence intervals)
 
+
+# %%
