@@ -1,22 +1,22 @@
 # %%
 # Import necessary libraries
-import pandas as pd
-import numpy as np
-import warnings
-import pmdarima as pm 
-import math
-from pmdarima import auto_arima
+# import math
 import matplotlib.pyplot as plt 
+import numpy as np
+import pandas as pd
+import pmdarima as pm 
+from pmdarima import auto_arima
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.seasonal import seasonal_decompose
-from common.preprocessor import load_data
+# from common.preprocessor import load_data
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
+import warnings
 pd.options.display.float_format = '{:,.2f}'.format
 np.set_printoptions(precision=2)
 warnings.filterwarnings("ignore")
@@ -239,12 +239,12 @@ plt.plot(predictions.index, predictions, color='red', label='Forecasted Values')
 # Plotting the 90% confidence intervals
 plt.fill_between(forecast_summary_90.index,
                  forecast_summary_90['mean_ci_lower'],
-                 forecast_summary_90['mean_ci_upper'], color='pink', alpha=0.3, label='90% Confidence Interval')
+                 forecast_summary_90['mean_ci_upper'], color='pink', alpha=0.1, label='90% Confidence Interval')
 
 # Plotting the 95% confidence intervals
 plt.fill_between(forecast_summary_95.index,
                  forecast_summary_95['mean_ci_lower'],
-                 forecast_summary_95['mean_ci_upper'], color='blue', alpha=0.2, label='95% Confidence Interval')
+                 forecast_summary_95['mean_ci_upper'], color='blue', alpha=0.05, label='95% Confidence Interval')
 
 plt.title('Forecast with Confidence Intervals')
 plt.legend()
