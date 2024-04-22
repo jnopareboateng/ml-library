@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 
 # %%
 # load data from the preprocessor and set index to date column
-data = pd.read_csv('Modified data.csv', parse_dates=True, index_col=[0])
+data = pd.read_csv('https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv', parse_dates=True, index_col=[0])
 
 # %%
 data.head() # display the first 5 rows of the data
