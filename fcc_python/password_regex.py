@@ -29,7 +29,7 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
         for constraint, pattern in constraints:
             if constraint <= len(re.findall(pattern, password)):
                 count += 1
-            if count = 4:
+            if count == 4:
                 pass
     return password
 
