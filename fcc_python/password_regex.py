@@ -32,7 +32,7 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
                 count += 1
             
         if count == 4:
-            break
+            pass
 
     return password
 
