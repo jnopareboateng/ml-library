@@ -119,6 +119,7 @@ print(f"MAPE: {mape}")
 
 
 # todo fix this!
+# FIXME: DONE
 # %%
 # Assuming 'data' is a DataFrame with a 'Price' column
 history = data['Price']
