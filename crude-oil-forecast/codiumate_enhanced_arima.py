@@ -134,6 +134,7 @@ def plot_seasonal_data(data):
 def evaluate_stationarity(differenced_data):
     def adf_test(series):
         result = adfuller(series, autolag='AIC')
+        logging.info("----------")
         logging.info(f'ADF Statistic: {result[0]}')
         logging.info(f'p-value: {result[1]}')
         if result[1] <= 0.05:
@@ -145,7 +146,8 @@ def evaluate_stationarity(differenced_data):
     adf_test(differenced_data['Price'])
 #%% 
 def auto_arima_model(differenced_data):
-    model = pm.auto_arima(differenced_data['Price'], trace=False)
+    model = pm.auto_arima(differenced_data['Price'], trace=True)
+    logging.info("----------")
     logging.info(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
     logging.info(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
     return model
@@ -158,6 +160,7 @@ def plot_residuals(model):
 def fit_sarimax_model(differenced_data, order, seasonal_order):
     model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
     results = model.fit(disp=0)
+    logging.info("----------")
     logging.info(results.summary())
     return results
 #%% 
@@ -202,22 +205,23 @@ def calculate_error_metrics(data, predictions):
     data= data[-len(predictions):]
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
+    logging.info("----------")
     logging.info("""Evaluating with MAE and MAPE """)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
 #%% 
 data = load_data()
-plot_data(data)
-test_stationarity(data)
+print(plot_data(data))
+print(test_stationarity(data))
 differenced_data = preprocess_data(data)
-plot_differenced_data(differenced_data)
-check_seasonal_differencing(data)
-plot_seasonal_decomposition(differenced_data)
-plot_acf_pacf_plots(differenced_data)
-plot_seasonal_data(data)
-evaluate_stationarity(differenced_data)
+print(plot_differenced_data(differenced_data))
+print(check_seasonal_differencing(data))
+print(plot_seasonal_decomposition(differenced_data))
+print(plot_acf_pacf_plots(differenced_data))
+print(plot_seasonal_data(data))
+print(evaluate_stationarity(differenced_data))
 model = auto_arima_model(differenced_data)
-plot_residuals(model)
+print(plot_residuals(model))
 results = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
 
 # Capture the returned values from forecast_future_values
