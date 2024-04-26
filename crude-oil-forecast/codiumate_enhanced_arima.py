@@ -37,7 +37,7 @@ warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 # Now, logging.info will print to the notebook
-# logging.info("This is a log message.")
+logging.info("This is a log message.")
 
 def load_data():
     url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
@@ -134,7 +134,7 @@ def plot_seasonal_data(data):
 def evaluate_stationarity(differenced_data):
     def adf_test(series):
         result = adfuller(series, autolag='AIC')
-        logging.info('\n===========================================')
+        logging.info("----------")
         logging.info(f'ADF Statistic: {result[0]}')
         logging.info(f'p-value: {result[1]}')
         if result[1] <= 0.05:
@@ -147,7 +147,7 @@ def evaluate_stationarity(differenced_data):
 #%% 
 def auto_arima_model(differenced_data):
     model = pm.auto_arima(differenced_data['Price'], trace=True)
-    logging.info('\n===========================================')
+    logging.info("----------")
     logging.info(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
     logging.info(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
     return model
@@ -160,7 +160,7 @@ def plot_residuals(model):
 def fit_sarimax_model(differenced_data, order, seasonal_order):
     model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
     results = model.fit(disp=0)
-    logging.info('\n===========================================')
+    logging.info("----------")
     logging.info(results.summary())
     return results
 #%% 
@@ -205,46 +205,30 @@ def calculate_error_metrics(data, predictions):
     data= data[-len(predictions):]
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
-    logging.info('\n===========================================')
+    logging.info("----------")
     logging.info("""Evaluating with MAE and MAPE """)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
 #%% 
 data = load_data()
-print(data)
-
-print(plot_data(data))
-
-print(test_stationarity(data))
-
+plot_data(data)
+test_stationarity(data)
 differenced_data = preprocess_data(data)
-print(differenced_data)
-
-print(plot_differenced_data(differenced_data))
-
-print(check_seasonal_differencing(data))
-
-print(plot_seasonal_decomposition(differenced_data))
-
-print(plot_acf_pacf_plots(differenced_data))
-
-print(plot_seasonal_data(data))
-
-print(evaluate_stationarity(differenced_data))
-
+plot_differenced_data(differenced_data)
+check_seasonal_differencing(data)
+plot_seasonal_decomposition(differenced_data)
+plot_acf_pacf_plots(differenced_data)
+plot_seasonal_data(data)
+evaluate_stationarity(differenced_data)
 model = auto_arima_model(differenced_data)
-print(model)
-
-print(plot_residuals(model))
-
+plot_residuals(model)
 results = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
-print(results)
 
 # Capture the returned values from forecast_future_values
 predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
-print(predictions, forecast_summary_90, forecast_summary_95)
 
 # Now you can use 'predictions' in the following functions
-print(plot_forecast_with_confidence_intervals(data['Price'], predictions, forecast_summary_90, forecast_summary_95))
+plot_forecast_with_confidence_intervals(data['Price'], predictions, forecast_summary_90, forecast_summary_95)
+calculate_error_metrics(data['Price'], predictions)
 
 # %%
