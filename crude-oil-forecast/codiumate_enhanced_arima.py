@@ -170,8 +170,6 @@ def forecast_future_values(history, order, seasonal_order, horizon):
     plt.savefig('forecast_with_confidence_intervals.png')
     return predictions, forecast_summary_90, forecast_summary_95
 
-predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
-
 def plot_forecast_with_confidence_intervals(history, predictions, forecast_summary_90, forecast_summary_95):
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=history.index, y=history, mode='lines', name='Historical Data'))
