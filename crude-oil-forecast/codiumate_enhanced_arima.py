@@ -134,7 +134,6 @@ def plot_seasonal_data(data):
 def evaluate_stationarity(differenced_data):
     def adf_test(series):
         result = adfuller(series, autolag='AIC')
-        logging.info("----------")
         logging.info(f'ADF Statistic: {result[0]}')
         logging.info(f'p-value: {result[1]}')
         if result[1] <= 0.05:
@@ -147,7 +146,6 @@ def evaluate_stationarity(differenced_data):
 #%% 
 def auto_arima_model(differenced_data):
     model = pm.auto_arima(differenced_data['Price'], trace=True)
-    logging.info("----------")
     logging.info(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
     logging.info(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
     return model
@@ -160,7 +158,6 @@ def plot_residuals(model):
 def fit_sarimax_model(differenced_data, order, seasonal_order):
     model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
     results = model.fit(disp=0)
-    logging.info("----------")
     logging.info(results.summary())
     return results
 #%% 
@@ -205,11 +202,11 @@ def calculate_error_metrics(data, predictions):
     data= data[-len(predictions):]
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
-    logging.info("----------")
     logging.info("""Evaluating with MAE and MAPE """)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
 #%% 
+# todo: improve readability of logs
 data = load_data()
 plot_data(data)
 test_stationarity(data)
