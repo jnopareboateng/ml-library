@@ -1,5 +1,5 @@
 #%% 
-from sklearn.metrics import mean_absolute_percentage_error
+from sklearn.metrics import mean_absolute_error,mean_absolute_percentage_error
 import logging
 import matplotlib.pyplot as plt 
 import numpy as np
@@ -128,7 +128,6 @@ def evaluate_stationarity(differenced_data):
     logging.info("Testing stationarity of scaled training data:")
     adf_test(differenced_data['Price'])
 #%% 
-
 def auto_arima_model(differenced_data):
     model = pm.auto_arima(differenced_data['Price'], trace=False)
     logging.info(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
@@ -140,16 +139,16 @@ def plot_residuals(model):
     model.plot_diagnostics(figsize=(12, 8))
     plt.savefig('residuals_plot.png')
 #%% 
-
 def fit_sarimax_model(differenced_data, order, seasonal_order):
     model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
     results = model.fit(disp=0)
     logging.info(results.summary())
     return results
 #%% 
-
 def forecast_future_values(history, order, seasonal_order, horizon):
     model = SARIMAX(endog=history, order=order, seasonal_order=seasonal_order)
+    history = data['Price']
+    HORIZON = 24
     model_fit = model.fit()
     predictions = model_fit.forecast(steps=horizon)
     forecast_period = pd.date_range(start=history.index[-1], periods=horizon+1, freq='MS')[1:]
@@ -169,7 +168,7 @@ def forecast_future_values(history, order, seasonal_order, horizon):
     plt.title('Forecast with Confidence Intervals')
     plt.legend()
     plt.savefig('forecast_with_confidence_intervals.png')
-#%% 
+    return predictions, forecast_summary_90, forecast_summary_95
 
 def plot_forecast_with_confidence_intervals(history, predictions, forecast_summary_90, forecast_summary_95):
     fig = go.Figure()
@@ -182,14 +181,15 @@ def plot_forecast_with_confidence_intervals(history, predictions, forecast_summa
     fig.update_layout(title='Forecast with Confidence Intervals')
     fig.show()
 #%% 
+predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
 
 def calculate_error_metrics(data, predictions):
+    data= data[-len(predictons):]
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
 #%% 
-
 data = load_data()
 plot_data(data)
 test_stationarity(data)
@@ -203,6 +203,12 @@ evaluate_stationarity(differenced_data)
 model = auto_arima_model(differenced_data)
 plot_residuals(model)
 results = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
-forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
+
+# Capture the returned values from forecast_future_values
+predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
+
+# Now you can use 'predictions' in the following functions
 plot_forecast_with_confidence_intervals(data['Price'], predictions, forecast_summary_90, forecast_summary_95)
 calculate_error_metrics(data['Price'], predictions)
+
+# %%
