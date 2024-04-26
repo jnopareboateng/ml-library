@@ -9,6 +9,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import requests
 from plotly.subplots import make_subplots
+from pmdarima.arima.utils import nsdiffs,ndiffs
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
