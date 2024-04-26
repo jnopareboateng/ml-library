@@ -70,7 +70,7 @@ def test_stationarity(series):
 
 def preprocess_data(data):
     n_diffs = pm.arima.ndiffs(data['Price'], test='adf')
-    logging.info(f"\nNumber of differences required for scaled training data: {n_diffs}")
+    logging.info(f"\nNumber of differences required : {n_diffs}")
     if n_diffs > 0:
         differenced_data = data.diff(n_diffs).dropna()
     else:
