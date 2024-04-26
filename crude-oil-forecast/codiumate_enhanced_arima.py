@@ -202,6 +202,7 @@ def calculate_error_metrics(data, predictions):
     data= data[-len(predictions):]
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
+    logging.info("""Evaluating with MAE and MAPE """)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
 #%% 
