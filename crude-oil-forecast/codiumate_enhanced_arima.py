@@ -1,3 +1,4 @@
+#%% 
 from sklearn.metrics import mean_absolute_percentage_error
 import logging
 import matplotlib.pyplot as plt 
@@ -18,18 +19,22 @@ np.set_printoptions(precision=2)
 warnings.filterwarnings("ignore")
 %matplotlib inline
 
+#%% 
+
 def load_data():
     url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
     response = requests.get(url)
     response.raise_for_status()
     data = pd.read_csv(response.text, parse_dates=True, index_col=[0])
     return data
+#%% 
 
 def plot_data(data):
     px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
     decomposition = seasonal_decompose(data["Price"], model="additive")
     decomposition.plot()
     plt.savefig('data_visualization.png')
+#%% 
 
 def test_stationarity(series):
     def adf_test(series):
@@ -43,6 +48,7 @@ def test_stationarity(series):
 
     logging.info("""Testing stationarity of data:""")
     adf_test(series)
+#%% 
 
 def preprocess_data(data):
     n_diffs = pm.arima.ndiffs(data['Price'], test='adf')
