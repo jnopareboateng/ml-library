@@ -7,6 +7,7 @@ import pandas as pd
 import pmdarima as pm 
 import plotly.express as px
 import plotly.graph_objects as go
+import requests
 from plotly.subplots import make_subplots
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
@@ -25,7 +26,7 @@ def load_data():
     url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
     response = requests.get(url)
     response.raise_for_status()
-    data = pd.read_csv(response.text, parse_dates=True, index_col=[0])
+    data = pd.read_csv(url, parse_dates=True, index_col=[0])
     return data
 #%% 
 
@@ -58,25 +59,30 @@ def preprocess_data(data):
     else:
         differenced_data = data.copy()
     return differenced_data
+#%% 
 
 def plot_differenced_data(differenced_data):
     differenced_data.plot()
     plt.savefig('differenced_data.png')
+#%% 
 
 def check_seasonal_differencing(data):
     nsdiff= nsdiffs(data['Price'], m=12, test='ch')
     logging.info(f"Seasonal differences required: {nsdiff}")
+#%% 
 
 def plot_seasonal_decomposition(differenced_data):
     decomposition = seasonal_decompose(differenced_data["Price"], model="additive")
     decomposition.plot()
     plt.savefig('seasonal_decomposition.png')
+#%% 
 
 def plot_acf_pacf_plots(differenced_data):
     plot_acf(differenced_data['Price'], title='ACF Plot')
     plt.savefig('acf_plot.png')
     plot_pacf(differenced_data['Price'], title='PACF Plot')
     plt.savefig('pacf_plot.png')
+#%% 
 
 def plot_seasonal_data(data):
     df_2002 = data['2002']
@@ -106,6 +112,7 @@ def plot_seasonal_data(data):
     fig.update_yaxes(title_text="Price", row=6, col=1)
     fig.update_layout(height=1000, title_text="Price from 2002 to 2007")
     fig.show()
+#%% 
 
 def evaluate_stationarity(differenced_data):
     def adf_test(series):
@@ -119,22 +126,26 @@ def evaluate_stationarity(differenced_data):
 
     logging.info("Testing stationarity of scaled training data:")
     adf_test(differenced_data['Price'])
+#%% 
 
 def auto_arima_model(differenced_data):
     model = pm.auto_arima(differenced_data['Price'], trace=False)
     logging.info(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
     logging.info(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
     return model
+#%% 
 
 def plot_residuals(model):
     model.plot_diagnostics(figsize=(12, 8))
     plt.savefig('residuals_plot.png')
+#%% 
 
 def fit_sarimax_model(differenced_data, order, seasonal_order):
     model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
     results = model.fit(disp=0)
     logging.info(results.summary())
     return results
+#%% 
 
 def forecast_future_values(history, order, seasonal_order, horizon):
     model = SARIMAX(endog=history, order=order, seasonal_order=seasonal_order)
@@ -157,6 +168,7 @@ def forecast_future_values(history, order, seasonal_order, horizon):
     plt.title('Forecast with Confidence Intervals')
     plt.legend()
     plt.savefig('forecast_with_confidence_intervals.png')
+#%% 
 
 def plot_forecast_with_confidence_intervals(history, predictions, forecast_summary_90, forecast_summary_95):
     fig = go.Figure()
@@ -168,12 +180,14 @@ def plot_forecast_with_confidence_intervals(history, predictions, forecast_summa
     fig.add_trace(go.Scatter(x=forecast_summary_95.index, y=forecast_summary_95['mean_ci_lower'], mode='lines', name='95% Confidence Interval', line=dict(width=0), fill='tonexty'))
     fig.update_layout(title='Forecast with Confidence Intervals')
     fig.show()
+#%% 
 
 def calculate_error_metrics(data, predictions):
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
+#%% 
 
 data = load_data()
 plot_data(data)
