@@ -6,7 +6,7 @@ from sklearn.svm import SVR
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error
 from sklearn.model_selection import RandomizedSearchCV
 from scipy.stats import uniform, reciprocal
-from common.preprocessor import load_data
+# from common.preprocessor import load_data
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
@@ -16,7 +16,8 @@ from scipy.stats import uniform, randint
 %matplotlib inline
 
 # %%
-data = load_data('data', 'Commodity Prices Monthly.csv')
+url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
+data = pd.read_csv(url, parse_dates=True, index_col=[0])
 data.head()
 
 # %%

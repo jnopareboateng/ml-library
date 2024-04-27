@@ -22,17 +22,6 @@ warnings.filterwarnings("ignore")
 %matplotlib inline
 
 #%% 
-# Create a logger
-# logger = logging.getLogger()
-# logger.setLevel(logging.INFO)
-
-# Create a stream handler
-# handler = logging.StreamHandler()
-# handler.setLevel(logging.INFO)
-
-# Add the handler to the logger
-# logger.addHandler(handler)
-
 # Configure logging to print to standard output
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
