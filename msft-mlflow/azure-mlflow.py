@@ -28,10 +28,9 @@ with mlflow.start_run():
     mlflow.log_metric("accuracy", accuracy)
 
 #%%
-# custom functons with custom logging
-Common functions used with custom logging are:
+# Common functions used with custom logging are:
 
-mlflow.log_param(): Logs a single key-value parameter. Use this function for an input parameter you want to log.
-mlflow.log_metric(): Logs a single key-value metric. Value must be a number. Use this function for any output you want to store with the run.
-mlflow.log_artifact(): Logs a file. Use this function for any plot you want to log, save as image file first.
-mlflow.log_model(): Logs a model. Use this function to create an MLflow model, which may include a custom signature, environment, and input examples.
+# ``` mlflow.log_param(): Logs a single key-value parameter. Use this function for an input parameter you want to log.
+# mlflow.log_metric(): Logs a single key-value metric. Value must be a number. Use this function for any output you want to store with the run.
+# mlflow.log_artifact(): Logs a file. Use this function for any plot you want to log, save as image file first.
+# mlflow.log_model(): Logs a model. Use this function to create an MLflow model, which may include a custom signature, environment, and input examples.```
