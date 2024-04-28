@@ -10,3 +10,4 @@ seaborn==0.13.2
 tensorflow==2.16.1
 keras==3.2.1
 keras-tuner==1.4.7
+requests==2.31.0
