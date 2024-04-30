@@ -53,7 +53,36 @@ def get_artist_genre(sp, artist_name):
     return 'Unknown'
 
 # %%
+
+artist_info_cache = {}
+
 def get_artist_info(sp, artist_name):
+    if artist_name in artist_info_cache:
+        return artist_info_cache[artist_name]
+
+    try:
+        if sp:
+            results = sp.search(q=artist_name, type='artist', limit=1)
+            if results['artists']['items']:
+                artist = results['artists']['items'][0]
+                artist_id = artist['id']
+                artist_info = sp.artist(artist_id)
+                popularity = artist_info['popularity']
+                followers = artist_info['followers']['total']
+                genres = artist_info['genres']
+                genre = genres[0] if genres else 'Unknown'
+                artist_info_cache[artist_name] = (popularity, followers, genre)
+                return popularity, followers, genre
+    except Exception as e:
+        print(f"Failed to get info for artist {artist_name}: {e}")
+
+    artist_info_cache[artist_name] = (None, None, 'Unknown')
+    return None, None, 'Unknown'
+
+# %%
+
+
+# def get_artist_info(sp, artist_name):
     try:
         if sp:
             results = sp.search(q=artist_name, type='artist', limit=1)
@@ -71,7 +100,23 @@ def get_artist_info(sp, artist_name):
     return None, None, 'Unknown'
 
 # %%
+
+import concurrent.futures
+
 def apply_functions(df, sp):
+    artist_cols = ['artist_popularity', 'artist_followers', 'genre']
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        df[artist_cols] = list(executor.map(get_artist_info, [sp]*len(df['artname']), df['artname']))
+    df[artist_cols] = df[artist_cols].apply(pd.Series)
+    track_cols = ['track_popularity', 'audio_features']
+    df = df.dropna(subset=artist_cols, how='all').reset_index(drop=True)
+    combined_cols = artist_cols + track_cols
+    df = pd.concat([df.drop(columns=combined_cols), df[combined_cols]], axis=1)
+    df[track_cols] = df.apply(lambda row: get_track_info(sp, row['track_name'], row['artname']), axis=1).apply(pd.Series)
+    return df
+
+
+# def apply_functions(df, sp):
     artist_cols = ['artist_popularity', 'artist_followers', 'genre']
     df[artist_cols] = df['artname'].map_partitions(lambda x: x.map(lambda y: get_artist_info(sp, y))).apply(pd.Series)
     track_cols = ['track_popularity', 'audio_features']
