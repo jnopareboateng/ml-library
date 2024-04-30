@@ -22,7 +22,6 @@ except FileNotFoundError as e:
 df.head()
 
 #%%
-#%%
 # Set up Spotify API credentials
 client_id = os.environ.get('SPOTIFY_CLIENT_ID')
 client_secret = os.environ.get('SPOTIFY_CLIENT_SECRET')
@@ -32,6 +31,18 @@ client_secret = os.environ.get('SPOTIFY_CLIENT_SECRET')
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
+#%%
+import os
+
+# Set environment variables
+os.environ['SPOTIFY_CLIENT_ID'] = 'your_client_id'
+os.environ['SPOTIFY_CLIENT_SECRET'] = 'your_client_secret'
+
+# Now the rest of your code
+client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+
+#%%
 # Function to retrieve the genre for an artist using Spotify API
 def get_artist_genre(artist_name):
     """
@@ -112,3 +123,4 @@ df['track_popularity'], df['audio_features'] = zip(*df.apply(lambda x: get_track
 
 # Save the modified dataset to a new CSV file
 df.to_csv('dataset_modified.csv', index=False)
+# %%
