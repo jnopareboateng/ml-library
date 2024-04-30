@@ -1,0 +1,62 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+# This defines the inputs for the pipeline
+inputs:
+  pipelineInput1:
+    type: uri_file
+    mode: ro_mount
+    path: <path-to-your-file>
+  pipelineInput2: <string or number>
+# This defines the outputs for the pipeline
+outputs:
+  pipelineOutput:
+    type: uri_folder
+    mode: rw_mount
+    path: <path-to-your-folder>
+
+# The jobs to be run in the pipeline
+jobs:
+  job1: #change name as needed
+    type: command
+    #enter path to your script files
+    code: <path-to-your-scripts>
+    #use scripts in Python, R, Java, Julia, C#. Here we have shown python
+    command: python <placeholder-for-your-script-name> --data ${{inputs.job1Input1}} --string ${{inputs.job1Input2}}
+    # invoke completions (Ctrl+Space, Cmd+Space) to see the list of computes available
+    compute: azureml:cpu-cluster
+    # invoke completions (Ctrl+Space, Cmd+Space) to see the list of environments available
+    environment:
+      image: docker.io/python
+    # This defines the inputs for job 1
+    inputs:
+      job1Input1:
+        type: uri_file
+        mode: ro_mount
+        path: ${{parent.inputs.pipelineInput1}}
+      job1Input2: ${{parent.inputs.pipelineInput2}}
+    # This defines the outputs for job 1
+    outputs:
+      job1Output1:
+        type: uri_folder
+        mode: rw_mount
+  job2: #change name as needed
+    type: command
+    #enter path to your component yaml
+    component: <path-to-your-component-yaml>
+    # invoke completions (Ctrl+Space, Cmd+Space) to see the list of computes available
+    compute: azureml:cpu-cluster
+    # invoke completions (Ctrl+Space, Cmd+Space) to see the list of environments available
+    environment:
+      image: docker.io/python
+    # This defines the inputs for job 2
+    inputs:
+      job2Input1:
+        type: uri_folder
+        mode: ro_mount
+        path: ${{parent.jobs.job1.outputs.job1Output1}}
+    # This defines the outputs for job 1
+    outputs:
+      job1Output1:
+        type: uri_folder
+        mode: rw_mount
+        path: ${{parent.outputs.pipelineOutput}}

@@ -1,7 +1,8 @@
 # %%
 import os
-import requests
+# import requests
 import logging
+import mlflow
 import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -22,21 +23,13 @@ except FileNotFoundError as e:
 df.head()
 
 #%%
-# Set up Spotify API credentials
+# Set environment variables
+os.environ['SPOTIFY_CLIENT_ID'] = '4187992fdb764829b6b2ce20718027c0'
+os.environ['SPOTIFY_CLIENT_SECRET'] = '4adc98b676ed40e1b43c521b355ef809'
+
+# # Set up Spotify API credentials
 client_id = os.environ.get('SPOTIFY_CLIENT_ID')
 client_secret = os.environ.get('SPOTIFY_CLIENT_SECRET')
-#%% 
-
-# Authenticate with Spotify API
-client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-
-#%%
-import os
-
-# Set environment variables
-os.environ['SPOTIFY_CLIENT_ID'] = 'your_client_id'
-os.environ['SPOTIFY_CLIENT_SECRET'] = 'your_client_secret'
 
 # Now the rest of your code
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
