@@ -7,7 +7,7 @@ import pandas as pd
 import pmdarima as pm 
 import plotly.express as px
 import plotly.graph_objects as go
-import requests
+# import requests
 from plotly.subplots import make_subplots
 from pmdarima.arima.utils import nsdiffs,ndiffs
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -26,7 +26,7 @@ warnings.filterwarnings("ignore")
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 # Now, logging.info will print to the notebook
-logging.info("This is a log message.")
+logging.info("Modeling and Forecasting Brent Crude Oil Using ARIMA ")
 
 def load_data():
     file_path = 'Modified_Data.csv'

@@ -6,8 +6,4 @@ statsmodels==0.14.1
 pmdarima==2.0.4
 plotly==5.20.0
 prophet==1.1.5
-seaborn==0.13.2
-tensorflow==2.16.1
-keras==3.2.1
-keras-tuner==1.4.7
-requests==2.31.0
+xgboost==1.6.2
