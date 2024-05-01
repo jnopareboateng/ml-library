@@ -29,18 +29,20 @@ logging.basicConfig(level=logging.INFO, format='%(message)s')
 logging.info("This is a log message.")
 
 def load_data():
-    url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
-    response = requests.get(url)
-    response.raise_for_status()
-    data = pd.read_csv(url, parse_dates=True, index_col=[0])
+    file_path = 'Modified_Data.csv'
+    # url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
+    # response = requests.get(url)
+    # response.raise_for_status()
+    data = pd.read_csv(file_path, parse_dates=True, index_col=[0])
     return data
 #%% 
 
 def plot_data(data):
-    px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
+    data_plot = px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
     decomposition = seasonal_decompose(data["Price"], model="additive")
     decomposition.plot()
     plt.savefig('data_visualization.png')
+    return data_plot
 #%% 
 
 def test_stationarity(series):
@@ -197,18 +199,28 @@ def calculate_error_metrics(data, predictions):
 #%% 
 # todo: improve readability of logs
 data = load_data()
+data.head()
+#%%
 plot_data(data)
+#%%
+
 test_stationarity(data)
 differenced_data = preprocess_data(data)
+
 plot_differenced_data(differenced_data)
 check_seasonal_differencing(data)
+#%%
+
 plot_seasonal_decomposition(differenced_data)
 plot_acf_pacf_plots(differenced_data)
 plot_seasonal_data(data)
 evaluate_stationarity(differenced_data)
+#%%
+
 model = auto_arima_model(differenced_data)
 plot_residuals(model)
 results = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
+#%%
 
 # Capture the returned values from forecast_future_values
 predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
