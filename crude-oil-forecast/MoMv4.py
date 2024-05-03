@@ -88,15 +88,6 @@ best_xgb.fit(train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[times
 best_svr.fit(train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[timesteps-1]])
 best_rf.fit(train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[timesteps-1]])
 #%%
-# Generate future timestamps
-future_dates = pd.date_range(start=data.index[-1], periods=25, freq='M')[1:] # Start from the last date in the data and generate the next 24 months
-
-# Make predictions
-# Forecast the future values
-xgb_forecast = best_xgb.predict(train_data_timesteps[-24:,:timesteps-1]) # Use the last 24 months to forecast the next 24 months
-svr_forecast = best_svr.predict(train_data_timesteps[-24:,:timesteps-1])
-rf_forecast = best_rf.predict(train_data_timesteps[-24:,:timesteps-1])
-#%%
 
 # Calculate the error metrics
 # Split the data into training and test sets
@@ -138,6 +129,16 @@ print(f"Random Forest MSE: {mse_rf}")
 print(f"XGBoost MAPE: {mape_xgb}")
 print(f"SVR MAPE: {mape_svr}")
 print(f"Random Forest MAPE: {mape_rf}")
+#%%
+
+# Generate future timestamps
+future_dates = pd.date_range(start=data.index[-1], periods=25, freq='M')[1:] # Start from the last date in the data and generate the next 24 months
+
+# Make predictions
+# Forecast the future values
+xgb_forecast = best_xgb.predict(train_data_timesteps[-24:,:timesteps-1]) # Use the last 24 months to forecast the next 24 months
+svr_forecast = best_svr.predict(train_data_timesteps[-24:,:timesteps-1])
+rf_forecast = best_rf.predict(train_data_timesteps[-24:,:timesteps-1])
 
 #%%
 
@@ -152,25 +153,26 @@ fig_xgb.show()
 #%%
 
 fig_svr = go.Figure()
-fig_svr.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_svr.add_trace(go.Scatter(x=X_train[-24:], y=svr_forecast, mode='lines', name='Forecasted Values'))
+fig_svr.add_trace(go.Scatter(x=data.index, y=data['Price'], mode='lines', name='Historical Data'))
+fig_svr.add_trace(go.Scatter(x=future_dates, y=svr_forecast, mode='lines', name='Forecasted Values'))
 fig_svr.update_layout(title='SVR: Historical Data vs Forecasted Values')
 fig_svr.show()
 #%%
 
 fig_rf = go.Figure()
-fig_rf.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_rf.add_trace(go.Scatter(x=X_train[-24:], y=rf_forecast, mode='lines', name='Forecasted Values'))
+fig_rf.add_trace(go.Scatter(x=data.index, y=data['Price'], mode='lines', name='Historical Data'))
+fig_rf.add_trace(go.Scatter(x=future_dates, y=rf_forecast, mode='lines', name='Forecasted Values'))
 fig_rf.update_layout(title='Random Forest: Historical Data vs Forecasted Values')
 fig_rf.show()
+
 #%%
 
 # Plot the historical data and the forecasted data for all models combined
 fig_combined = go.Figure()
-fig_combined.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=xgb_forecast, mode='lines', name='XGBoost Forecasted Values'))
-fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=svr_forecast, mode='lines', name='SVR Forecasted Values'))
-fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=rf_forecast, mode='lines', name='Random Forest Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=data.index, y=data['Price'], mode='lines', name='Historical Data'))
+fig_combined.add_trace(go.Scatter(x=future_dates, y=xgb_forecast, mode='lines', name='XGBoost Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=future_dates, y=svr_forecast, mode='lines', name='SVR Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=future_dates, y=rf_forecast, mode='lines', name='Random Forest Forecasted Values'))
 fig_combined.update_layout(title='All Models: Historical Data vs Forecasted Values')
 fig_combined.show()
 
