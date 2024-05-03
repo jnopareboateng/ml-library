@@ -19,7 +19,7 @@ import warnings
 pd.options.display.float_format = '{:,.2f}'.format
 np.set_printoptions(precision=2)
 warnings.filterwarnings("ignore")
-%matplotlib inline
+# %matplotlib inline
 
 #%% 
 # Configure logging to print to standard output
@@ -155,7 +155,7 @@ def fit_sarimax_model(differenced_data, order, seasonal_order):
 def forecast_future_values(history, order, seasonal_order, horizon):
     model = SARIMAX(endog=history, order=order, seasonal_order=seasonal_order)
     history = data['Price']
-    HORIZON = 24
+    horizon = 24
     model_fit = model.fit()
     predictions = model_fit.forecast(steps=horizon)
     forecast_period = pd.date_range(start=history.index[-1], periods=horizon+1, freq='MS')[1:]
