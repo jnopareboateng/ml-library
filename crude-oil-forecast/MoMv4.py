@@ -129,6 +129,7 @@ print(f"Random Forest MAPE: {mape_rf}")
 
 # Plot the historical data and the forecasted data for each model individually
 index = data.index
+history = data['Price']
 
 # Convert X and y to numpy arrays of type float32
 # X = np.array(data.index.values.reshape(-1, 1), dtype=np.float32)
@@ -158,8 +159,10 @@ fig_rf.show()
 # Plot the historical data and the forecasted data for all models combined
 fig_combined = go.Figure()
 fig_combined.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_combined.add_trace(go.Scatter(x=train.index[timesteps-1:], y=xgb_predictions, mode='lines', name='XGBoost Forecasted Values'))
-fig_combined.add_trace(go.Scatter(x=train.index[timesteps-1:], y=svr_predictions, mode='lines', name='SVR Forecasted Values'))
-fig_combined.add_trace(go.Scatter(x=train.index[timesteps-1:], y=rf_predictions, mode='lines', name='Random Forest Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=xgb_predictions, mode='lines', name='XGBoost Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=svr_predictions, mode='lines', name='SVR Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=rf_predictions, mode='lines', name='Random Forest Forecasted Values'))
 fig_combined.update_layout(title='All Models: Historical Data vs Forecasted Values')
 fig_combined.show()
+
+# %%

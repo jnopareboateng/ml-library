@@ -12,8 +12,8 @@ from scipy.stats import uniform, randint
 %matplotlib inline
 
 # Load the data
-url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
-data = pd.read_csv(url, parse_dates=True, index_col=[0])
+file_path = 'Modified_Data.csv'
+data = pd.read_csv(file_path, parse_dates=True, index_col=[0])
 
 # Plot the data
 data.plot(y='Price', title='Commodity Prices Monthly', figsize=(12, 6))
@@ -67,3 +67,5 @@ fig.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode=
 fig.add_trace(go.Scatter(x=train.index[-24:], y=y_pred, mode='lines', name='Predicted'))
 fig.update_layout(title='Actual vs Predicted', xaxis_title='Date', yaxis_title='Price')
 fig.show()
+
+# %%
