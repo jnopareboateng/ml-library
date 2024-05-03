@@ -36,10 +36,18 @@ param_dist_rf = {"n_estimators": [100, 200, 300, 400, 500],
                  "bootstrap": [True, False]}
 #%%
 # Prepare the data
+# Prepare the data
 data = load_data()
-X = data.index.values.reshape(-1, 1)
-y = data['Price'].values
+timesteps = 24
+X, y = [], []
 
+# Create sequences of observations and next values to predict
+for i in range(timesteps, len(data)):
+    X.append(data['Price'].iloc[i-timesteps:i].values)
+    y.append(data['Price'].iloc[i])
+
+# Convert lists to numpy arrays
+X, y = np.array(X), np.array(y)
 #%%
 
 # Initialize the models
@@ -56,11 +64,6 @@ random_search_svr = RandomizedSearchCV(svr, param_distributions=param_dist_svr,
 random_search_rf = RandomizedSearchCV(rf, param_distributions=param_dist_rf,
                                       n_iter=10, cv=5, random_state=42)
 #%%
-
-# Convert X and y to numpy arrays of type float32
-X = np.array(X, dtype=np.float32)
-y = np.array(y, dtype=np.float32)
-
 
 # Fit the RandomizedSearchCV objects to the data
 random_search_xgb.fit(X, y)
@@ -98,22 +101,22 @@ print(f"Random Forest MAE: {mae_rf}")
 #%%
 
 # Plot the historical data and the forecasted data for each model individually
-# index = data.index
+index = data.index
 
 # Convert X and y to numpy arrays of type float32
 # X = np.array(data.index.values.reshape(-1, 1), dtype=np.float32)
 # y = np.array(data['Price'].values, dtype=np.float32)
 
 fig_xgb = go.Figure()
-fig_xgb.add_trace(go.Scatter(x=X[0], y=y, mode='lines', name='Historical Data'))
-fig_xgb.add_trace(go.Scatter(x=X[0], y=xgb_predictions, mode='lines', name='Forecasted Values'))
+fig_xgb.add_trace(go.Scatter(x=X.index[timesteps-1:], y=y.flatten(), mode='lines', name='Historical Data'))
+fig_xgb.add_trace(go.Scatter(x=X.index[timesteps-1:], y=xgb_predictions, mode='lines', name='Forecasted Values'))
 fig_xgb.update_layout(title='XGBoost: Historical Data vs Forecasted Values')
 fig_xgb.show()
 #%%
 
 fig_svr = go.Figure()
-fig_svr.add_trace(go.Scatter(x=X[0], y=y, mode='lines', name='Historical Data'))
-fig_svr.add_trace(go.Scatter(x=X[0], y=svr_predictions, mode='lines', name='Forecasted Values'))
+fig_svr.add_trace(go.Scatter(x=X, y=y, mode='lines', name='Historical Data'))
+fig_svr.add_trace(go.Scatter(x=X, y=svr_predictions, mode='lines', name='Forecasted Values'))
 fig_svr.update_layout(title='SVR: Historical Data vs Forecasted Values')
 fig_svr.show()
 #%%

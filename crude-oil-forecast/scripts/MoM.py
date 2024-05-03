@@ -63,7 +63,7 @@ scaled_train_data = scaled_train.values
 scaled_test_data = scaled_test.values
 
 # %%
-timesteps = 3
+timesteps = 24
 
 # %%
 scaled_train_data_timesteps=np.array([[j for j in scaled_train_data[i:i+timesteps]] for i in range(0,len(scaled_train_data)-timesteps+1)])[:,:,0]
