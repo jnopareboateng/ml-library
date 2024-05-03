@@ -84,29 +84,48 @@ best_rf = random_search_rf.best_estimator_
 #%%
 
 # Fit the best estimators to the data
-best_xgb.fit(X_train, y_train)
-best_svr.fit(X_train, y_train)
-best_rf.fit(X_train, y_train)
+best_xgb.fit(train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[timesteps-1]])
+best_svr.fit(train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[timesteps-1]])
+best_rf.fit(train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[timesteps-1]])
 #%%
+# Generate future timestamps
+future_dates = pd.date_range(start=data.index[-1], periods=25, freq='M')[1:] # Start from the last date in the data and generate the next 24 months
 
 # Make predictions
-xgb_predictions = best_xgb.predict(X_train[-24:]) # Predict the last 24 months
-svr_predictions = best_svr.predict(X_train[-24:])
-rf_predictions = best_rf.predict(X_train[-24:])
+# Forecast the future values
+xgb_forecast = best_xgb.predict(train_data_timesteps[-24:,:timesteps-1]) # Use the last 24 months to forecast the next 24 months
+svr_forecast = best_svr.predict(train_data_timesteps[-24:,:timesteps-1])
+rf_forecast = best_rf.predict(train_data_timesteps[-24:,:timesteps-1])
 #%%
 
 # Calculate the error metrics
-mae_xgb = mean_absolute_error(y_train[-24:], xgb_predictions) # Calculate the MAE for the last 24 months
-mae_svr = mean_absolute_error(y_train[-24:], svr_predictions)
-mae_rf = mean_absolute_error(y_train[-24:], rf_predictions)
+# Split the data into training and test sets
+train_size = int(len(train_data_timesteps) * 0.8)
+X_train, X_test = train_data_timesteps[:train_size,:timesteps-1], train_data_timesteps[train_size:,:timesteps-1]
+y_train, y_test = train_data_timesteps[:train_size,[timesteps-1]], train_data_timesteps[train_size:,[timesteps-1]]
 
-mse_xgb = mean_squared_error(y_train[-24:], xgb_predictions)
-mse_svr = mean_squared_error(y_train[-24:], svr_predictions)
-mse_rf = mean_squared_error(y_train[-24:], rf_predictions)
+# Fit the best estimators to the training data
+best_xgb.fit(X_train, y_train)
+best_svr.fit(X_train, y_train)
+best_rf.fit(X_train, y_train)
 
-mape_xgb = mean_absolute_percentage_error(y_train[-24:], xgb_predictions)
-mape_svr = mean_absolute_percentage_error(y_train[-24:], svr_predictions)
-mape_rf = mean_absolute_percentage_error(y_train[-24:], rf_predictions)
+# Make predictions on the test set
+xgb_forecast = best_xgb.predict(X_test)
+svr_forecast = best_svr.predict(X_test)
+rf_forecast = best_rf.predict(X_test)
+
+# Calculate the error metrics
+mae_xgb = mean_absolute_error(y_test, xgb_forecast)
+mae_svr = mean_absolute_error(y_test, svr_forecast)
+mae_rf = mean_absolute_error(y_test, rf_forecast)
+
+mse_xgb = mean_squared_error(y_test, xgb_forecast)
+mse_svr = mean_squared_error(y_test, svr_forecast)
+mse_rf = mean_squared_error(y_test, rf_forecast)
+
+mape_xgb = mean_absolute_percentage_error(y_test, xgb_forecast)
+mape_svr = mean_absolute_percentage_error(y_test, svr_forecast)
+mape_rf = mean_absolute_percentage_error(y_test, rf_forecast)
 
 print(f"XGBoost MAE: {mae_xgb}")
 print(f"SVR MAE: {mae_svr}")
@@ -122,36 +141,26 @@ print(f"Random Forest MAPE: {mape_rf}")
 
 #%%
 
-# print(f"XGBoost MAE: {mae_xgb}")
-# print(f"SVR MAE: {mae_svr}")
-# print(f"Random Forest MAE: {mae_rf}")
-#%%
-
 # Plot the historical data and the forecasted data for each model individually
 index = data.index
-history = data['Price']
-
-# Convert X and y to numpy arrays of type float32
-# X = np.array(data.index.values.reshape(-1, 1), dtype=np.float32)
-# y = np.array(data['Price'].values, dtype=np.float32)
 
 fig_xgb = go.Figure()
-fig_xgb.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_xgb.add_trace(go.Scatter(x=train.index[-24:], y=xgb_predictions, mode='lines', name='Forecasted Values'))
+fig_xgb.add_trace(go.Scatter(x=data.index, y=data['Price'], mode='lines', name='Historical Data'))
+fig_xgb.add_trace(go.Scatter(x=future_dates, y=xgb_forecast, mode='lines', name='Forecasted Values'))
 fig_xgb.update_layout(title='XGBoost: Historical Data vs Forecasted Values')
 fig_xgb.show()
 #%%
 
 fig_svr = go.Figure()
 fig_svr.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_svr.add_trace(go.Scatter(x=X_train[-24:], y=svr_predictions, mode='lines', name='Forecasted Values'))
+fig_svr.add_trace(go.Scatter(x=X_train[-24:], y=svr_forecast, mode='lines', name='Forecasted Values'))
 fig_svr.update_layout(title='SVR: Historical Data vs Forecasted Values')
 fig_svr.show()
 #%%
 
 fig_rf = go.Figure()
 fig_rf.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_rf.add_trace(go.Scatter(x=X_train[-24:], y=rf_predictions, mode='lines', name='Forecasted Values'))
+fig_rf.add_trace(go.Scatter(x=X_train[-24:], y=rf_forecast, mode='lines', name='Forecasted Values'))
 fig_rf.update_layout(title='Random Forest: Historical Data vs Forecasted Values')
 fig_rf.show()
 #%%
@@ -159,9 +168,9 @@ fig_rf.show()
 # Plot the historical data and the forecasted data for all models combined
 fig_combined = go.Figure()
 fig_combined.add_trace(go.Scatter(x=train.index[timesteps-1:], y=y_train.flatten(), mode='lines', name='Historical Data'))
-fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=xgb_predictions, mode='lines', name='XGBoost Forecasted Values'))
-fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=svr_predictions, mode='lines', name='SVR Forecasted Values'))
-fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=rf_predictions, mode='lines', name='Random Forest Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=xgb_forecast, mode='lines', name='XGBoost Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=svr_forecast, mode='lines', name='SVR Forecasted Values'))
+fig_combined.add_trace(go.Scatter(x=X_train[-24:], y=rf_forecast, mode='lines', name='Random Forest Forecasted Values'))
 fig_combined.update_layout(title='All Models: Historical Data vs Forecasted Values')
 fig_combined.show()
 
