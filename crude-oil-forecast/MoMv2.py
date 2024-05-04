@@ -75,21 +75,21 @@ def calculate_error_metrics(models, X_test, y_test):
     X_test (np.array): The test features.
     y_test (np.array): The test target.
     """
-    results = []
+    error_metrics = []
     for model in models:
         y_pred = model.predict(X_test)
         mae = mean_absolute_error(y_test, y_pred)
         mse = mean_squared_error(y_test, y_pred)
         mape = mean_absolute_percentage_error(y_test, y_pred)
-        results.append({
+        error_metrics.append({
             'Model': type(model).__name__,
             'MAE': f"{mae:.4f}",
             'MSE': f"{mse:.4f}",
             'MAPE': f"{mape:.4f}"
         })
-    results_df = pd.DataFrame(results)
-    print(results_df)
-    return results_df
+    error_metrics_df = pd.DataFrame(error_metrics)
+    # print(error_metrics_df)
+    return error_metrics_df
 
 #%%
 def prepare_data(data, timesteps):
@@ -193,11 +193,7 @@ def main():
     fit_models(models, X_train, y_train)
     train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
     X_train, X_test, y_train, y_test = split_data(train_data_timesteps, timesteps)
-    error_metrics = calculate_error_metrics(models, X_test, y_test)
-    for model_name, metrics in error_metrics.items():
-        print(f"{model_name} MAE: {metrics['MAE']:.3f}")
-        print(f"{model_name} MSE: {metrics['MSE']:.3f}")
-        print(f"{model_name} MAPE: {metrics['MAPE']:.3f}")
+    calculate_error_metrics(models, X_test, y_test)
     future_dates = pd.date_range(start=data.index[-1], periods=25, freq='M')[1:]
     forecasts = generate_forecast(models, train_data_timesteps, timesteps)
     plot_forecasts(data, future_dates, forecasts)

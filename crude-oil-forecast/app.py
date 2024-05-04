@@ -16,12 +16,9 @@ def main(timesteps):
     train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
     X_train, X_test, y_train, y_test = split_data(train_data_timesteps, timesteps)
     
-    error_metrics = calculate_error_metrics(models, X_test, y_test)
-    for model_name, metrics in error_metrics.items():
-        st.write(f"{model_name} MAE: {metrics['MAE']:.3f}")
-        st.write(f"{model_name} MSE: {metrics['MSE']:.3f}")
-        st.write(f"{model_name} MAPE: {metrics['MAPE']:.3f}")
-    
+    error_metrics_df = calculate_error_metrics(models, X_test, y_test)
+    st.table(error_metrics_df)
+
     future_dates = pd.date_range(start=data.index[-1], periods=25, freq='M')[1:]
     forecasts = generate_forecast(models, train_data_timesteps, timesteps)
     
