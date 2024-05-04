@@ -75,14 +75,21 @@ def calculate_error_metrics(models, X_test, y_test):
     X_test (np.array): The test features.
     y_test (np.array): The test target.
     """
-    error_metrics = {}
+    results = []
     for model in models:
         y_pred = model.predict(X_test)
         mae = mean_absolute_error(y_test, y_pred)
         mse = mean_squared_error(y_test, y_pred)
         mape = mean_absolute_percentage_error(y_test, y_pred)
-        error_metrics[type(model).__name__] = {'MAE': mae, 'MSE': mse, 'MAPE': mape}
-    return error_metrics
+        results.append({
+            'Model': type(model).__name__,
+            'MAE': f"{mae:.4f}",
+            'MSE': f"{mse:.4f}",
+            'MAPE': f"{mape:.4f}"
+        })
+    results_df = pd.DataFrame(results)
+    print(results_df)
+    return results_df
 
 #%%
 def prepare_data(data, timesteps):
@@ -150,6 +157,7 @@ def plot_forecasts(data, future_dates, forecasts):
         fig.add_trace(go.Scatter(x=future_dates, y=forecast, mode='lines', name='Forecasted Values'))
         fig.update_layout(title=f'{model_name}: Historical Data vs Forecasted Values')
         fig.show()
+    return fig
 
 #%%
 def plot_combined_forecasts(data, future_dates, forecasts):
@@ -168,6 +176,8 @@ def plot_combined_forecasts(data, future_dates, forecasts):
         fig.add_trace(go.Scatter(x=future_dates, y=forecast, mode='lines', name=f'{model_name} Forecasted Values'))
     fig.update_layout(title='All Models: Historical Data vs Forecasted Values')
     fig.show()
+    return fig
+
 
 #%%
 def main():
