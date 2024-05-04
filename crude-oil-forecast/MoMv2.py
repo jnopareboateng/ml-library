@@ -39,7 +39,7 @@ def plot_data(data):
     return data_plot
 
 #%%
-def initialize_models(random_state=None):
+def initialize_models(random_state=42):
     """
     Initialize the models.
     
@@ -85,12 +85,11 @@ def calculate_error_metrics(models, X_test, y_test):
     return error_metrics
 
 #%%
-def time_series_data_preparation(data, timesteps):
-    X, y = [], []
-    for i in range(len(data) - timesteps):
-        X.append(data[i:i+timesteps])
-        y.append(data[i+timesteps])
-    return np.array(X), np.array(y)
+def prepare_data(data, timesteps):
+    train_data = data.values
+    train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
+    X_train, y_train = train_data_timesteps[:,:timesteps-1],train_data_timesteps[:,[timesteps-1]]
+    return X_train, y_train
 #%%
 def split_data(train_data_timesteps, timesteps):
     """

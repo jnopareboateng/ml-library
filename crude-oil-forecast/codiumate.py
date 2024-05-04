@@ -1,73 +1,95 @@
+#%%
 import pandas as pd
 import numpy as np
-import pmdarima as pm
-import warnings
-from pmdarima import auto_arima
-from pmdarima.arima.utils import nsdiffs
-import matplotlib.pyplot as plt
-import plotly.express as px
-from statsmodels.tsa.seasonal import seasonal_decompose
-from statsmodels.tsa.stattools import adfuller
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
-from statsmodels.tsa.statespace.sarimax import SARIMAX
-from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
-from sklearn.model_selection import TimeSeriesSplit
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+from xgboost import XGBRegressor
+from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor
+import plotly.graph_objects as go
+#%%
 
-# Suppress warnings
-warnings.filterwarnings("ignore")
-pd.options.display.float_format = '{:,.2f}'.format
-np.set_printoptions(precision=2)
+def load_data(file_path):
+    return pd.read_csv(file_path, parse_dates=True, index_col=[0])
+#%%
 
-def load_data(url):
-    try:
-        data = pd.read_csv(url, parse_dates=True, index_col=[0])
-        if data.isnull().sum().any():
-            data.fillna(data.mean(), inplace=True)  # Handling missing values by filling with mean
-        return data
-    except Exception as e:
-        print(f"Error loading data: {e}")
-        return None
+def prepare_data(data, timesteps):
+    train_data = data.values
+    train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
+    X_train, y_train = train_data_timesteps[:,:timesteps-1],train_data_timesteps[:,[timesteps-1]]
+    return X_train, y_train
+#%%
 
-def check_stationarity(series):
-    result = adfuller(series, autolag='AIC')
-    print(f'ADF Statistic: {result[0]}')
-    print(f'p-value: {result[1]}')
-    return result[1] <= 0.05
+def initialize_models():
+    return XGBRegressor(random_state=42), SVR(), RandomForestRegressor(random_state=42)
+#%%
 
-def fit_sarimax(data, order, seasonal_order, train_size_ratio=0.8):
-    train_size = int(len(data) * train_size_ratio)
-    train, test = data[0:train_size], data[train_size:]
-    model = SARIMAX(train, order=order, seasonal_order=seasonal_order)
-    results = model.fit(disp=0)
-    predictions = results.predict(start=len(train), end=len(train) + len(test) - 1)
-    mse = mean_squared_error(test, predictions)
-    mape = mean_absolute_percentage_error(test, predictions)
-    return mse, mape, results
+def initialize_search(models, param_distributions, n_iter=10, cv=5, random_state=42):
+    return [RandomizedSearchCV(model, param_distributions=param_dist, n_iter=n_iter, cv=cv, random_state=random_state) for model, param_dist in zip(models, param_distributions)]
+#%%
 
-def plot_forecast(model_fit, history, steps=24):
-    forecast = model_fit.get_forecast(steps=steps)
-    forecast_index = pd.date_range(start=history.index[-1], periods=steps+1, freq='MS')[1:]
-    forecast_series = pd.Series(forecast.predicted_mean, index=forecast_index)
-    lower_series = pd.Series(forecast.conf_int()['lower Price'], index=forecast_index)
-    upper_series = pd.Series(forecast.conf_int()['upper Price'], index=forecast_index)
+def fit_search(search_objects, X_train, y_train):
+    for search in search_objects:
+        search.fit(X_train, y_train)
+    return search_objects
+#%%
 
-    plt.figure(figsize=(10, 5))
-    plt.plot(history, label='Historical Data')
-    plt.plot(forecast_series, color='red', label='Forecasted Values')
-    plt.fill_between(forecast_index, lower_series, upper_series, color='pink', alpha=0.1, label='Confidence Interval')
-    plt.title('Forecast with Confidence Intervals')
-    plt.legend()
-    plt.show()
+def get_best_estimators(search_objects):
+    return [search.best_estimator_ for search in search_objects]
+#%%
 
-# Main execution
-data_url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
-data = load_data(data_url)
-if data is not None:
-    if check_stationarity(data['Price']):
-        print("Data is stationary")
-    else:
-        print("Data is not stationary, differencing needed")
-    auto_model = auto_arima(data['Price'], trace=True, error_action='ignore', suppress_warnings=True)
-    mse, mape, fitted_model = fit_sarimax(data, auto_model.order, auto_model.seasonal_order)
-    print(f"MSE: {mse}, MAPE: {mape}")
-    plot_forecast(fitted_model, data['Price'])
+def fit_estimators(estimators, X_train, y_train):
+    for estimator in estimators:
+        estimator.fit(X_train, y_train)
+    return estimators
+#%%
+
+def calculate_error_metrics(estimators, X_train, X_test, y_train, y_test):
+    error_metrics = []
+    for estimator in estimators:
+        estimator.fit(X_train, y_train)
+        forecast = estimator.predict(X_test)
+        mae = mean_absolute_error(y_test, forecast)
+        mse = mean_squared_error(y_test, forecast)
+        error_metrics.append((mae, mse))
+    return error_metrics
+#%%
+
+def plot_data(data, forecast, title):
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=data.index, y=data['Price'], mode='lines', name='Historical Data'))
+    fig.add_trace(go.Scatter(x=future_dates, y=forecast, mode='lines', name='Forecasted Values'))
+    fig.update_layout(title=title)
+    fig.show()
+#%%
+
+def main():
+    # Load and prepare data
+    data = load_data('Modified_Data.csv')
+    X_train, y_train = prepare_data(data, 24)
+
+# Initialize models and search objects
+    models = initialize_models()
+    param_dist_xgb, param_dist_svr, param_dist_rf = initialize_param_distributions()
+    param_distributions = [param_dist_xgb, param_dist_svr, param_dist_rf]
+    search_objects = initialize_search(models, param_distributions)
+
+    # Fit search objects and get best estimators
+    search_objects = fit_search(search_objects, X_train, y_train)
+    estimators = get_best_estimators(search_objects)
+
+    # Fit estimators
+    estimators = fit_estimators(estimators, X_train, y_train)
+
+    # Calculate error metrics
+    error_metrics = calculate_error_metrics(estimators, X_train, X_test, y_train, y_test)
+
+    # Plot data
+    for estimator, (mae, mse) in zip(estimators, error_metrics):
+        forecast = estimator.predict(X_test)
+        plot_data(data, forecast, f'{estimator.__class__.__name__}: Historical Data vs Forecasted Values')
+#%%
+
+if __name__ == '__main__':
+    main()
+# %%
