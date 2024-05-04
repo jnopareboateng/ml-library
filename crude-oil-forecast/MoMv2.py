@@ -86,10 +86,10 @@ def calculate_error_metrics(models, X_test, y_test):
 
 #%%
 def prepare_data(data, timesteps):
-    train_data = data.values
-    train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
-    X_train, y_train = train_data_timesteps[:,:timesteps-1],train_data_timesteps[:,[timesteps-1]]
+    train_data_timesteps = np.array([[j for j in data[i:i+timesteps]] for i in range(0, len(data)-timesteps+1)])[:,:,0]
+    X_train, y_train = train_data_timesteps[:,:timesteps-1], train_data_timesteps[:,[timesteps-1]]
     return X_train, y_train
+
 #%%
 def split_data(train_data_timesteps, timesteps):
     """
@@ -178,16 +178,16 @@ def main():
     print('Training data shape: ', train.shape)
     train_data = train.values
     timesteps = 24
-    X_train, y_train = time_series_data_preparation(train_data, timesteps)
+    X_train, y_train = prepare_data(train_data, timesteps)
     models = initialize_models(random_state=42)
     fit_models(models, X_train, y_train)
     train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
     X_train, X_test, y_train, y_test = split_data(train_data_timesteps, timesteps)
     error_metrics = calculate_error_metrics(models, X_test, y_test)
     for model_name, metrics in error_metrics.items():
-        print(f"{model_name} MAE: {metrics['MAE']}")
-        print(f"{model_name} MSE: {metrics['MSE']}")
-        print(f"{model_name} MAPE: {metrics['MAPE']}")
+        print(f"{model_name} MAE: {metrics['MAE']:.3f}")
+        print(f"{model_name} MSE: {metrics['MSE']:.3f}")
+        print(f"{model_name} MAPE: {metrics['MAPE']:.3f}")
     future_dates = pd.date_range(start=data.index[-1], periods=25, freq='M')[1:]
     forecasts = generate_forecast(models, train_data_timesteps, timesteps)
     plot_forecasts(data, future_dates, forecasts)
