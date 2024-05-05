@@ -1,5 +1,5 @@
 #%%
-from sklearn.model_selection import RandomizedSearchCV, TimeSeriesSplit
+from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error
 from xgboost import XGBRegressor
 from sklearn.svm import SVR
@@ -64,11 +64,11 @@ rf = RandomForestRegressor(random_state=42)
 
 # Initialize the RandomizedSearchCV objects
 random_search_xgb = RandomizedSearchCV(xgb, param_distributions=param_dist_xgb,
-                                       n_iter=10, cv=TimeSeriesSplit(n_splits=5), random_state=42)
+                                       n_iter=10, cv=5, random_state=42)
 random_search_svr = RandomizedSearchCV(svr, param_distributions=param_dist_svr,
-                                       n_iter=10, cv=TimeSeriesSplit(n_splits=5), random_state=42)
+                                       n_iter=10, cv=5, random_state=42)
 random_search_rf = RandomizedSearchCV(rf, param_distributions=param_dist_rf,
-                                      n_iter=10, cv=TimeSeriesSplit(n_splits=5), random_state=42)
+                                      n_iter=10, cv=5, random_state=42)
 #%%
 
 # Fit the RandomizedSearchCV objects to the data
