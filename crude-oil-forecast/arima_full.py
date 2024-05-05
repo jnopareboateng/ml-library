@@ -1,4 +1,6 @@
-from sklearn.metrics import mean_absolute_percentage_error
+#%% 
+from sklearn.metrics import mean_absolute_error,mean_absolute_percentage_error
+# from sklearn.model_selection import TimeSeriesSplit
 import logging
 import matplotlib.pyplot as plt 
 import numpy as np
@@ -6,30 +8,45 @@ import pandas as pd
 import pmdarima as pm 
 import plotly.express as px
 import plotly.graph_objects as go
+# import requests
 from plotly.subplots import make_subplots
+from pmdarima.arima.utils import nsdiffs,ndiffs
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 import warnings
+# import mlflow
 
 pd.options.display.float_format = '{:,.2f}'.format
 np.set_printoptions(precision=2)
 warnings.filterwarnings("ignore")
-%matplotlib inline
+# %matplotlib inline
+
+#%% 
+
+# Configure logging to print to standard output
+logging.basicConfig(level=logging.INFO, format='%(message)s')
+
+# Now, logging.info will print to the notebook
+logging.info("Modeling and Forecasting Brent Crude Oil Using ARIMA ")
 
 def load_data():
-    url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
-    response = requests.get(url)
-    response.raise_for_status()
-    data = pd.read_csv(response.text, parse_dates=True, index_col=[0])
+    file_path = 'Modified_Data.csv'
+    # url = 'https://raw.githubusercontent.com/jnopareboateng/ml-library/master/crude-oil-forecast/Modified_Data.csv'
+    # response = requests.get(url)
+    # response.raise_for_status()
+    data = pd.read_csv(file_path, parse_dates=True, index_col=[0])
     return data
+#%% 
 
 def plot_data(data):
-    px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
+    data_plot = px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
     decomposition = seasonal_decompose(data["Price"], model="additive")
     decomposition.plot()
     plt.savefig('data_visualization.png')
+    return data_plot
+#%% 
 
 def test_stationarity(series):
     def adf_test(series):
@@ -43,34 +60,40 @@ def test_stationarity(series):
 
     logging.info("""Testing stationarity of data:""")
     adf_test(series)
+#%% 
 
 def preprocess_data(data):
     n_diffs = pm.arima.ndiffs(data['Price'], test='adf')
-    logging.info(f"\nNumber of differences required for scaled training data: {n_diffs}")
+    logging.info(f"\nNumber of differences required : {n_diffs}")
     if n_diffs > 0:
         differenced_data = data.diff(n_diffs).dropna()
     else:
         differenced_data = data.copy()
     return differenced_data
+#%% 
 
 def plot_differenced_data(differenced_data):
     differenced_data.plot()
     plt.savefig('differenced_data.png')
+#%% 
 
 def check_seasonal_differencing(data):
     nsdiff= nsdiffs(data['Price'], m=12, test='ch')
     logging.info(f"Seasonal differences required: {nsdiff}")
+#%% 
 
 def plot_seasonal_decomposition(differenced_data):
     decomposition = seasonal_decompose(differenced_data["Price"], model="additive")
     decomposition.plot()
     plt.savefig('seasonal_decomposition.png')
+#%% 
 
 def plot_acf_pacf_plots(differenced_data):
     plot_acf(differenced_data['Price'], title='ACF Plot')
     plt.savefig('acf_plot.png')
     plot_pacf(differenced_data['Price'], title='PACF Plot')
     plt.savefig('pacf_plot.png')
+#%% 
 
 def plot_seasonal_data(data):
     df_2002 = data['2002']
@@ -100,6 +123,7 @@ def plot_seasonal_data(data):
     fig.update_yaxes(title_text="Price", row=6, col=1)
     fig.update_layout(height=1000, title_text="Price from 2002 to 2007")
     fig.show()
+#%% 
 
 def evaluate_stationarity(differenced_data):
     def adf_test(series):
@@ -113,25 +137,28 @@ def evaluate_stationarity(differenced_data):
 
     logging.info("Testing stationarity of scaled training data:")
     adf_test(differenced_data['Price'])
-
+#%% 
 def auto_arima_model(differenced_data):
-    model = pm.auto_arima(differenced_data['Price'], trace=False)
+    model = pm.auto_arima(differenced_data['Price'], trace=True)
     logging.info(f"\nAuto ARIMA identified parameters: {model.order}, {model.seasonal_order}")
     logging.info(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
     return model
+#%% 
 
 def plot_residuals(model):
     model.plot_diagnostics(figsize=(12, 8))
     plt.savefig('residuals_plot.png')
-
+#%% 
 def fit_sarimax_model(differenced_data, order, seasonal_order):
     model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
     results = model.fit(disp=0)
     logging.info(results.summary())
     return results
-
+#%% 
 def forecast_future_values(history, order, seasonal_order, horizon):
     model = SARIMAX(endog=history, order=order, seasonal_order=seasonal_order)
+    history = data['Price']
+    horizon = 24
     model_fit = model.fit()
     predictions = model_fit.forecast(steps=horizon)
     forecast_period = pd.date_range(start=history.index[-1], periods=horizon+1, freq='MS')[1:]
@@ -151,6 +178,7 @@ def forecast_future_values(history, order, seasonal_order, horizon):
     plt.title('Forecast with Confidence Intervals')
     plt.legend()
     plt.savefig('forecast_with_confidence_intervals.png')
+    return predictions, forecast_summary_90, forecast_summary_95
 
 def plot_forecast_with_confidence_intervals(history, predictions, forecast_summary_90, forecast_summary_95):
     fig = go.Figure()
@@ -162,26 +190,46 @@ def plot_forecast_with_confidence_intervals(history, predictions, forecast_summa
     fig.add_trace(go.Scatter(x=forecast_summary_95.index, y=forecast_summary_95['mean_ci_lower'], mode='lines', name='95% Confidence Interval', line=dict(width=0), fill='tonexty'))
     fig.update_layout(title='Forecast with Confidence Intervals')
     fig.show()
+#%% 
 
 def calculate_error_metrics(data, predictions):
+    data= data[-len(predictions):]
     mae = mean_absolute_error(data, predictions)
     mape = mean_absolute_percentage_error(data, predictions)
+    logging.info("""Evaluating with MAE and MAPE """)
     logging.info(f"Mean Absolute Error: {mae}")
     logging.info(f"Mean Absolute Percentage Error: {mape}")
-
+#%% 
+# todo: improve readability of logs
 data = load_data()
+data.head()
+#%%
 plot_data(data)
+#%%
+
 test_stationarity(data)
 differenced_data = preprocess_data(data)
+
 plot_differenced_data(differenced_data)
 check_seasonal_differencing(data)
+#%%
+
 plot_seasonal_decomposition(differenced_data)
 plot_acf_pacf_plots(differenced_data)
 plot_seasonal_data(data)
 evaluate_stationarity(differenced_data)
+#%%
+
 model = auto_arima_model(differenced_data)
 plot_residuals(model)
 results = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
-forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
+#%%
+
+# Capture the returned values from forecast_future_values
+predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
+
+# Now you can use 'predictions' in the following functions
 plot_forecast_with_confidence_intervals(data['Price'], predictions, forecast_summary_90, forecast_summary_95)
 calculate_error_metrics(data['Price'], predictions)
+
+# %%

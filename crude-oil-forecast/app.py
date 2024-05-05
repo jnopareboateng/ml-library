@@ -2,10 +2,22 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from MoMv2 import load_data, initialize_models, fit_models, prepare_data, split_data, calculate_error_metrics, generate_forecast, plot_forecasts, plot_combined_forecasts
+from arima import load_data, plot_data, test_stationarity, preprocess_data, auto_arima_model, fit_sarimax_model, forecast_future_values, calculate_error_metrics
 
+#todo: add arima to streamlit application
 def main(timesteps):
     file_path = 'Modified_Data.csv'
     data = load_data(file_path)
+    plot_data(data)
+    test_stationarity(data)
+    differenced_data = preprocess_data(data)
+    model = auto_arima_model(differenced_data)
+    fitted_model = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
+    forecast = forecast_future_values(data, model.order, model.seasonal_order, timesteps)
+    error_metrics = calculate_error_metrics(data, forecast)
+    st.write(error_metrics)
+
+
     train = data.copy()[['Price']]
     train_data = train.values
     

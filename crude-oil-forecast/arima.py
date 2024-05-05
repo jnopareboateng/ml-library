@@ -1,6 +1,6 @@
 #%% 
 from sklearn.metrics import mean_absolute_error,mean_absolute_percentage_error
-from sklearn.model_selection import TimeSeriesSplit
+# from sklearn.model_selection import TimeSeriesSplit
 import logging
 import matplotlib.pyplot as plt 
 import numpy as np
@@ -16,7 +16,7 @@ from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 import warnings
-import mlflow
+# import mlflow
 
 pd.options.display.float_format = '{:,.2f}'.format
 np.set_printoptions(precision=2)
@@ -24,8 +24,6 @@ warnings.filterwarnings("ignore")
 # %matplotlib inline
 
 #%% 
-# Set up MLflow
-mlflow.set_experiment('arima_experiment')
 
 # Configure logging to print to standard output
 logging.basicConfig(level=logging.INFO, format='%(message)s')
