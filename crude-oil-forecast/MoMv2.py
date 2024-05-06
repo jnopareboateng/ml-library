@@ -11,7 +11,7 @@ import plotly.express as px
 import pandas as pd
 
 #%%
-def load_data(file_path):
+def load_data():
     """
     Load data from a given file path.
     
@@ -21,6 +21,7 @@ def load_data(file_path):
     Returns:
     data (pd.DataFrame): The loaded data.
     """
+    file_path = 'Modified_Data.csv'
     data = pd.read_csv(file_path, parse_dates=True, index_col=[0])
     return data
 
