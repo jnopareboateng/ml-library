@@ -1,27 +1,14 @@
 import mlflow
 import mlflow.sklearn
-import plotly.graph_objects as go
-import plotly.express as px
-import pandas as pd
-import numpy as np
-from pmdarima.arima import auto_arima 
-from xgboost import XGBRegressor
-from sklearn.svm import SVR
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import TimeSeriesSplit
-from arima import load_data,test_stationarity, preprocess_data, plot_differenced_data, check_seasonal_differencing,plot_seasonal_decomposition,plot_acf_pacf_plots
 
 # Set up MLflow tracking
 mlflow.set_tracking_uri("path/to/tracking/uri")
-mlflow.set_experiment("Time Series Forecasting With Mixture of Models")
+mlflow.set_experiment("Time Series Forecasting")
 
 def prepare_data(data, train_start_date, test_start_date, tscv=None):
     """
     Prepare the data for training and testing.
     """
-    # TimeSeriesSplit
-    data = load_data()
-    tscv = TimeSeriesSplit(n_splits=5)
     if tscv:
         for train_index, test_index in tscv.split(data):
             train_data = data.iloc[train_index]
@@ -37,17 +24,13 @@ def visualize_data(train_data, test_data):
     """
     Visualize the train-test split.
     """
-    data = load_data()
-    data_plot = px.line(data, x=data.index, y=data['Price'], title="Brent Crude Oil Prices from 2002 -2022")
-
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=train_data.index, y=train_data['Price'], mode='lines', name='Training Data'))
     fig.add_trace(go.Scatter(x=test_data.index, y=test_data['Price'], mode='lines', name='Test Data'))
     fig.update_layout(title='Train-Test Split Visualization')
     fig.show()
-    return data_plot, fig
 
-def initialize_models(train_data,random_state=42):
+def initialize_models(random_state=42):
     """
     Initialize the forecasting models.
     """
@@ -61,11 +44,12 @@ def initialize_models(train_data,random_state=42):
 
     return arima_model, xgb_model, svr_model, rf_model
 
-def arima_processor():
+def preprocess_data(train_data):
     """
     Preprocess the data for ARIMA.
     """
-    return test_stationarity, preprocess_data, plot_differenced_data, check_seasonal_differencing,plot_seasonal_decomposition,plot_acf_pacf_plots
+    differenced_data = preprocess_data(train_data)
+    return differenced_data
 
 def train_models(train_data, differenced_data, timesteps):
     """
@@ -153,4 +137,24 @@ def main(data, train_start_date, test_start_date, tscv=None, timesteps=24):
     mlflow.log_metric("arima_mape", error_metrics_df.loc[error_metrics_df['Model'] == 'ARIMA', 'MAPE'].values[0])
     mlflow.log_metric("xgboost_mape", error_metrics_df.loc[error_metrics_df['Model'] == 'XGBoost', 'MAPE'].values[0])
     mlflow.log_metric("svr_mape", error_metrics_df.loc[error_metrics_df['Model'] == 'SVR', 'MAPE'].values[0])
-    mlflow.log_metric("rf_mape", error_metrics_df.loc[error_metrics_df['Model'] == 'RF', 'RF'].values[0])
+    mlflow.log_metric("rf_mape", error_metrics_df.loc[error_metrics_df['Model'] == 'Random Forest', 'MAPE'].values[0])
+
+    mlflow.log_figure(individual_figs[0], "arima_forecast.html")
+    mlflow.log_figure(individual_figs[1], "xgboost_forecast.html")
+    mlflow.log_figure(individual_figs[2], "svr_forecast.html")
+    mlflow.log_figure(individual_figs[3], "rf_forecast.html")
+    mlflow.log_figure(combined_fig, "combined_forecast.html")
+
+    mlflow.sklearn.log_model(arima_model, "arima_model")
+    mlflow.sklearn.log_model(xgb_model, "xgboost_model")
+    mlflow.sklearn.log_model(svr_model, "svr_model")
+    mlflow.sklearn.log_model(rf_model, "rf_model")
+
+    mlflow.end_run()
+
+if __name__ == "__main__":
+    data = load_data("path/to/data.csv")
+    train_start_date = "2002-01-01"
+    test_start_date = "2020-01-01"
+    tscv = TimeSeriesSplit(n_splits=5)
+    main(data, train_start_date, test_start_date, tscv, timesteps=24)

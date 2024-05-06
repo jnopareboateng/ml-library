@@ -98,7 +98,6 @@ class ARIMAModel:
 
     def evaluate_stationarity(self, differenced_data):
         logging.info("Testing stationarity of scaled training data:")
-        adf_test(differenced_data['Price'])
         self.test_stationarity(differenced_data['Price'])
 
     def auto_arima_model(self, differenced_data):
