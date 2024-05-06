@@ -105,47 +105,7 @@ class ARIMAModel:
         plt.savefig('pacf_plot.png')
     #%% 
 
-    def plot_seasonal_data(data):
-        df_2002 = data['2002']
-        df_2003 = data['2003']
-        df_2004 = data['2004']
-        df_2005 = data['2005']
-        df_2006 = data['2006']
-        df_2007 = data['2007']
-        fig = make_subplots(rows=6, cols=1)
-        fig.add_trace(go.Scatter(x=df_2002.index, y=df_2002['Price'], name='Price in 2002'), row=1, col=1)
-        fig.add_trace(go.Scatter(x=df_2003.index, y=df_2003['Price'], name='Price in 2003'), row=2, col=1)
-        fig.add_trace(go.Scatter(x=df_2004.index, y=df_2004['Price'], name='Price in 2004'), row=3, col=1)
-        fig.add_trace(go.Scatter(x=df_2005.index, y=df_2005['Price'], name='Price in 2005'), row=4, col=1)
-        fig.add_trace(go.Scatter(x=df_2006.index, y=df_2006['Price'], name='Price in 2006'), row=5, col=1)
-        fig.add_trace(go.Scatter(x=df_2007.index, y=df_2007['Price'], name='Price in 2007'), row=6, col=1)
-        fig.update_xaxes(title_text="Date", row=1, col=1)
-        fig.update_xaxes(title_text="Date", row=2, col=1)
-        fig.update_xaxes(title_text="Date", row=3, col=1)
-        fig.update_xaxes(title_text="Date", row=4, col=1)
-        fig.update_xaxes(title_text="Date", row=5, col=1)
-        fig.update_xaxes(title_text="Date", row=6, col=1)
-        fig.update_yaxes(title_text="Price", row=1, col=1)
-        fig.update_yaxes(title_text="Price", row=2, col=1)
-        fig.update_yaxes(title_text="Price", row=3, col=1)
-        fig.update_yaxes(title_text="Price", row=4, col=1)
-        fig.update_yaxes(title_text="Price", row=5, col=1)
-        fig.update_yaxes(title_text="Price", row=6, col=1)
-        fig.update_layout(height=1000, title_text="Price from 2002 to 2007")
-        fig.show()
-    #%% 
-
     def evaluate_stationarity(differenced_data):
-        def adf_test(series):
-            result = adfuller(series, autolag='AIC')
-            logging.info(f'ADF Statistic: {result[0]}')
-            logging.info(f'p-value: {result[1]}')
-            if result[1] <= 0.05:
-                logging.info("Data is likely stationary.")
-            else:
-                logging.info("Data may be non-stationary. Consider differencing.")
-
-        logging.info("Testing stationarity of scaled training data:")
         adf_test(differenced_data['Price'])
     #%% 
     def auto_arima_model(differenced_data):
@@ -154,7 +114,13 @@ class ARIMAModel:
         logging.info(f'model order: {model.order}, \nmodel seasonal order: {model.seasonal_order}')
         return model
     #%% 
-
+def interpret_model(model):
+    logging.info(f"ARIMA Order: {model.order}")
+    logging.info(f"Seasonal Order: {model.seasonal_order}")
+    logging.info(f"AIC: {model.aic()}")
+    logging.info(f"BIC: {model.bic()}")
+    logging.info(f"HQIC: {model.hqic()}")
+    #%%
     def plot_residuals(model):
         model.plot_diagnostics(figsize=(12, 8))
         plt.savefig('residuals_plot.png')
@@ -211,35 +177,40 @@ class ARIMAModel:
         logging.info(f"Mean Absolute Percentage Error: {mape}")
 #%% 
 # todo: improve readability of logs
-data = load_data()
-data.head()
-#%%
-plot_data(data)
-#%%
+# Instantiate the ARIMAModel class
+arima_model = ARIMAModel('Modified_Data.csv', 24)
 
-test_stationarity(data)
+# Load and validate the data
+data = arima_model.load_data()
+if data is None or 'Price' not in data.columns:
+    logging.error("Invalid data.")
+    return
+
+# Preprocess the data
 differenced_data = preprocess_data(data)
+if differenced_data is None:
+    logging.error("Error in data preprocessing.")
+    return
 
-plot_differenced_data(differenced_data)
-check_seasonal_differencing(data)
-#%%
-
-plot_seasonal_decomposition(differenced_data)
-plot_acf_pacf_plots(differenced_data)
-plot_seasonal_data(data)
-evaluate_stationarity(differenced_data)
-#%%
-
+# Fit the model
 model = auto_arima_model(differenced_data)
-plot_residuals(model)
-results = fit_sarimax_model(differenced_data, model.order, model.seasonal_order)
-#%%
+if model is None:
+    logging.error("Error in model fitting.")
+    return
 
-# Capture the returned values from forecast_future_values
+# Forecast future values
 predictions, forecast_summary_90, forecast_summary_95 = forecast_future_values(data['Price'], model.order, model.seasonal_order, 24)
+if predictions is None:
+    logging.error("Error in forecasting.")
+    return
 
-# Now you can use 'predictions' in the following functions
-plot_forecast_with_confidence_intervals(data['Price'], predictions, forecast_summary_90, forecast_summary_95)
-calculate_error_metrics(data['Price'], predictions)
+# Calculate error metrics
+mae, mape = calculate_error_metrics(data['Price'], predictions)
+if mae is None or mape is None:
+    logging.error("Error in error metric calculation.")
+    return
 
+# Print the error metrics
+logging.info(f"Mean Absolute Error: {mae}")
+logging.info(f"Mean Absolute Percentage Error: {mape}")
 # %%
