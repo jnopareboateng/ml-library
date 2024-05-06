@@ -17,6 +17,8 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 import warnings
 
+from sympy import series
+
 # Set display options
 pd.options.display.float_format = '{:,.2f}'.format
 np.set_printoptions(precision=2)
@@ -55,17 +57,14 @@ class ARIMAModel:
 # Similar modifications can be made to the other plotting methods
 
     def test_stationarity(self, series):
-        def adf_test(series):
-            result = adfuller(series, autolag='AIC')
-            logging.info(f'ADF Statistic: {result[0]}')
-            logging.info(f'p-value: {result[1]}')
-            if result[1] <= 0.05:
-                logging.info("Data is likely stationary.")
-            else:
-                logging.info("Data may be non-stationary. Consider differencing.")
-
-        logging.info("""Testing stationarity of data:""")
-        adf_test(series)
+        result = adfuller(series, autolag='AIC')
+        logging.info(f'ADF Statistic: {result[0]}')
+        logging.info(f'p-value: {result[1]}')
+        if result[1] <= 0.05:
+            logging.info("Data is likely stationary.")
+        else:
+            logging.info("Data may be non-stationary. Consider differencing.")
+    
 
     def preprocess_data(self, data):
         n_diffs = pm.arima.ndiffs(data['Price'], test='adf')
@@ -157,5 +156,14 @@ class ARIMAModel:
             logging.info(f"Mean Absolute Percentage Error: {mape}")
         else:
             logging.error("Test data does not have a 'Price' column.")
+#%%
+#Instantiate the Model
+arima_model = ARIMAModel('Modified_Data.csv', 24)
 
 
+# %%
+data = arima_model.load_data()
+data.head()
+# %%
+arima_model.test_stationarity(data)
+# %%

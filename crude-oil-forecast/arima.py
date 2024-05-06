@@ -184,7 +184,7 @@ arima_model = ARIMAModel('Modified_Data.csv', 24)
 data = arima_model.load_data()
 if data is None or 'Price' not in data.columns:
     logging.error("Invalid data.")
-    return
+
 
 # Preprocess the data
 differenced_data = preprocess_data(data)
