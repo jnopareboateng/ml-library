@@ -161,60 +161,33 @@ order = model.order
 model.plot_diagnostics(figsize=(12, 8)).show()
 
 #%%
-model = SARIMAX(train, order= order)
-model_fit = model.fit()
-#%%
-# Forecast on test data using the fitted model
-# predictions = model.predict(start=test.index[0], end=test.index[-1], dynamic=False)
+model = SARIMAX(diff, order= order).fit()
+y_hat = model.predict(start = "2023-01-01", end="2024-12-31")
+# forecast = y_hat.predicted_mean 
+# conf_int = y_hat.conf_int()
+yhat.to_dataframe
 
 #%%
-# Calculate evaluation metrics
-# Root Mean Squared Error (RMSE)
-# rmse = sqrt(mean_squared_error(test['Price'], predictions))
-# print('RMSE:', rmse)
 
-# # Mean Absolute Error (MAE)
-# mae = mean_absolute_error(test['Price'], predictions)
-# print('MAE:', mae)
-
-# # Mean Absolute Percentage Error (MAPE)
-# mape = mean_absolute_percentage_error(test['Price'], predictions)
-# print('MAPE:', mape, '%')
+# Fit the model to the training data
 
 #%%
-plt.figure(figsize=(10, 6))
-plt.plot(test.index, test['Price'], marker='o', label='Actual')
-plt.plot(test.index, predictions, marker='x', label='Predicted')
-plt.title('Actual vs Predicted Prices')
-plt.xlabel('Date')
-plt.ylabel('Price')
-plt.legend()
-plt.grid(True)
-plt.show()
+# Create a dataframe for the forecast and the confidence intervals
+df_forecast = pd.DataFrame({'forecast': forecast})
+df_forecast.index = test.index  # use the index of your test data
+df_forecast['lower'] = conf_int.iloc[:, 0]
+df_forecast['upper'] = conf_int.iloc[:, 1]
 
-# %%
-# Forecast for 24 months from 2023-01-01
-# Forecast for 24 months from 2023-01-01
-future_dates = pd.date_range(start='2023-01-01', periods=24, freq='M')
-forecast_obj = model_fit.get_prediction(start=future_dates[0], end=future_dates[-1])
-forecast = forecast_obj.predicted_mean
-conf_int = forecast_obj.conf_int(alpha=0.05)  # 95% confidence interval
-# Calculate confidence intervals
-conf_int = model_fit.get_forecast(steps=24, alpha=0.05)  # 95% confidence interval
-conf_int_df = conf_int.conf_int
+# Create the line plots
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=df_forecast.index, y=df_forecast['forecast'], mode='lines', name='forecast'))
+fig.add_trace(go.Scatter(x=df_forecast.index, y=df_forecast['lower'], mode='lines', name='lower bound', line={'dash': 'dash'}))
+fig.add_trace(go.Scatter(x=df_forecast.index, y=df_forecast['upper'], mode='lines', name='upper bound', line={'dash': 'dash'}))
+
+# Add the actual values
+fig.add_trace(go.Scatter(x=test.index, y=test, mode='lines', name='actual'))
+
+fig.show()
+
+
 #%%
-# Plot actual data, forecast, and confidence intervals
-plt.figure(figsize=(12, 6))
-plt.plot(data.index, data['Price'], marker='o', label='Actual')
-plt.plot(future_dates, forecast, marker='x', label='Forecast')
-plt.fill_between(
-    future_dates, conf_int_df.iloc[:, 0], conf_int_df.iloc[:, 1], alpha=0.2, color='b', label='Confidence Interval'
-)
-plt.title('Brent Crude Oil Price Forecast (with Confidence Intervals)')
-plt.xlabel('Date')
-plt.ylabel('Price')
-plt.legend()
-plt.grid(True)
-plt.show()
-
-# %%
