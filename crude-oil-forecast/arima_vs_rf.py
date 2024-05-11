@@ -161,25 +161,25 @@ order = model.order
 model.plot_diagnostics(figsize=(12, 8)).show()
 
 #%%
-model = SARIMAX(data, order= order).fit()
-
+model = SARIMAX(train, order= order)
+model_fit = model.fit()
 #%%
 # Forecast on test data using the fitted model
-predictions = model.predict(start=test.index[0], end=test.index[-1], dynamic=False)
+# predictions = model.predict(start=test.index[0], end=test.index[-1], dynamic=False)
 
 #%%
 # Calculate evaluation metrics
 # Root Mean Squared Error (RMSE)
-rmse = sqrt(mean_squared_error(test['Price'], predictions))
-print('RMSE:', rmse)
+# rmse = sqrt(mean_squared_error(test['Price'], predictions))
+# print('RMSE:', rmse)
 
-# Mean Absolute Error (MAE)
-mae = mean_absolute_error(test['Price'], predictions)
-print('MAE:', mae)
+# # Mean Absolute Error (MAE)
+# mae = mean_absolute_error(test['Price'], predictions)
+# print('MAE:', mae)
 
-# Mean Absolute Percentage Error (MAPE)
-mape = mean_absolute_percentage_error(test['Price'], predictions)
-print('MAPE:', mape, '%')
+# # Mean Absolute Percentage Error (MAPE)
+# mape = mean_absolute_percentage_error(test['Price'], predictions)
+# print('MAPE:', mape, '%')
 
 #%%
 plt.figure(figsize=(10, 6))
@@ -194,13 +194,15 @@ plt.show()
 
 # %%
 # Forecast for 24 months from 2023-01-01
+# Forecast for 24 months from 2023-01-01
 future_dates = pd.date_range(start='2023-01-01', periods=24, freq='M')
-forecast = model_fit.predict(start=future_dates[0], end=future_dates[-1], dynamic=False)
-
+forecast_obj = model_fit.get_prediction(start=future_dates[0], end=future_dates[-1])
+forecast = forecast_obj.predicted_mean
+conf_int = forecast_obj.conf_int(alpha=0.05)  # 95% confidence interval
 # Calculate confidence intervals
 conf_int = model_fit.get_forecast(steps=24, alpha=0.05)  # 95% confidence interval
 conf_int_df = conf_int.conf_int
-
+#%%
 # Plot actual data, forecast, and confidence intervals
 plt.figure(figsize=(12, 6))
 plt.plot(data.index, data['Price'], marker='o', label='Actual')
