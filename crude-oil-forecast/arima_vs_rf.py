@@ -162,7 +162,7 @@ order = model.order
 model.plot_diagnostics(figsize=(12, 8)).show()
 
 #%%
-model = SARIMAX(train, order= order).fit()
+model = SARIMAX(train, order= order)
 model_fit = model.fit()
 # %%
 predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic=False)
@@ -192,3 +192,4 @@ plt.ylabel('Price')
 plt.legend()
 plt.grid(True)
 plt.show()
+# %%
