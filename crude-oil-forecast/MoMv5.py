@@ -1,8 +1,12 @@
 import mlflow
 import mlflow.sklearn
+from arimav2 import *
+from MoMv4 import *
+from pmdarima import auto_arima
+
 
 # Set up MLflow tracking
-mlflow.set_tracking_uri("path/to/tracking/uri")
+mlflow.set_tracking_uri("/mlruns")
 mlflow.set_experiment("Time Series Forecasting")
 
 def prepare_data(data, train_start_date, test_start_date, tscv=None):
@@ -153,8 +157,8 @@ def main(data, train_start_date, test_start_date, tscv=None, timesteps=24):
     mlflow.end_run()
 
 if __name__ == "__main__":
-    data = load_data("path/to/data.csv")
+    data = load_data("Modified_Data.csv")
     train_start_date = "2002-01-01"
     test_start_date = "2020-01-01"
-    tscv = TimeSeriesSplit(n_splits=5)
-    main(data, train_start_date, test_start_date, tscv, timesteps=24)
+    # tscv = TimeSeriesSplit(n_splits=5)
+    main(data, train_start_date, test_start_date, tscv=None, timesteps=24)
