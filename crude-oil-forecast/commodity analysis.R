@@ -69,3 +69,4 @@ SSxx <- sum((price_times - mean(price_times)) * (price_times - mean(price_times)
 SSxy <- sum((price_values - mean(price_values)) * (price_times - mean(price_times)))
 slope <- SSxy / SSxx
 intercept <- mean(price_values) - slope * mean(price_times)
+
