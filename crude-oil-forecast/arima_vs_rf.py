@@ -1,5 +1,6 @@
 #%%
 # import necessary libraries for arima and XG Boost
+from tracemalloc import start
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -161,33 +162,33 @@ order = model.order
 model.plot_diagnostics(figsize=(12, 8)).show()
 
 #%%
-model = SARIMAX(diff, order= order).fit()
-y_hat = model.predict(start = "2023-01-01", end="2024-12-31")
-# forecast = y_hat.predicted_mean 
-# conf_int = y_hat.conf_int()
-yhat.to_dataframe
+model = SARIMAX(train, order= order).fit()
+model_fit = model.fit()
+# %%
+predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic=False)
 
 #%%
+# Calculate evaluation metrics
+# Root Mean Squared Error (RMSE)
+rmse = sqrt(mean_squared_error(test['Price'], predictions))
+print('RMSE:', rmse)
 
-# Fit the model to the training data
+# Mean Absolute Error (MAE)
+mae = mean_absolute_error(test['Price'], predictions)
+print('MAE:', mae)
 
-#%%
-# Create a dataframe for the forecast and the confidence intervals
-df_forecast = pd.DataFrame({'forecast': forecast})
-df_forecast.index = test.index  # use the index of your test data
-df_forecast['lower'] = conf_int.iloc[:, 0]
-df_forecast['upper'] = conf_int.iloc[:, 1]
-
-# Create the line plots
-fig = go.Figure()
-fig.add_trace(go.Scatter(x=df_forecast.index, y=df_forecast['forecast'], mode='lines', name='forecast'))
-fig.add_trace(go.Scatter(x=df_forecast.index, y=df_forecast['lower'], mode='lines', name='lower bound', line={'dash': 'dash'}))
-fig.add_trace(go.Scatter(x=df_forecast.index, y=df_forecast['upper'], mode='lines', name='upper bound', line={'dash': 'dash'}))
-
-# Add the actual values
-fig.add_trace(go.Scatter(x=test.index, y=test, mode='lines', name='actual'))
-
-fig.show()
+# Mean Absolute Percentage Error (MAPE)
+mape = mean_absolute_percentage_error(test['Price'], predictions)
+print('MAPE:', mape, '%')
 
 
-#%%
+# Plot actual vs predicted prices
+plt.figure(figsize=(10, 6))
+plt.plot(test.index, test['Price'], marker='o', label='Actual')
+plt.plot(test.index, predictions, marker='x', label='Predicted')
+plt.title('Actual vs Predicted Prices')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.grid(True)
+plt.show()
