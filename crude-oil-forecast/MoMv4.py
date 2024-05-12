@@ -2,11 +2,7 @@
 from sklearn.model_selection import RandomizedSearchCV, TimeSeriesSplit
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error
 from xgboost import XGBRegressor
-# merged.py
-
-from arima import ARIMAModel
-# from MoMv4 import load_data as load_data_MoMv4, initialize_models, fit_models, prepare_data, split_data, calculate_error_metrics as calculate_error_metrics_MoMv4, generate_forecast, plot_forecasts, plot_combined_forecasts
-# from arima import test_stationarity,preprocess_data,plot_differenced_data,check_seasonal_differencing,plot
+# from arima import ARIMAModel
 from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
@@ -41,23 +37,68 @@ param_dist_rf = {"n_estimators": [100, 200, 300, 400, 500],
                  "bootstrap": [True, False]}
 #%%
 # Prepare the data
+#%%
+# set the train and test data with start dates
+# load_data()
+train_start_date = '2002-01-01'
+test_start_date = '2019-01-01'
 
-data = load_data()
-# Set the train data and print the dimensions of it
-train = data.copy()[['Price']]
+#%%
+# visualize the train and test data
+# import plotly.graph_objects as go
+
+# Create a trace for the train data
+train_trace = go.Scatter(
+    x = data[(data.index < test_start_date) & (data.index >= train_start_date)].index,
+    y = data[(data.index < test_start_date) & (data.index >= train_start_date)]['Price'],
+    mode = 'lines',
+    name = 'train'
+)
+
+# Create a trace for the test data
+test_trace = go.Scatter(
+    x = data[test_start_date:].index,
+    y = data[test_start_date:]['Price'],
+    mode = 'lines',
+    name = 'test'
+)
+
+# Create the layout
+layout = go.Layout(
+    title = 'Train and Test Data',
+    xaxis = dict(title = 'Timestamp'),
+    yaxis = dict(title = 'Price')
+)
+
+# Create the figure and add the traces
+fig = go.Figure(data=[train_trace, test_trace], layout=layout)
+
+# Show the figure
+fig.show()
+
+#%%
+# set the train and test data and print the dimensions of it
+train = data.copy()[(data.index >= train_start_date) & (data.index < test_start_date)][['Price']]
+test = data.copy()[data.index >= test_start_date][['Price']]
+
 print('Training data shape: ', train.shape)
-
-# Convert to numpy arrays
-train_data = train.values
+print('Test data shape: ', test.shape)
 
 # Set the timesteps
 timesteps = 24
+
+train_data = train.values
+test_data = test.values
 
 # Create timesteps for the train data
 train_data_timesteps = np.array([[j for j in train_data[i:i+timesteps]] for i in range(0,len(train_data)-timesteps+1)])[:,:,0]
 
 # Split the data into features and target
 X_train, y_train = train_data_timesteps[:,:timesteps-1],train_data_timesteps[:,[timesteps-1]]
+
+# Create timesteps for the test data
+test_data_timesteps = np.array([[j for j in test_data[i:i+timesteps]] for i in range(0,len(test_data)-timesteps+1)])[:,:,0]
+X_test, y_test = test_data_timesteps[:,:timesteps-1],test_data_timesteps[:,[timesteps-1]]
 
 #%%
 

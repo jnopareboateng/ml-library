@@ -193,3 +193,106 @@ plt.legend()
 plt.grid(True)
 plt.show()
 # %%
+# Forecast for 24 months from 2023-01-01
+future_dates = pd.date_range(start='2023-01-01', periods=24, freq='M')
+forecast_obj = model_fit.get_prediction(start=future_dates[0], end=future_dates[-1])
+forecast = forecast_obj.predicted_mean
+conf_int = forecast_obj.conf_int(alpha=0.05)  # 95% confidence interval
+
+# Plot actual data, forecast, and confidence intervals
+plt.figure(figsize=(12, 6))
+plt.plot(data.index, data['Price'], marker='o', label='Actual')
+plt.plot(future_dates, forecast, marker='x', label='Forecast')
+plt.fill_between(
+    future_dates, conf_int.iloc[:, 0], conf_int.iloc[:, 1], alpha=0.5, color='b', label='Confidence Interval'
+)
+plt.title('Brent Crude Oil Price Forecast (with Confidence Intervals)')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.grid(True)
+plt.show()
+# %%
+# Random Forest Classifier
+# Split the data into features and target
+X_train, y_train = np.array(train.index).reshape(-1,1), train.values
+X_test, y_test = np.array(test.index).reshape(-1,1), test.values
+#%%
+# Initialize Random forest regressor
+rf = RandomForestRegressor()
+#%%
+
+# Define the hyperparameter grid
+param_grid = {
+    'n_estimators': [10, 50, 100, 200],
+    'max_depth': [None, 10, 20, 30],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4],
+    'bootstrap': [True, False]
+}
+
+# Perform randomized search CV
+rf_random = RandomizedSearchCV(estimator=rf, param_distributions=param_grid, n_iter=100, cv=3, verbose=2, random_state=42, n_jobs=-1)
+rf_random.fit(X_train, y_train)
+#%%
+
+# Fit the model with the best parameters
+rf_best = RandomForestRegressor(n_estimators=rf_random.best_params_['n_estimators'], 
+                                max_depth=rf_random.best_params_['max_depth'], 
+                                min_samples_split=rf_random.best_params_['min_samples_split'], 
+                                min_samples_leaf=rf_random.best_params_['min_samples_leaf'], 
+                                bootstrap=rf_random.best_params_['bootstrap'])
+rf_best.fit(X_train, y_train)
+#%%
+
+# Predict on test data
+rf_predictions = rf_best.predict(X_test)
+#%%
+
+# Calculate evaluation metrics
+rmse_rf = sqrt(mean_squared_error(y_test, rf_predictions))
+mae_rf = mean_absolute_error(y_test, rf_predictions)
+mape_rf = mean_absolute_percentage_error(y_test, rf_predictions)
+
+print('Random Forest RMSE:', rmse_rf)
+print('Random Forest MAE:', mae_rf)
+print('Random Forest MAPE:', mape_rf, '%')
+#%%
+
+# Plot actual vs predicted prices
+plt.figure(figsize=(10, 6))
+plt.plot(test.index, y_test, marker='o', label='Actual')
+plt.plot(test.index, rf_predictions, marker='x', label='Predicted')
+plt.title('Actual vs Predicted Prices - Random Forest')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+#%%
+
+# Forecast for 48 months from 2022-01-01 to 2024-12-31
+future_dates_rf = pd.date_range(start='2022-01-01', end='2024-12-31', freq='M')
+
+#%%
+
+# Create a dummy X input with the required shape for the future dates
+X_future_rf = np.array(future_dates_rf).reshape(-1,1)
+
+# Predict on the future dates
+rf_forecast = rf_best.predict(X_future_rf)
+
+# Plot the forecast
+plt.figure(figsize=(12, 6))
+plt.plot(data.index, data['Price'], marker='o', label='Actual')
+plt.plot(future_dates_rf, rf_forecast, marker='x', label='Forecast')
+plt.title('Brent Crude Oil Price Forecast (Random Forest)')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+# %%
