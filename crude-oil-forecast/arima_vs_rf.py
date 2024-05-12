@@ -1,6 +1,6 @@
 #%%
 # import necessary libraries for arima and XG Boost
-from tracemalloc import start
+# from tracemalloc import start
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,9 +18,9 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tools.eval_measures import rmse
 from sklearn.metrics import mean_squared_error,mean_absolute_error, mean_absolute_percentage_error
 from math import sqrt
-from sklearn.model_selection import RandomizedSearchCV
+# from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error, mean_squared_error
-from sklearn.ensemble import RandomForestRegressor
+# from sklearn.ensemble import RandomForestRegressor
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -165,7 +165,7 @@ model.plot_diagnostics(figsize=(12, 8)).show()
 model = SARIMAX(train, order= order)
 model_fit = model.fit()
 # %%
-predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic=False)
+predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic=False) # dynamic=False means that forecasts at each point are generated using the full history up to that point
 
 #%%
 # Calculate evaluation metrics
@@ -179,7 +179,7 @@ print('MAE:', mae)
 
 # Mean Absolute Percentage Error (MAPE)
 mape = mean_absolute_percentage_error(test['Price'], predictions)
-print('MAPE:', mape, '%')
+print('MAPE:', mape*100, '%')
 
 
 # Plot actual vs predicted prices
@@ -212,87 +212,3 @@ plt.ylabel('Price')
 plt.legend()
 plt.grid(True)
 plt.show()
-# %%
-# Random Forest Classifier
-# Split the data into features and target
-X_train, y_train = np.array(train.index).reshape(-1,1), train.values
-X_test, y_test = np.array(test.index).reshape(-1,1), test.values
-#%%
-# Initialize Random forest regressor
-rf = RandomForestRegressor()
-#%%
-
-# Define the hyperparameter grid
-param_grid = {
-    'n_estimators': [10, 50, 100, 200],
-    'max_depth': [None, 10, 20, 30],
-    'min_samples_split': [2, 5, 10],
-    'min_samples_leaf': [1, 2, 4],
-    'bootstrap': [True, False]
-}
-
-# Perform randomized search CV
-rf_random = RandomizedSearchCV(estimator=rf, param_distributions=param_grid, n_iter=100, cv=3, verbose=2, random_state=42, n_jobs=-1)
-rf_random.fit(X_train, y_train)
-#%%
-
-# Fit the model with the best parameters
-rf_best = RandomForestRegressor(n_estimators=rf_random.best_params_['n_estimators'], 
-                                max_depth=rf_random.best_params_['max_depth'], 
-                                min_samples_split=rf_random.best_params_['min_samples_split'], 
-                                min_samples_leaf=rf_random.best_params_['min_samples_leaf'], 
-                                bootstrap=rf_random.best_params_['bootstrap'])
-rf_best.fit(X_train, y_train)
-#%%
-
-# Predict on test data
-rf_predictions = rf_best.predict(X_test)
-#%%
-
-# Calculate evaluation metrics
-rmse_rf = sqrt(mean_squared_error(y_test, rf_predictions))
-mae_rf = mean_absolute_error(y_test, rf_predictions)
-mape_rf = mean_absolute_percentage_error(y_test, rf_predictions)
-
-print('Random Forest RMSE:', rmse_rf)
-print('Random Forest MAE:', mae_rf)
-print('Random Forest MAPE:', mape_rf, '%')
-#%%
-
-# Plot actual vs predicted prices
-plt.figure(figsize=(10, 6))
-plt.plot(test.index, y_test, marker='o', label='Actual')
-plt.plot(test.index, rf_predictions, marker='x', label='Predicted')
-plt.title('Actual vs Predicted Prices - Random Forest')
-plt.xlabel('Date')
-plt.ylabel('Price')
-plt.legend()
-plt.grid(True)
-plt.show()
-
-#%%
-
-# Forecast for 48 months from 2022-01-01 to 2024-12-31
-future_dates_rf = pd.date_range(start='2022-01-01', end='2024-12-31', freq='M')
-
-#%%
-
-# Create a dummy X input with the required shape for the future dates
-X_future_rf = np.array(future_dates_rf).reshape(-1,1)
-
-# Predict on the future dates
-rf_forecast = rf_best.predict(X_future_rf)
-
-# Plot the forecast
-plt.figure(figsize=(12, 6))
-plt.plot(data.index, data['Price'], marker='o', label='Actual')
-plt.plot(future_dates_rf, rf_forecast, marker='x', label='Forecast')
-plt.title('Brent Crude Oil Price Forecast (Random Forest)')
-plt.xlabel('Date')
-plt.ylabel('Price')
-plt.legend()
-plt.grid(True)
-plt.show()
-
-
-# %%
