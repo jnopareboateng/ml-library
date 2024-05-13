@@ -107,20 +107,6 @@ print('KPSS:', ndiffs(y, test='kpss'))
 # PP test:
 print('PP:', ndiffs(y, test='pp'))
 
-
-#%%
-# number of seasonal differencing required
-# from pmdarima.arima.utils import nsdiffs
-# y = series
-# # Adf Test
-# print('ADF:', nsdiffs(y,test='adf'))
-# # KPSS test
-# print('KPSS:', nsdiffs(y,test='kpss'))
-# # PP test:
-# print('PP:', nsdiffs(y,test='pp'))
-
-
-
 #%%
 # Order of auto regressive term P
 plot_pacf(diff, lags =48).show()
@@ -131,7 +117,7 @@ plot_acf(diff, lags=48).show()
 
 #%%
 # use auto_arima to find best parameters
-model = pm.auto_arima(data, seasonal=True, stepwise=True, suppress_warnings=True, trace=True, error_action="ignore")
+model = pm.auto_arima(diff, seasonal=True, stepwise=True, suppress_warnings=True, trace=True, error_action="ignore")
 
 #%%
 order = model.order 
@@ -141,7 +127,7 @@ order = model.order
 model.plot_diagnostics(figsize=(12, 8)).show()
 
 #%%
-model = SARIMAX(data, order= order)
+model = SARIMAX(train, order= order)
 model_fit = model.fit()
 # %%
 predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic=False) # dynamic=False means that forecasts at each point are generated using the full history up to that point
@@ -191,4 +177,13 @@ plt.ylabel('Price')
 plt.legend()
 plt.grid(True)
 plt.show()
+# %%
+# Plot actual data, forecast, and confidence intervals
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=data.index, y=data['Price'], mode='lines', name='Actual'))
+fig.add_trace(go.Scatter(x=future_dates, y=forecast, mode='lines', name='Forecast'))
+fig.add_trace(go.Scatter(x=future_dates, y=conf_int.iloc[:, 0], mode='lines', name='Lower CI'))
+fig.add_trace(go.Scatter(x=future_dates, y=conf_int.iloc[:, 1], mode='lines', name='Upper CI'))
+fig.update_layout(title='Brent Crude Oil Price Forecast (with Confidence Intervals)', xaxis_title='Date', yaxis_title='Price')
+fig.show()
 # %%

@@ -123,7 +123,7 @@ class ARIMAModel:
 
     def fit_sarimax_model(self, differenced_data, order, seasonal_order):
         model = SARIMAX(endog=differenced_data, order=order, seasonal_order=seasonal_order, freq="MS")
-        results = model.fit(disp=0)
+        results = model.fit(disp=0) # disp=0 to suppress convergence output
         logging.info(results.summary())
         return results
 
