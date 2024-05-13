@@ -46,38 +46,6 @@ fig.show()
 train_start_date = '2002-01-01'
 test_start_date = '2019-01-01'
 
-#%%
-# visualize the train and test data
-# import plotly.graph_objects as go
-
-# Create a trace for the train data
-train_trace = go.Scatter(
-    x = data[(data.index < test_start_date) & (data.index >= train_start_date)].index,
-    y = data[(data.index < test_start_date) & (data.index >= train_start_date)]['Price'],
-    mode = 'lines',
-    name = 'train'
-)
-
-# Create a trace for the test data
-test_trace = go.Scatter(
-    x = data[test_start_date:].index,
-    y = data[test_start_date:]['Price'],
-    mode = 'lines',
-    name = 'test'
-)
-
-# Create the layout
-layout = go.Layout(
-    title = 'Train and Test Data',
-    xaxis = dict(title = 'Timestamp'),
-    yaxis = dict(title = 'Price')
-)
-
-# Create the figure and add the traces
-fig = go.Figure(data=[train_trace, test_trace], layout=layout)
-
-# Show the figure
-fig.show()
 
 #%%
 # set the train and test data and print the dimensions of it
@@ -87,37 +55,36 @@ test = data.copy()[data.index >= test_start_date][['Price']]
 print('Training data shape: ', train.shape)
 print('Test data shape: ', test.shape)
 #%%
+# Plot train and test splits
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=train.index, y=train['Price'], mode='lines', name='Train'))
+fig.add_trace(go.Scatter(x=test.index, y=test['Price'], mode='lines', name='Test'))
+fig.update_layout(title='Train and Test Split', xaxis_title='Date', yaxis_title='Price')
+fig.show()
+
+#%%
+# Convert data to series
 series = pd.Series(data=train['Price'].to_numpy(), index =train.index)
-# series
+
 
 #%%
 def adf_test(series):
     result = adfuller(series)
     print('ADF Statistic: %f' % result[0])
     print('p-value: %f' % result[1])
-    print('Critical Values:')
-    for key, value in result[4].items():
-        print('\t%s: %.3f' % (key, value))
 
 adf_test(series)
 
 #%%
-# px.line(series[0:100])
-#%%
-# Decompose time series
+# Decompose time series into trend, seasonal, and residual components
 result = seasonal_decompose(series, model='additive', period=1)
 result.plot()
 plt.show()
 
 
-#%%
-# Acf Plot
-# plot_acf(series).show()
 
 #%%
-# plot_pacf(series).show()
-
-#%%
+# Differencing to make the series stationary and plot the differenced series
 diff = series.diff(periods=1).dropna()
 diff_2 = diff.diff(periods=1).dropna()
 
@@ -141,18 +108,30 @@ print('KPSS:', ndiffs(y, test='kpss'))
 print('PP:', ndiffs(y, test='pp'))
 
 
+#%%
+# number of seasonal differencing required
+# from pmdarima.arima.utils import nsdiffs
+# y = series
+# # Adf Test
+# print('ADF:', nsdiffs(y,test='adf'))
+# # KPSS test
+# print('KPSS:', nsdiffs(y,test='kpss'))
+# # PP test:
+# print('PP:', nsdiffs(y,test='pp'))
+
+
 
 #%%
 # Order of auto regressive term P
-plot_pacf(diff).show()
+plot_pacf(diff, lags =48).show()
 
 #%%
 # Find order of MA term Q
-plot_acf(diff).show()
+plot_acf(diff, lags=48).show()
 
 #%%
 # use auto_arima to find best parameters
-model = pm.auto_arima(train, seasonal=False, stepwise=True, suppress_warnings=True, trace=True, error_action="ignore")
+model = pm.auto_arima(train, seasonal=True, stepwise=True, suppress_warnings=True, trace=True, error_action="ignore")
 
 #%%
 order = model.order 
