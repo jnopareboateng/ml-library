@@ -131,7 +131,7 @@ plot_acf(diff, lags=48).show()
 
 #%%
 # use auto_arima to find best parameters
-model = pm.auto_arima(train, seasonal=True, stepwise=True, suppress_warnings=True, trace=True, error_action="ignore")
+model = pm.auto_arima(data, seasonal=True, stepwise=True, suppress_warnings=True, trace=True, error_action="ignore")
 
 #%%
 order = model.order 
@@ -141,7 +141,7 @@ order = model.order
 model.plot_diagnostics(figsize=(12, 8)).show()
 
 #%%
-model = SARIMAX(train, order= order)
+model = SARIMAX(data, order= order)
 model_fit = model.fit()
 # %%
 predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic=False) # dynamic=False means that forecasts at each point are generated using the full history up to that point
@@ -191,3 +191,4 @@ plt.ylabel('Price')
 plt.legend()
 plt.grid(True)
 plt.show()
+# %%
