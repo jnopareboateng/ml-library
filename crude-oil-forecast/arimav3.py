@@ -162,6 +162,9 @@ predictions = model_fit.predict(start=test.index[0], end=test.index[-1], dynamic
 #%%
 
 # Calculate evaluation metrics
+# Mean  Squared Error.
+mse = mean_squared_error(test['Price'], predictions)
+print(f'MSE: {mse:.3f}')
 # Root Mean Squared Error (RMSE)
 rmse = sqrt(mean_squared_error(test['Price'], predictions))
 print(f'RMSE: {rmse:.3f}')
@@ -214,7 +217,7 @@ fig.update_layout(title='Brent Crude Oil Price Forecast (with Confidence Interva
 fig.show()
 
 
-print(conf_int)
+# print(conf_int)
 
 
 
