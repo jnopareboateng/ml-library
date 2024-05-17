@@ -8,6 +8,7 @@ import plotly.express as px
 import pandas as pd
 #%%
 data = pd.read_csv('Modified_Data.csv', parse_dates=True, index_col=[0])
+
 #%%
 train_start_date = '2002-01-01'
 test_start_date = '2019-01-01'
