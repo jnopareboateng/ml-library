@@ -1,4 +1,5 @@
 # %%
+import py_compile
 import pandas as pd
 import os
 
@@ -33,5 +34,3 @@ def preprocess_data(dir_path, file_name):
 
 # Call the function
 preprocess_data('crude-oil-forecast', 'Commodity Prices Monthly.csv')
-
-
