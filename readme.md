@@ -7,9 +7,10 @@
 
 ## Project Contents
 
-- `arima_full.ipynb`: Our main analysis notebook.
+- `arimav3.ipynb`: Our main analysis notebook.
+- `rf.ipynb`: Our random forest implementation
 - `Commodity Prices Monthly.csv`: The original dataset.
-- `Pre-processed Data`: The dataset after cleaning and pre-processing (with years ranging from 2002-2022)
+- `Modified_Data.csv`: The dataset after cleaning and pre-processing (with years ranging from 2002-2022)
 
 ## Data Notes
 
@@ -25,4 +26,4 @@ Got questions? Reach out to me via [mail](jnopareboateng@outlook.com)
 
 Appreciate your interest in our work. Wishing you all the best!
 
-_Note: This project is for educational purposes only._
+_Note: This project is for educational and research purposes only._
