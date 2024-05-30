@@ -1,0 +1,769 @@
+Gender,College,Churn,Level,Residence,SIM_Usage,Usage_Freq,Network_Strength,Services_Used,Data_Exhaustion,Other_Networks,Reasons_Discontinue,Monthly_Data_Usage
+Female,School of Business,No,400,Off-campus,Yes,Occasionally,3,Voice Calls,Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance",1.82
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Daily,6,"SMS/Text messaging, Mobile data/Internet, None of the above",Yes,Yes,Insufficient data allowance,6.64
+Female,College of Humanity and Social Science,Yes,200,On-campus,No,Several times a week,3,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",Yes,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",2.05
+Male,College of Science,Yes,100,Off-campus,Yes,Daily,2,"Voice Calls, Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,High costs/pricing,8.56
+Female,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Occasionally,4,SMS/Text messaging,Yes,Yes,"High costs/pricing, Unsatisfactory customer service",6.06
+Female,College of Humanity and Social Science,Yes,500,Off-campus,Yes,Several times a week,4,"Mobile data/Internet, SMS/Text messaging",No,Yes,High costs/pricing,5.9
+Female,College of Art and Built Environment,Yes,200,Off-campus,Yes,Daily,3,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",8.88
+Female,School of Business,Yes,100,Off-campus,No,Several times a week,3,Voice Calls,Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",8.35
+Male,College of Humanity and Social Science,Yes,500,Off-campus,Yes,Occasionally,3,"None of the above, Mobile data/Internet",Yes,No,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",4.51
+Male,College of Engineering,Yes,400,Off-campus,Yes,Occasionally,1,"Mobile data/Internet, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, High costs/pricing",7.56
+Female,School of Business,Yes,600,Off-campus,No,Occasionally,1,"SMS/Text messaging, None of the above, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",3.01
+Male,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Daily,4,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",5.98
+Male,College of Engineering,Yes,400,Off-campus,Yes,Never,4,"Voice Calls, Mobile data/Internet, None of the above",No,Yes,"Unsatisfactory customer service, High costs/pricing",5.17
+Female,School of Business,Yes,200,Off-campus,No,Daily,4,"None of the above, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",3.53
+Female,College of Humanity and Social Science,Yes,600,Off-campus,No,Several times a week,2,"Voice Calls, SMS/Text messaging, None of the above",No,Yes,High costs/pricing,5.18
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,5,"SMS/Text messaging, Mobile data/Internet",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",0.94
+Male,School of Business,Yes,500,Off-campus,Yes,Several times a week,3,"SMS/Text messaging, Voice Calls, None of the above",No,Yes,"Unsatisfactory customer service, Insufficient data allowance",3.74
+Male,College of Engineering,Yes,400,Off-campus,No,Occasionally,5,"Voice Calls, SMS/Text messaging",No,Yes,High costs/pricing,4.86
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Daily,3,Voice Calls,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",1.28
+Male,School of Business,No,300,Off-campus,No,Several times a week,3,Voice Calls,No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",3.86
+Male,College of Art and Built Environment,Yes,500,Off-campus,Yes,Several times a week,2,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",9.64
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,5,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",No,Yes,"High costs/pricing, Unsatisfactory customer service",3.4
+Female,College of Engineering,Yes,200,Off-campus,Yes,Several times a week,1,None of the above,No,Yes,"Unsatisfactory customer service, High costs/pricing",4.89
+Male,College of Art and Built Environment,No,600,Off-campus,Yes,Occasionally,1,"None of the above, Mobile data/Internet, Voice Calls",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",4.84
+Male,School of Business,Yes,300,Off-campus,No,Daily,6,None of the above,Yes,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",6.43
+Male,College of Art and Built Environment,No,200,Off-campus,No,Several times a week,5,None of the above,Yes,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",7.25
+Male,College of Science,No,100,Off-campus,Yes,Several times a week,5,"Mobile data/Internet, None of the above",Yes,Yes,None,5.17
+Male,College of Humanity and Social Science,Yes,200,Off-campus,No,Daily,1,Voice Calls,No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",9.82
+Male,College of Engineering,Yes,200,On-campus,Yes,Daily,2,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"High costs/pricing, Unsatisfactory customer service",1.0
+Male,College of Science,Yes,300,Off-campus,No,Daily,1,Voice Calls,No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",2.13
+Male,College of Engineering,No,100,Off-campus,Yes,Several times a week,5,"Voice Calls, None of the above, SMS/Text messaging",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",1.22
+Male,College of Science,Yes,200,Off-campus,No,Several times a week,4,"Mobile data/Internet, SMS/Text messaging, Voice Calls",No,No,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",5.12
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Rarely,4,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",Yes,Yes,None,0.8
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Daily,3,"None of the above, SMS/Text messaging, Voice Calls",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",9.48
+Male,College of Art and Built Environment,No,300,Off-campus,No,Several times a week,4,Voice Calls,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing, Insufficient data allowance",9.88
+Female,College of Science,Yes,400,Off-campus,No,Several times a week,3,"Voice Calls, None of the above, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",0.71
+Female,College of Humanity and Social Science,Yes,600,Off-campus,No,Daily,2,SMS/Text messaging,Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",6.7
+Male,College of Science,Yes,200,Off-campus,No,Daily,1,"SMS/Text messaging, None of the above",Yes,Yes,High costs/pricing,9.2
+Female,College of Humanity and Social Science,Yes,100,Off-campus,No,Never,4,"None of the above, Mobile data/Internet, Voice Calls, SMS/Text messaging",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",7.77
+Female,College of Art and Built Environment,No,100,Off-campus,No,Several times a week,6,Mobile data/Internet,Yes,Yes,None,0.94
+Male,College of Humanity and Social Science,No,300,Off-campus,Yes,Occasionally,1,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance",7.27
+Male,School of Business,Yes,600,On-campus,No,Occasionally,2,"Mobile data/Internet, Voice Calls, None of the above",Yes,Yes,Insufficient data allowance,1.11
+Male,College of Engineering,Yes,500,Off-campus,No,Daily,2,"SMS/Text messaging, None of the above, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",4.26
+Male,College of Humanity and Social Science,Yes,300,Off-campus,Yes,Daily,3,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,High costs/pricing,4.87
+Female,College of Art and Built Environment,Yes,100,On-campus,No,Occasionally,1,"Mobile data/Internet, None of the above",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",1.47
+Male,College of Art and Built Environment,Yes,300,Off-campus,Yes,Occasionally,3,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,"High costs/pricing, Poor network quality/coverage",6.69
+Male,College of Science,No,400,Off-campus,Yes,Several times a week,1,"None of the above, Mobile data/Internet",No,Yes,High costs/pricing,0.55
+Female,College of Humanity and Social Science,Yes,300,Off-campus,Yes,Daily,1,"SMS/Text messaging, None of the above, Mobile data/Internet",No,Yes,Poor network quality/coverage,5.4
+Female,College of Humanity and Social Science,No,400,On-campus,No,Several times a week,3,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",5.62
+Male,School of Business,No,200,Off-campus,No,Daily,4,"None of the above, Mobile data/Internet",No,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",6.78
+Female,College of Science,Yes,600,Off-campus,Yes,Several times a week,3,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",8.93
+Male,School of Business,Yes,600,On-campus,No,Daily,5,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",No,Yes,"High costs/pricing, Unsatisfactory customer service",2.72
+Male,School of Business,No,500,On-campus,Yes,Several times a week,1,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,Insufficient data allowance,9.19
+Female,School of Business,No,200,On-campus,No,Occasionally,3,"Voice Calls, Mobile data/Internet, None of the above",Yes,Yes,None,4.16
+Male,College of Engineering,Yes,100,On-campus,No,Occasionally,5,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",5.62
+Male,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Never,2,"None of the above, SMS/Text messaging, Mobile data/Internet",No,No,Poor network quality/coverage,4.69
+Male,College of Agriculture and Natural Resources,Yes,600,On-campus,No,Daily,2,None of the above,Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",5.2
+Female,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Daily,6,"Voice Calls, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",10.02
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,1,"None of the above, Voice Calls, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing",0.82
+Male,College of Agriculture and Natural Resources,Yes,200,On-campus,Yes,Several times a week,2,None of the above,Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",3.01
+Male,College of Art and Built Environment,Yes,200,Off-campus,Yes,Occasionally,2,SMS/Text messaging,Yes,Yes,Poor network quality/coverage,5.64
+Male,College of Agriculture and Natural Resources,Yes,500,Off-campus,No,Daily,1,"Voice Calls, SMS/Text messaging, None of the above",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",6.63
+Male,College of Science,Yes,200,Off-campus,No,Daily,5,"Voice Calls, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance",4.87
+Female,College of Science,Yes,400,Off-campus,Yes,Several times a week,6,"Mobile data/Internet, None of the above",Yes,Yes,Insufficient data allowance,8.01
+Female,College of Science,Yes,300,Off-campus,No,Several times a week,1,"None of the above, Voice Calls",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",6.04
+Male,School of Business,Yes,100,Off-campus,Yes,Occasionally,4,Voice Calls,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",7.59
+Male,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Several times a week,1,"Mobile data/Internet, SMS/Text messaging",Yes,Yes,Poor network quality/coverage,1.89
+Female,College of Science,No,600,Off-campus,No,Rarely,3,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,Yes,Poor network quality/coverage,7.98
+Male,College of Engineering,Yes,400,Off-campus,Yes,Daily,5,"None of the above, SMS/Text messaging, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",4.42
+Male,College of Science,Yes,300,Off-campus,No,Daily,4,None of the above,No,Yes,Insufficient data allowance,5.14
+Male,College of Science,No,600,Off-campus,No,Several times a week,3,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",No,Yes,"High costs/pricing, Poor network quality/coverage",3.38
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, None of the above, Mobile data/Internet",Yes,Yes,Insufficient data allowance,8.75
+Male,College of Humanity and Social Science,No,400,Off-campus,No,Occasionally,1,"Mobile data/Internet, SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",4.01
+Male,School of Business,Yes,400,Off-campus,No,Occasionally,4,"Voice Calls, Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",3.48
+Male,College of Agriculture and Natural Resources,No,400,On-campus,Yes,Several times a week,4,"Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,Yes,Poor network quality/coverage,4.68
+Male,College of Humanity and Social Science,No,400,Off-campus,No,Daily,5,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,No,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",8.46
+Male,College of Engineering,No,500,Off-campus,Yes,Several times a week,1,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",No,No,Insufficient data allowance,1.93
+Female,College of Humanity and Social Science,Yes,300,Off-campus,No,Occasionally,4,"None of the above, Mobile data/Internet",No,Yes,High costs/pricing,6.38
+Female,College of Science,Yes,300,Off-campus,Yes,Occasionally,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,No,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",9.04
+Male,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,4,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,"Poor network quality/coverage, High costs/pricing",4.2
+Male,College of Engineering,Yes,600,Off-campus,Yes,Daily,5,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",0.87
+Female,School of Business,No,500,Off-campus,Yes,Occasionally,4,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,Yes,Insufficient data allowance,6.58
+Male,College of Art and Built Environment,No,400,Off-campus,No,Daily,1,Mobile data/Internet,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",6.98
+Male,College of Engineering,Yes,600,Off-campus,Yes,Daily,4,"Mobile data/Internet, SMS/Text messaging, Voice Calls, None of the above",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage, High costs/pricing",9.26
+Female,College of Humanity and Social Science,No,600,Off-campus,Yes,Several times a week,3,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance, High costs/pricing",2.59
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,6,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",9.32
+Female,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Daily,2,Mobile data/Internet,No,Yes,Unsatisfactory customer service,0.85
+Female,School of Business,Yes,600,On-campus,No,Several times a week,5,"None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",1.39
+Male,College of Art and Built Environment,Yes,200,On-campus,Yes,Several times a week,4,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,Unsatisfactory customer service,1.35
+Female,School of Business,Yes,300,Off-campus,Yes,Occasionally,5,SMS/Text messaging,Yes,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",8.09
+Male,School of Business,Yes,200,Off-campus,Yes,Several times a week,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,"High costs/pricing, Unsatisfactory customer service",5.66
+Female,School of Business,Yes,300,Off-campus,Yes,Never,2,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",3.14
+Female,College of Art and Built Environment,Yes,500,On-campus,Yes,Several times a week,3,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",6.23
+Female,College of Humanity and Social Science,Yes,600,Off-campus,Yes,Daily,2,"Mobile data/Internet, SMS/Text messaging",No,Yes,High costs/pricing,4.57
+Male,College of Science,No,400,Off-campus,Yes,Several times a week,4,None of the above,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",9.66
+Female,College of Art and Built Environment,No,500,On-campus,No,Occasionally,5,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, High costs/pricing",5.01
+Female,College of Humanity and Social Science,No,100,Off-campus,No,Several times a week,1,SMS/Text messaging,No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",1.28
+Female,School of Business,Yes,600,Off-campus,No,Occasionally,3,Voice Calls,No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",9.44
+Male,College of Science,Yes,100,Off-campus,No,Daily,4,"SMS/Text messaging, None of the above, Voice Calls",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",8.06
+Female,College of Art and Built Environment,No,400,Off-campus,No,Rarely,2,"Voice Calls, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",1.93
+Male,College of Humanity and Social Science,No,100,Off-campus,Yes,Several times a week,2,Voice Calls,No,Yes,None,8.18
+Female,College of Science,Yes,200,Off-campus,Yes,Occasionally,3,"Voice Calls, SMS/Text messaging, None of the above",Yes,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",6.2
+Female,College of Engineering,No,600,Off-campus,Yes,Several times a week,3,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, Insufficient data allowance",3.25
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Daily,2,Voice Calls,Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",9.49
+Male,College of Engineering,No,400,On-campus,No,Several times a week,5,"None of the above, SMS/Text messaging, Voice Calls",Yes,Yes,High costs/pricing,9.12
+Female,College of Engineering,Yes,500,Off-campus,Yes,Occasionally,2,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",4.69
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Daily,4,"None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",6.83
+Male,College of Humanity and Social Science,Yes,100,On-campus,No,Rarely,1,"SMS/Text messaging, None of the above, Voice Calls",Yes,Yes,High costs/pricing,1.41
+Female,School of Business,Yes,300,Off-campus,Yes,Daily,1,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",2.66
+Male,School of Business,Yes,200,Off-campus,No,Daily,2,"Voice Calls, Mobile data/Internet",Yes,Yes,None,1.91
+Female,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Daily,3,"None of the above, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",2.9
+Male,School of Business,Yes,600,Off-campus,Yes,Daily,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,No,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",2.74
+Female,College of Science,No,400,On-campus,No,Occasionally,2,Voice Calls,No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",8.41
+Male,College of Humanity and Social Science,Yes,300,On-campus,No,Occasionally,5,"Voice Calls, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",9.36
+Female,College of Engineering,Yes,200,On-campus,Yes,Daily,1,"Voice Calls, Mobile data/Internet",No,Yes,Unsatisfactory customer service,5.6
+Male,College of Humanity and Social Science,Yes,300,Off-campus,No,Several times a week,6,SMS/Text messaging,Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",5.72
+Female,College of Engineering,Yes,100,Off-campus,Yes,Daily,3,"SMS/Text messaging, None of the above, Mobile data/Internet",Yes,Yes,Poor network quality/coverage,4.35
+Male,College of Engineering,Yes,500,Off-campus,Yes,Occasionally,4,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",2.1
+Female,College of Art and Built Environment,Yes,400,Off-campus,Yes,Daily,1,None of the above,Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",7.66
+Male,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Rarely,5,"SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",8.26
+Male,College of Science,Yes,400,On-campus,Yes,Several times a week,2,"None of the above, SMS/Text messaging, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",5.92
+Female,College of Humanity and Social Science,Yes,100,On-campus,Yes,Never,5,Mobile data/Internet,No,No,Insufficient data allowance,1.16
+Female,College of Science,No,100,Off-campus,No,Daily,2,"SMS/Text messaging, None of the above",Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",7.44
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Several times a week,1,Mobile data/Internet,No,No,"Unsatisfactory customer service, Insufficient data allowance",5.06
+Female,College of Science,Yes,300,Off-campus,Yes,Occasionally,4,Voice Calls,Yes,No,"Unsatisfactory customer service, High costs/pricing",6.92
+Female,School of Business,Yes,300,Off-campus,No,Daily,3,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,Unsatisfactory customer service,3.87
+Female,College of Art and Built Environment,Yes,100,Off-campus,No,Several times a week,1,"Voice Calls, None of the above",Yes,Yes,Unsatisfactory customer service,1.84
+Female,College of Humanity and Social Science,Yes,300,On-campus,No,Daily,3,"None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",0.87
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Several times a week,1,Mobile data/Internet,Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",2.75
+Male,College of Science,No,200,Off-campus,Yes,Occasionally,4,"Mobile data/Internet, None of the above",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",8.7
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,2,"SMS/Text messaging, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",4.94
+Female,College of Art and Built Environment,Yes,100,Off-campus,No,Daily,1,"Mobile data/Internet, SMS/Text messaging",Yes,No,None,9.78
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Daily,3,"None of the above, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, High costs/pricing",6.63
+Male,College of Science,Yes,300,Off-campus,No,Several times a week,5,"None of the above, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",1.86
+Male,School of Business,Yes,200,Off-campus,No,Occasionally,2,Mobile data/Internet,No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",9.45
+Male,School of Business,No,300,Off-campus,No,Daily,1,SMS/Text messaging,Yes,No,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",4.94
+Female,College of Engineering,Yes,600,Off-campus,No,Several times a week,2,"SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",6.57
+Male,College of Science,No,100,Off-campus,No,Rarely,1,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,No,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",6.97
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,6,"None of the above, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",0.59
+Female,School of Business,Yes,300,Off-campus,No,Several times a week,4,"Mobile data/Internet, Voice Calls",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",1.74
+Male,College of Science,Yes,500,Off-campus,No,Occasionally,6,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,Insufficient data allowance,8.15
+Female,School of Business,No,400,On-campus,Yes,Several times a week,3,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",No,Yes,Poor network quality/coverage,7.73
+Female,School of Business,Yes,500,Off-campus,Yes,Occasionally,2,"None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, High costs/pricing",9.0
+Male,College of Humanity and Social Science,No,200,Off-campus,No,Never,1,"Mobile data/Internet, Voice Calls, SMS/Text messaging, None of the above",No,Yes,"High costs/pricing, Poor network quality/coverage",8.72
+Female,College of Science,Yes,200,On-campus,Yes,Several times a week,4,Mobile data/Internet,No,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",2.18
+Female,School of Business,Yes,200,Off-campus,No,Several times a week,1,"None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,None,6.28
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,3,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance",7.61
+Male,College of Humanity and Social Science,Yes,500,Off-campus,No,Occasionally,2,"Mobile data/Internet, Voice Calls",No,Yes,Poor network quality/coverage,4.72
+Male,College of Art and Built Environment,No,400,Off-campus,No,Several times a week,1,"Voice Calls, None of the above",Yes,Yes,High costs/pricing,6.87
+Female,College of Science,Yes,100,Off-campus,No,Daily,2,SMS/Text messaging,No,Yes,Insufficient data allowance,6.92
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,4,"SMS/Text messaging, Voice Calls",Yes,Yes,Unsatisfactory customer service,5.18
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,2,Mobile data/Internet,No,No,None,4.53
+Female,College of Humanity and Social Science,Yes,300,On-campus,No,Several times a week,2,None of the above,No,Yes,Insufficient data allowance,0.74
+Male,College of Engineering,Yes,600,Off-campus,No,Occasionally,4,"Mobile data/Internet, None of the above",No,No,"High costs/pricing, Unsatisfactory customer service",8.3
+Female,College of Engineering,Yes,400,Off-campus,No,Daily,1,Voice Calls,No,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",9.02
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Daily,1,"SMS/Text messaging, Voice Calls",No,No,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance",4.15
+Male,College of Engineering,Yes,100,On-campus,Yes,Daily,4,"Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",8.76
+Male,College of Science,Yes,200,Off-campus,No,Several times a week,1,None of the above,No,No,Unsatisfactory customer service,7.31
+Male,College of Science,Yes,300,Off-campus,Yes,Daily,1,"SMS/Text messaging, Voice Calls, None of the above",No,Yes,"High costs/pricing, Unsatisfactory customer service",1.45
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Occasionally,4,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,Insufficient data allowance,4.52
+Female,School of Business,No,100,Off-campus,Yes,Occasionally,2,"Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",5.16
+Female,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Occasionally,5,Mobile data/Internet,No,Yes,Unsatisfactory customer service,3.14
+Female,College of Science,Yes,300,Off-campus,No,Daily,2,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,No,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",1.27
+Female,College of Engineering,Yes,300,On-campus,No,Several times a week,2,Voice Calls,Yes,No,"High costs/pricing, Poor network quality/coverage",5.27
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,1,Mobile data/Internet,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",8.25
+Male,College of Science,Yes,200,Off-campus,No,Occasionally,1,"Voice Calls, SMS/Text messaging, Mobile data/Internet",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",2.79
+Female,College of Art and Built Environment,Yes,600,Off-campus,Yes,Daily,3,"SMS/Text messaging, None of the above, Voice Calls",No,No,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",9.28
+Female,School of Business,Yes,200,Off-campus,No,Occasionally,2,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Insufficient data allowance, High costs/pricing",0.54
+Female,College of Humanity and Social Science,No,200,Off-campus,Yes,Daily,3,"SMS/Text messaging, None of the above",Yes,Yes,Poor network quality/coverage,6.43
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Several times a week,1,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,No,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",2.79
+Female,College of Agriculture and Natural Resources,Yes,200,On-campus,No,Daily,6,SMS/Text messaging,No,No,None,2.04
+Female,College of Agriculture and Natural Resources,No,200,On-campus,No,Daily,6,"Voice Calls, None of the above",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",5.74
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Daily,2,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",No,No,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",5.1
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Daily,5,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,No,"Poor network quality/coverage, Unsatisfactory customer service",3.73
+Female,College of Agriculture and Natural Resources,Yes,600,Off-campus,No,Occasionally,2,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,Insufficient data allowance,1.29
+Male,College of Engineering,No,500,On-campus,Yes,Occasionally,4,"Mobile data/Internet, None of the above",No,No,"Unsatisfactory customer service, High costs/pricing",3.94
+Male,College of Science,Yes,400,Off-campus,No,Several times a week,4,"Mobile data/Internet, None of the above",No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",1.93
+Male,College of Science,Yes,100,Off-campus,Yes,Several times a week,5,"Mobile data/Internet, SMS/Text messaging, None of the above",Yes,Yes,High costs/pricing,7.82
+Female,College of Humanity and Social Science,No,200,Off-campus,No,Several times a week,3,"None of the above, Mobile data/Internet",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",0.94
+Male,College of Art and Built Environment,No,400,Off-campus,Yes,Occasionally,2,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Insufficient data allowance, Unsatisfactory customer service",7.42
+Male,College of Art and Built Environment,Yes,100,Off-campus,Yes,Occasionally,4,"None of the above, SMS/Text messaging, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",8.32
+Female,College of Humanity and Social Science,Yes,600,Off-campus,No,Several times a week,5,"SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",5.47
+Male,College of Humanity and Social Science,Yes,200,Off-campus,No,Rarely,5,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",3.03
+Female,College of Humanity and Social Science,No,100,Off-campus,No,Never,2,SMS/Text messaging,No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",6.26
+Female,College of Art and Built Environment,No,300,On-campus,Yes,Daily,3,None of the above,Yes,Yes,High costs/pricing,10.03
+Male,School of Business,Yes,200,Off-campus,No,Several times a week,1,"SMS/Text messaging, Voice Calls",Yes,Yes,Poor network quality/coverage,7.25
+Male,College of Art and Built Environment,No,200,Off-campus,No,Occasionally,4,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,Yes,Poor network quality/coverage,5.04
+Male,College of Art and Built Environment,No,600,On-campus,No,Daily,1,Voice Calls,No,Yes,Unsatisfactory customer service,1.91
+Male,College of Art and Built Environment,No,600,Off-campus,No,Several times a week,1,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance",6.7
+Female,College of Science,Yes,100,Off-campus,No,Daily,4,"Mobile data/Internet, None of the above",No,No,"High costs/pricing, Unsatisfactory customer service",1.96
+Male,College of Science,Yes,400,Off-campus,No,Several times a week,3,Mobile data/Internet,Yes,Yes,"Insufficient data allowance, High costs/pricing",3.4
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,2,"SMS/Text messaging, Voice Calls, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",6.79
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Several times a week,5,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance",3.41
+Male,College of Science,Yes,400,Off-campus,Yes,Daily,1,"Voice Calls, SMS/Text messaging, None of the above",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",7.98
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,No,Several times a week,3,Mobile data/Internet,Yes,Yes,"High costs/pricing, Insufficient data allowance",8.02
+Male,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Rarely,1,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",9.57
+Female,School of Business,Yes,100,Off-campus,Yes,Daily,4,"Voice Calls, None of the above",No,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",0.98
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,4,Mobile data/Internet,Yes,Yes,Unsatisfactory customer service,3.25
+Female,College of Engineering,No,200,Off-campus,Yes,Daily,1,"None of the above, Mobile data/Internet",No,Yes,None,1.24
+Male,College of Art and Built Environment,No,500,Off-campus,Yes,Occasionally,2,SMS/Text messaging,No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",5.48
+Female,College of Science,Yes,600,Off-campus,No,Several times a week,2,"None of the above, Voice Calls, Mobile data/Internet",No,No,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",1.97
+Female,College of Engineering,Yes,400,Off-campus,No,Daily,1,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",Yes,Yes,"Unsatisfactory customer service, High costs/pricing",10.19
+Female,College of Engineering,Yes,400,Off-campus,Yes,Daily,2,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,Unsatisfactory customer service,5.31
+Female,College of Science,Yes,200,On-campus,No,Several times a week,1,"None of the above, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",7.86
+Male,College of Science,Yes,300,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",9.0
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Several times a week,2,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,High costs/pricing,5.8
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Several times a week,4,None of the above,No,Yes,Poor network quality/coverage,9.16
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Occasionally,2,"Mobile data/Internet, None of the above",No,Yes,Insufficient data allowance,8.91
+Female,College of Science,No,400,Off-campus,Yes,Several times a week,3,"SMS/Text messaging, Mobile data/Internet",Yes,Yes,Unsatisfactory customer service,4.86
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Rarely,1,SMS/Text messaging,No,Yes,Poor network quality/coverage,5.64
+Male,College of Engineering,Yes,300,Off-campus,Yes,Occasionally,6,"Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",0.76
+Female,College of Engineering,Yes,500,Off-campus,No,Several times a week,3,"None of the above, SMS/Text messaging",Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage, High costs/pricing",7.09
+Female,College of Art and Built Environment,No,200,Off-campus,No,Several times a week,5,"None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,High costs/pricing,2.68
+Male,School of Business,Yes,200,Off-campus,No,Rarely,3,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",No,Yes,Unsatisfactory customer service,7.65
+Female,College of Agriculture and Natural Resources,Yes,400,On-campus,Yes,Several times a week,6,"Mobile data/Internet, None of the above",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",1.34
+Female,College of Science,Yes,200,Off-campus,No,Occasionally,5,"None of the above, SMS/Text messaging",No,No,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",5.23
+Male,College of Art and Built Environment,Yes,500,Off-campus,Yes,Rarely,2,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",1.23
+Female,College of Agriculture and Natural Resources,Yes,500,Off-campus,Yes,Several times a week,2,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",Yes,Yes,High costs/pricing,1.53
+Male,College of Humanity and Social Science,Yes,500,Off-campus,Yes,Several times a week,4,"None of the above, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",1.34
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Daily,6,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",5.84
+Male,College of Agriculture and Natural Resources,No,100,On-campus,No,Daily,5,Voice Calls,No,Yes,"Insufficient data allowance, Poor network quality/coverage",10.12
+Female,College of Engineering,No,300,Off-campus,Yes,Occasionally,3,None of the above,Yes,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",9.62
+Male,College of Engineering,Yes,200,Off-campus,Yes,Rarely,2,"Mobile data/Internet, None of the above, SMS/Text messaging",Yes,Yes,Insufficient data allowance,5.69
+Male,College of Science,Yes,600,Off-campus,No,Several times a week,4,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,Yes,Unsatisfactory customer service,3.68
+Female,College of Science,Yes,400,On-campus,No,Never,1,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,High costs/pricing,9.26
+Female,College of Agriculture and Natural Resources,Yes,600,Off-campus,No,Occasionally,1,"Voice Calls, None of the above, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",6.83
+Female,College of Science,No,200,Off-campus,Yes,Several times a week,1,None of the above,No,No,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",6.22
+Male,College of Art and Built Environment,No,400,Off-campus,No,Several times a week,2,"Voice Calls, None of the above, SMS/Text messaging, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",3.99
+Male,College of Engineering,Yes,200,On-campus,No,Occasionally,2,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",6.81
+Male,College of Art and Built Environment,Yes,400,On-campus,No,Several times a week,2,"None of the above, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",2.57
+Female,College of Engineering,No,500,On-campus,Yes,Daily,1,"Voice Calls, SMS/Text messaging, Mobile data/Internet, None of the above",No,No,Unsatisfactory customer service,0.63
+Female,College of Art and Built Environment,Yes,500,Off-campus,Yes,Several times a week,3,"None of the above, Voice Calls, Mobile data/Internet",No,Yes,"High costs/pricing, Unsatisfactory customer service",4.33
+Male,School of Business,Yes,400,Off-campus,Yes,Daily,6,None of the above,Yes,No,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",7.22
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Occasionally,2,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",7.83
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,3,"Mobile data/Internet, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",3.32
+Male,College of Engineering,Yes,300,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, None of the above",Yes,Yes,"Poor network quality/coverage, High costs/pricing",1.83
+Female,College of Science,Yes,500,On-campus,Yes,Daily,1,"Mobile data/Internet, None of the above, SMS/Text messaging",Yes,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",7.17
+Male,College of Engineering,No,400,Off-campus,Yes,Occasionally,3,"Voice Calls, None of the above, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",4.88
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Daily,4,Mobile data/Internet,No,Yes,"Poor network quality/coverage, High costs/pricing",8.05
+Male,School of Business,Yes,400,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",7.54
+Female,College of Science,Yes,400,On-campus,No,Several times a week,2,None of the above,No,Yes,High costs/pricing,8.67
+Female,College of Engineering,Yes,500,Off-campus,Yes,Several times a week,3,Mobile data/Internet,No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",4.08
+Female,College of Art and Built Environment,No,400,On-campus,No,Occasionally,5,"Voice Calls, Mobile data/Internet, None of the above",No,Yes,None,5.93
+Female,School of Business,No,300,Off-campus,No,Never,4,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",4.39
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Daily,4,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage, High costs/pricing",6.39
+Male,College of Humanity and Social Science,Yes,400,On-campus,No,Several times a week,3,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage",8.77
+Female,School of Business,Yes,600,Off-campus,No,Never,1,"SMS/Text messaging, Voice Calls",No,Yes,"High costs/pricing, Unsatisfactory customer service",1.58
+Male,College of Science,Yes,600,Off-campus,Yes,Daily,3,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",9.44
+Male,College of Art and Built Environment,Yes,100,Off-campus,Yes,Daily,3,"Mobile data/Internet, SMS/Text messaging, Voice Calls",No,No,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",5.32
+Male,School of Business,No,200,Off-campus,Yes,Several times a week,3,"Voice Calls, Mobile data/Internet, None of the above",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",5.52
+Female,School of Business,Yes,400,Off-campus,No,Never,6,"SMS/Text messaging, Voice Calls, None of the above",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",7.38
+Male,School of Business,Yes,400,Off-campus,Yes,Occasionally,1,"Mobile data/Internet, SMS/Text messaging",Yes,No,"Insufficient data allowance, Poor network quality/coverage",5.35
+Male,College of Engineering,Yes,100,Off-campus,No,Daily,1,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage, High costs/pricing",4.29
+Male,College of Art and Built Environment,Yes,300,Off-campus,No,Occasionally,3,"SMS/Text messaging, Voice Calls",No,Yes,Insufficient data allowance,4.03
+Male,College of Art and Built Environment,No,600,Off-campus,No,Occasionally,4,"Voice Calls, SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",1.02
+Female,College of Humanity and Social Science,Yes,300,Off-campus,No,Several times a week,5,"None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",9.17
+Male,College of Science,Yes,100,On-campus,No,Daily,6,Voice Calls,No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",6.91
+Female,College of Engineering,Yes,400,Off-campus,No,Occasionally,2,None of the above,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",1.21
+Male,School of Business,Yes,400,Off-campus,No,Occasionally,3,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",5.22
+Female,School of Business,No,300,Off-campus,No,Occasionally,3,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",7.98
+Male,School of Business,No,200,Off-campus,Yes,Never,4,"None of the above, Voice Calls",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",7.65
+Male,College of Science,Yes,200,Off-campus,Yes,Daily,1,"Voice Calls, SMS/Text messaging",No,Yes,Poor network quality/coverage,9.35
+Male,College of Art and Built Environment,Yes,100,Off-campus,Yes,Daily,4,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",2.7
+Male,School of Business,Yes,100,Off-campus,Yes,Several times a week,5,"None of the above, Voice Calls",Yes,Yes,Insufficient data allowance,7.98
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Several times a week,1,Voice Calls,Yes,Yes,Unsatisfactory customer service,9.23
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,3,"None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"Poor network quality/coverage, High costs/pricing",1.93
+Male,College of Science,No,300,On-campus,No,Several times a week,4,"None of the above, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",1.05
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Several times a week,2,Voice Calls,Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",3.32
+Female,College of Humanity and Social Science,No,300,Off-campus,Yes,Several times a week,2,"Voice Calls, None of the above, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",0.85
+Male,College of Humanity and Social Science,Yes,500,Off-campus,No,Occasionally,4,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",7.9
+Female,College of Engineering,No,400,Off-campus,Yes,Occasionally,4,None of the above,No,No,"Unsatisfactory customer service, Poor network quality/coverage",5.93
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Several times a week,2,"SMS/Text messaging, None of the above",No,Yes,"Poor network quality/coverage, High costs/pricing",8.76
+Female,College of Humanity and Social Science,Yes,400,Off-campus,No,Daily,4,"None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",7.66
+Male,College of Art and Built Environment,Yes,200,Off-campus,Yes,Daily,2,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,No,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",0.85
+Male,College of Engineering,No,100,Off-campus,No,Rarely,3,"SMS/Text messaging, Mobile data/Internet, Voice Calls",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing, Insufficient data allowance",8.13
+Female,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Occasionally,2,"None of the above, Voice Calls, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",5.49
+Female,College of Humanity and Social Science,Yes,300,Off-campus,No,Several times a week,1,"Mobile data/Internet, None of the above",No,Yes,"Poor network quality/coverage, High costs/pricing",5.62
+Male,School of Business,Yes,300,Off-campus,No,Several times a week,4,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",No,Yes,High costs/pricing,3.96
+Male,College of Humanity and Social Science,No,600,On-campus,No,Occasionally,1,"SMS/Text messaging, Voice Calls, None of the above",No,Yes,None,6.72
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Rarely,1,"SMS/Text messaging, Voice Calls",Yes,Yes,"Insufficient data allowance, High costs/pricing",1.16
+Male,College of Art and Built Environment,Yes,400,On-campus,No,Daily,4,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,No,"High costs/pricing, Unsatisfactory customer service",1.84
+Male,College of Humanity and Social Science,No,400,Off-campus,No,Occasionally,1,Mobile data/Internet,No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing",5.47
+Male,College of Art and Built Environment,No,300,Off-campus,No,Occasionally,2,Mobile data/Internet,Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",5.87
+Male,College of Engineering,Yes,400,Off-campus,No,Occasionally,2,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",No,Yes,"High costs/pricing, Poor network quality/coverage",5.32
+Female,College of Science,Yes,300,Off-campus,Yes,Occasionally,4,"Mobile data/Internet, Voice Calls",No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",2.05
+Female,College of Humanity and Social Science,Yes,400,Off-campus,No,Daily,1,SMS/Text messaging,Yes,No,None,2.83
+Male,College of Engineering,Yes,400,Off-campus,Yes,Daily,4,None of the above,No,No,"Poor network quality/coverage, Unsatisfactory customer service",10.02
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,1,"SMS/Text messaging, Voice Calls",Yes,Yes,"Unsatisfactory customer service, High costs/pricing",1.38
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Daily,3,Mobile data/Internet,Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage",9.49
+Male,College of Science,Yes,500,On-campus,No,Daily,4,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, Unsatisfactory customer service",9.17
+Female,College of Engineering,Yes,200,Off-campus,No,Daily,2,Mobile data/Internet,No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",5.22
+Male,College of Humanity and Social Science,Yes,300,Off-campus,No,Occasionally,3,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,Insufficient data allowance,9.42
+Female,College of Engineering,Yes,200,Off-campus,No,Daily,5,"Mobile data/Internet, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Insufficient data allowance",8.76
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Daily,1,Voice Calls,Yes,Yes,None,9.33
+Male,College of Engineering,Yes,500,Off-campus,Yes,Daily,4,"Voice Calls, None of the above, SMS/Text messaging",No,Yes,"Insufficient data allowance, High costs/pricing",0.95
+Female,School of Business,No,300,Off-campus,Yes,Several times a week,3,"Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",4.79
+Male,College of Engineering,No,200,Off-campus,Yes,Occasionally,2,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",Yes,Yes,Insufficient data allowance,8.94
+Female,College of Science,No,300,On-campus,No,Several times a week,5,Mobile data/Internet,Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",4.43
+Female,College of Engineering,Yes,100,Off-campus,No,Occasionally,3,"None of the above, Voice Calls",No,Yes,"High costs/pricing, Poor network quality/coverage",2.06
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Several times a week,2,"Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,No,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",9.52
+Female,College of Science,Yes,200,Off-campus,Yes,Daily,4,"Mobile data/Internet, SMS/Text messaging, Voice Calls, None of the above",Yes,No,Insufficient data allowance,0.84
+Female,College of Science,Yes,400,Off-campus,No,Never,4,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance",2.75
+Female,College of Engineering,Yes,600,On-campus,No,Never,5,None of the above,No,Yes,None,6.13
+Female,School of Business,No,400,Off-campus,No,Several times a week,4,Voice Calls,No,Yes,Unsatisfactory customer service,5.67
+Male,College of Science,Yes,300,Off-campus,Yes,Daily,3,"Voice Calls, Mobile data/Internet, None of the above",No,No,"Unsatisfactory customer service, Poor network quality/coverage",5.01
+Male,College of Engineering,Yes,100,Off-campus,Yes,Several times a week,2,"None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing",7.88
+Male,College of Agriculture and Natural Resources,Yes,100,On-campus,Yes,Occasionally,4,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",6.71
+Male,School of Business,Yes,200,Off-campus,No,Occasionally,2,"None of the above, SMS/Text messaging",Yes,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",2.16
+Female,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Several times a week,4,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance",2.51
+Male,College of Art and Built Environment,Yes,100,Off-campus,Yes,Several times a week,5,"SMS/Text messaging, Voice Calls",No,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",1.66
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Several times a week,4,SMS/Text messaging,No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",8.56
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Daily,6,SMS/Text messaging,No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",1.48
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,4,"None of the above, Voice Calls",No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",3.43
+Female,School of Business,Yes,400,Off-campus,Yes,Occasionally,1,Mobile data/Internet,Yes,No,"Poor network quality/coverage, High costs/pricing",5.96
+Male,College of Humanity and Social Science,Yes,500,Off-campus,No,Occasionally,5,"SMS/Text messaging, None of the above",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",5.35
+Female,College of Science,Yes,300,Off-campus,Yes,Several times a week,3,"SMS/Text messaging, Mobile data/Internet",Yes,Yes,Poor network quality/coverage,5.73
+Male,College of Engineering,No,600,Off-campus,Yes,Daily,1,Mobile data/Internet,Yes,Yes,High costs/pricing,2.31
+Male,College of Science,Yes,400,Off-campus,Yes,Several times a week,5,SMS/Text messaging,No,Yes,"Poor network quality/coverage, High costs/pricing",9.96
+Female,College of Engineering,Yes,400,Off-campus,Yes,Rarely,1,"None of the above, SMS/Text messaging",No,Yes,"Insufficient data allowance, Poor network quality/coverage",8.12
+Male,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Daily,5,"Mobile data/Internet, None of the above, SMS/Text messaging",No,No,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",1.27
+Male,College of Art and Built Environment,Yes,100,On-campus,No,Daily,2,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing, Insufficient data allowance",4.79
+Female,College of Engineering,Yes,600,Off-campus,No,Occasionally,1,"Voice Calls, SMS/Text messaging, None of the above",No,Yes,Unsatisfactory customer service,2.0
+Male,College of Humanity and Social Science,No,200,Off-campus,Yes,Occasionally,4,"Mobile data/Internet, Voice Calls",No,No,None,0.53
+Male,College of Agriculture and Natural Resources,Yes,600,On-campus,No,Rarely,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,Unsatisfactory customer service,5.4
+Male,School of Business,No,600,Off-campus,No,Occasionally,3,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",3.79
+Male,School of Business,Yes,200,Off-campus,No,Several times a week,5,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,No,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",8.14
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Several times a week,3,Voice Calls,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",8.87
+Female,College of Art and Built Environment,No,600,On-campus,No,Occasionally,3,Voice Calls,No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",9.1
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Several times a week,3,"SMS/Text messaging, Mobile data/Internet, Voice Calls, None of the above",Yes,No,High costs/pricing,4.63
+Male,College of Humanity and Social Science,Yes,200,Off-campus,No,Several times a week,1,Voice Calls,Yes,Yes,Insufficient data allowance,2.08
+Male,College of Engineering,Yes,600,Off-campus,No,Occasionally,2,Mobile data/Internet,No,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",7.73
+Female,College of Art and Built Environment,Yes,100,Off-campus,No,Rarely,4,Voice Calls,Yes,No,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",5.54
+Male,College of Art and Built Environment,No,400,Off-campus,Yes,Occasionally,5,"Mobile data/Internet, None of the above, SMS/Text messaging",Yes,No,"High costs/pricing, Poor network quality/coverage",5.74
+Female,School of Business,Yes,400,Off-campus,Yes,Occasionally,5,None of the above,Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",2.63
+Female,School of Business,Yes,400,Off-campus,No,Several times a week,1,"Voice Calls, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",9.27
+Male,College of Science,Yes,200,Off-campus,No,Several times a week,1,Mobile data/Internet,Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",5.61
+Male,College of Science,Yes,100,Off-campus,No,Daily,5,"SMS/Text messaging, None of the above, Voice Calls",Yes,Yes,"High costs/pricing, Insufficient data allowance",9.2
+Female,School of Business,Yes,200,Off-campus,Yes,Occasionally,4,"None of the above, Voice Calls",No,Yes,Poor network quality/coverage,8.17
+Male,School of Business,No,300,Off-campus,No,Occasionally,2,"Voice Calls, None of the above",Yes,Yes,"High costs/pricing, Poor network quality/coverage",6.47
+Male,School of Business,Yes,300,Off-campus,Yes,Occasionally,1,"Voice Calls, SMS/Text messaging, None of the above",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",4.95
+Male,College of Engineering,Yes,500,Off-campus,No,Occasionally,2,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",5.66
+Female,College of Science,Yes,600,Off-campus,Yes,Several times a week,2,"SMS/Text messaging, Voice Calls, None of the above",Yes,No,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",3.0
+Female,College of Humanity and Social Science,No,200,Off-campus,Yes,Several times a week,2,"Mobile data/Internet, Voice Calls, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",3.45
+Female,College of Science,Yes,100,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, Mobile data/Internet",Yes,No,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",8.75
+Male,College of Science,Yes,200,Off-campus,No,Daily,4,"Voice Calls, SMS/Text messaging, None of the above",No,Yes,Insufficient data allowance,5.24
+Male,College of Engineering,Yes,300,Off-campus,No,Occasionally,2,"Mobile data/Internet, Voice Calls",No,No,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",6.77
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Several times a week,3,None of the above,No,Yes,"High costs/pricing, Poor network quality/coverage",7.38
+Female,School of Business,Yes,200,Off-campus,No,Daily,1,"Voice Calls, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",6.28
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Daily,1,"None of the above, SMS/Text messaging",No,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",4.7
+Male,College of Science,No,300,On-campus,No,Several times a week,5,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance",2.62
+Male,College of Art and Built Environment,Yes,300,Off-campus,No,Daily,5,"Mobile data/Internet, Voice Calls, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, High costs/pricing",8.23
+Male,College of Engineering,No,200,Off-campus,No,Occasionally,3,Mobile data/Internet,No,Yes,Poor network quality/coverage,1.69
+Male,College of Engineering,Yes,300,Off-campus,No,Occasionally,5,Voice Calls,Yes,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",4.4
+Male,School of Business,No,400,Off-campus,No,Several times a week,4,"None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",8.64
+Male,School of Business,Yes,200,On-campus,Yes,Daily,5,"Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage, High costs/pricing",10.37
+Female,School of Business,No,300,Off-campus,No,Occasionally,1,Mobile data/Internet,Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",4.19
+Female,College of Science,Yes,500,On-campus,No,Daily,3,"SMS/Text messaging, Mobile data/Internet, Voice Calls",No,No,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",2.28
+Male,College of Engineering,Yes,300,Off-campus,Yes,Daily,2,"Mobile data/Internet, SMS/Text messaging, None of the above, Voice Calls",No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",1.53
+Female,College of Engineering,No,200,Off-campus,Yes,Occasionally,5,"SMS/Text messaging, Voice Calls",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",7.26
+Female,College of Humanity and Social Science,Yes,600,Off-campus,No,Occasionally,2,"Voice Calls, Mobile data/Internet, None of the above",No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",9.12
+Male,College of Science,No,500,Off-campus,No,Several times a week,2,"Mobile data/Internet, None of the above",No,No,"Poor network quality/coverage, High costs/pricing",7.82
+Male,College of Humanity and Social Science,No,500,Off-campus,Yes,Rarely,4,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",6.28
+Female,College of Engineering,Yes,200,Off-campus,Yes,Rarely,4,"SMS/Text messaging, Mobile data/Internet, Voice Calls",Yes,Yes,Unsatisfactory customer service,9.36
+Female,College of Humanity and Social Science,Yes,100,On-campus,Yes,Daily,5,"SMS/Text messaging, Voice Calls",No,No,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",1.16
+Male,College of Art and Built Environment,Yes,600,Off-campus,Yes,Several times a week,4,"Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",4.13
+Female,College of Humanity and Social Science,No,200,On-campus,Yes,Several times a week,4,"None of the above, Voice Calls, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",6.64
+Male,College of Engineering,Yes,500,Off-campus,No,Several times a week,2,None of the above,No,Yes,"Poor network quality/coverage, Insufficient data allowance",5.72
+Female,School of Business,No,100,Off-campus,No,Occasionally,5,"SMS/Text messaging, Mobile data/Internet, None of the above",Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",7.41
+Male,College of Humanity and Social Science,Yes,400,On-campus,No,Daily,2,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",5.77
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,No,Daily,2,None of the above,No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",7.68
+Male,College of Humanity and Social Science,No,400,Off-campus,Yes,Several times a week,5,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",7.97
+Female,College of Engineering,No,600,On-campus,Yes,Daily,1,"None of the above, SMS/Text messaging, Mobile data/Internet",Yes,No,"Poor network quality/coverage, High costs/pricing",5.98
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Occasionally,3,Voice Calls,Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",3.14
+Male,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,5,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",1.53
+Male,College of Humanity and Social Science,Yes,200,Off-campus,No,Several times a week,1,None of the above,Yes,No,"Poor network quality/coverage, High costs/pricing",4.33
+Male,College of Science,No,400,Off-campus,Yes,Occasionally,1,"Mobile data/Internet, None of the above",No,Yes,Poor network quality/coverage,2.28
+Male,College of Engineering,No,500,Off-campus,No,Occasionally,1,Mobile data/Internet,No,Yes,"High costs/pricing, Poor network quality/coverage",1.36
+Male,College of Agriculture and Natural Resources,Yes,500,Off-campus,No,Occasionally,1,"None of the above, Voice Calls",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",6.31
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Daily,6,"Mobile data/Internet, Voice Calls, SMS/Text messaging, None of the above",Yes,No,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",5.58
+Female,School of Business,No,200,Off-campus,No,Occasionally,5,"Voice Calls, None of the above",No,Yes,"Insufficient data allowance, High costs/pricing",5.26
+Female,College of Agriculture and Natural Resources,Yes,600,Off-campus,No,Occasionally,1,"SMS/Text messaging, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",9.6
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,No,Several times a week,2,"SMS/Text messaging, None of the above",Yes,Yes,Insufficient data allowance,9.72
+Male,College of Engineering,No,100,Off-campus,Yes,Daily,3,"None of the above, Mobile data/Internet",No,Yes,"High costs/pricing, Unsatisfactory customer service",10.02
+Male,School of Business,Yes,400,Off-campus,No,Several times a week,2,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",No,Yes,Insufficient data allowance,1.89
+Female,College of Humanity and Social Science,No,200,Off-campus,Yes,Several times a week,2,"Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,None,6.54
+Male,College of Engineering,Yes,300,Off-campus,No,Several times a week,3,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",Yes,No,High costs/pricing,6.06
+Male,College of Engineering,Yes,400,Off-campus,No,Occasionally,3,"SMS/Text messaging, None of the above, Voice Calls",Yes,Yes,Poor network quality/coverage,2.63
+Male,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Daily,2,"Voice Calls, SMS/Text messaging",No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",10.18
+Male,College of Art and Built Environment,No,300,Off-campus,Yes,Occasionally,1,Voice Calls,Yes,Yes,"High costs/pricing, Insufficient data allowance",8.85
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Daily,4,"Voice Calls, None of the above",No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",5.98
+Female,College of Engineering,Yes,400,Off-campus,Yes,Several times a week,4,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,Unsatisfactory customer service,3.34
+Female,College of Engineering,Yes,200,On-campus,No,Occasionally,4,"Mobile data/Internet, None of the above",No,No,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",7.8
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Daily,1,Voice Calls,Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",2.07
+Male,College of Engineering,No,600,Off-campus,No,Daily,2,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",6.82
+Female,College of Science,Yes,400,On-campus,No,Never,4,"Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,Yes,Poor network quality/coverage,7.87
+Male,College of Humanity and Social Science,Yes,600,Off-campus,Yes,Several times a week,5,"Mobile data/Internet, Voice Calls, None of the above, SMS/Text messaging",No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",5.2
+Male,College of Engineering,Yes,500,Off-campus,No,Several times a week,6,"Voice Calls, SMS/Text messaging, Mobile data/Internet",No,No,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",5.73
+Male,College of Art and Built Environment,Yes,400,Off-campus,No,Several times a week,4,"Voice Calls, SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",3.74
+Female,College of Humanity and Social Science,No,300,Off-campus,No,Occasionally,2,"Voice Calls, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",2.8
+Male,College of Engineering,No,100,Off-campus,No,Several times a week,2,None of the above,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",1.23
+Female,College of Agriculture and Natural Resources,No,300,On-campus,No,Occasionally,4,Voice Calls,Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",2.02
+Male,School of Business,No,500,On-campus,No,Several times a week,2,"Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",0.94
+Male,College of Agriculture and Natural Resources,Yes,500,Off-campus,No,Occasionally,1,"None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",9.69
+Male,School of Business,No,300,Off-campus,Yes,Daily,5,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",1.44
+Female,School of Business,Yes,400,Off-campus,No,Several times a week,2,"None of the above, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, High costs/pricing",0.71
+Female,College of Humanity and Social Science,Yes,100,Off-campus,No,Occasionally,2,SMS/Text messaging,Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",2.75
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,5,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,Unsatisfactory customer service,1.31
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,2,Voice Calls,Yes,Yes,High costs/pricing,4.86
+Female,College of Science,No,100,Off-campus,No,Occasionally,1,"None of the above, Voice Calls",No,Yes,Poor network quality/coverage,5.3
+Female,College of Art and Built Environment,No,600,Off-campus,Yes,Occasionally,2,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",6.71
+Female,College of Science,Yes,400,Off-campus,No,Daily,1,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",10.08
+Female,School of Business,No,300,Off-campus,No,Several times a week,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,High costs/pricing,6.51
+Female,School of Business,Yes,400,Off-campus,Yes,Daily,4,Mobile data/Internet,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",0.99
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Daily,6,"SMS/Text messaging, Mobile data/Internet, Voice Calls",No,Yes,Unsatisfactory customer service,10.03
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,1,Voice Calls,No,No,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",8.86
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Daily,2,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",9.4
+Male,College of Agriculture and Natural Resources,Yes,600,Off-campus,No,Occasionally,5,"SMS/Text messaging, None of the above",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",5.93
+Male,College of Science,No,600,Off-campus,No,Occasionally,4,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",No,No,"Unsatisfactory customer service, High costs/pricing",7.25
+Male,College of Science,No,200,Off-campus,No,Several times a week,2,"None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",8.81
+Female,School of Business,No,400,Off-campus,Yes,Daily,1,"SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Insufficient data allowance, Poor network quality/coverage",1.42
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,No,Daily,2,Voice Calls,Yes,Yes,"Insufficient data allowance, High costs/pricing",5.6
+Female,School of Business,Yes,400,Off-campus,No,Several times a week,2,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",No,Yes,Insufficient data allowance,6.39
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Several times a week,2,"Mobile data/Internet, SMS/Text messaging, None of the above",Yes,No,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance, High costs/pricing",6.35
+Male,School of Business,Yes,200,Off-campus,Yes,Daily,3,"None of the above, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage, High costs/pricing",9.75
+Male,College of Science,Yes,400,Off-campus,No,Occasionally,6,"Mobile data/Internet, Voice Calls, None of the above",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",5.25
+Male,College of Humanity and Social Science,No,600,Off-campus,No,Several times a week,3,Voice Calls,No,Yes,High costs/pricing,6.27
+Male,College of Humanity and Social Science,Yes,300,Off-campus,Yes,Several times a week,3,None of the above,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",6.66
+Male,College of Science,Yes,100,Off-campus,Yes,Several times a week,1,"Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,None,0.5
+Female,School of Business,Yes,200,Off-campus,Yes,Several times a week,3,"Mobile data/Internet, None of the above",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",2.0
+Female,School of Business,Yes,500,Off-campus,No,Occasionally,5,Voice Calls,Yes,Yes,"Poor network quality/coverage, High costs/pricing",7.4
+Male,College of Art and Built Environment,Yes,500,On-campus,No,Several times a week,5,"Mobile data/Internet, SMS/Text messaging, None of the above",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage",5.86
+Female,College of Science,Yes,300,Off-campus,No,Daily,1,"Voice Calls, SMS/Text messaging",No,No,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",4.64
+Female,College of Engineering,No,400,Off-campus,No,Occasionally,2,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",Yes,Yes,Insufficient data allowance,8.1
+Female,School of Business,Yes,600,Off-campus,No,Daily,1,"None of the above, Mobile data/Internet, Voice Calls, SMS/Text messaging",Yes,No,None,4.21
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Never,2,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",9.91
+Male,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Daily,4,"None of the above, Voice Calls",No,Yes,"Insufficient data allowance, High costs/pricing",9.39
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,2,"Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",6.73
+Female,School of Business,No,300,On-campus,Yes,Daily,1,"Mobile data/Internet, Voice Calls",No,Yes,Poor network quality/coverage,7.33
+Male,College of Engineering,No,200,Off-campus,Yes,Daily,1,Voice Calls,Yes,Yes,None,6.15
+Male,College of Engineering,Yes,300,On-campus,No,Several times a week,3,None of the above,Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",7.49
+Male,College of Engineering,No,200,Off-campus,Yes,Daily,2,Mobile data/Internet,No,Yes,"Poor network quality/coverage, High costs/pricing",3.25
+Male,College of Art and Built Environment,No,400,On-campus,No,Occasionally,1,"None of the above, SMS/Text messaging",Yes,No,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",6.97
+Male,College of Engineering,Yes,200,Off-campus,No,Daily,1,"Voice Calls, Mobile data/Internet, None of the above",Yes,Yes,Poor network quality/coverage,9.03
+Male,College of Engineering,Yes,100,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, Mobile data/Internet, Voice Calls",No,Yes,Poor network quality/coverage,4.71
+Female,College of Humanity and Social Science,Yes,600,Off-campus,No,Several times a week,3,"Voice Calls, SMS/Text messaging",Yes,Yes,"High costs/pricing, Unsatisfactory customer service",8.29
+Female,School of Business,Yes,300,Off-campus,No,Occasionally,1,None of the above,Yes,Yes,Poor network quality/coverage,9.59
+Female,College of Engineering,Yes,200,Off-campus,Yes,Occasionally,2,"SMS/Text messaging, Voice Calls",Yes,Yes,"Poor network quality/coverage, High costs/pricing",6.9
+Female,College of Art and Built Environment,Yes,100,Off-campus,No,Occasionally,1,"Voice Calls, None of the above",No,Yes,"High costs/pricing, Insufficient data allowance",7.48
+Female,School of Business,Yes,500,On-campus,No,Daily,4,"Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,Yes,High costs/pricing,8.58
+Female,School of Business,No,300,Off-campus,No,Rarely,3,Voice Calls,Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",4.56
+Female,College of Science,Yes,500,Off-campus,Yes,Several times a week,1,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",8.7
+Female,School of Business,Yes,400,Off-campus,Yes,Several times a week,1,Mobile data/Internet,No,Yes,"Unsatisfactory customer service, Insufficient data allowance",1.07
+Male,College of Art and Built Environment,Yes,400,Off-campus,Yes,Several times a week,3,Mobile data/Internet,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",2.63
+Female,College of Agriculture and Natural Resources,Yes,200,On-campus,No,Several times a week,6,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,No,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",1.75
+Male,College of Agriculture and Natural Resources,Yes,400,On-campus,No,Several times a week,1,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",1.49
+Female,College of Science,No,400,Off-campus,No,Several times a week,2,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",8.07
+Male,College of Engineering,Yes,200,Off-campus,Yes,Occasionally,2,None of the above,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance, High costs/pricing",0.81
+Male,College of Science,No,200,Off-campus,No,Several times a week,2,SMS/Text messaging,No,Yes,Unsatisfactory customer service,2.04
+Female,College of Agriculture and Natural Resources,Yes,100,On-campus,No,Occasionally,5,"SMS/Text messaging, Mobile data/Internet",No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",4.08
+Female,College of Engineering,No,200,Off-campus,No,Occasionally,6,"SMS/Text messaging, Voice Calls",No,No,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",7.2
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Rarely,2,"Voice Calls, Mobile data/Internet",Yes,No,Unsatisfactory customer service,4.02
+Male,College of Science,Yes,400,Off-campus,Yes,Rarely,4,"None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",3.68
+Female,College of Humanity and Social Science,No,500,Off-campus,Yes,Never,1,"None of the above, SMS/Text messaging",Yes,No,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",3.66
+Male,School of Business,Yes,100,Off-campus,Yes,Occasionally,2,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",Yes,No,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",10.16
+Male,College of Engineering,No,500,Off-campus,No,Daily,1,"Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"High costs/pricing, Poor network quality/coverage",7.28
+Female,School of Business,Yes,400,Off-campus,Yes,Occasionally,4,Voice Calls,No,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",3.8
+Female,College of Agriculture and Natural Resources,Yes,100,On-campus,Yes,Occasionally,3,None of the above,No,No,Poor network quality/coverage,3.82
+Female,School of Business,Yes,100,Off-campus,No,Daily,2,"SMS/Text messaging, Voice Calls",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",7.91
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,1,Mobile data/Internet,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",3.6
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,1,"Voice Calls, SMS/Text messaging",No,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",10.06
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Occasionally,2,None of the above,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",2.37
+Male,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,4,SMS/Text messaging,No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",9.34
+Male,College of Humanity and Social Science,Yes,400,Off-campus,No,Occasionally,2,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",6.28
+Male,College of Engineering,No,200,Off-campus,Yes,Occasionally,1,"Mobile data/Internet, Voice Calls",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",10.29
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Occasionally,1,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",1.86
+Male,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Daily,3,"None of the above, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Poor network quality/coverage",6.52
+Male,School of Business,No,100,Off-campus,Yes,Occasionally,3,"Voice Calls, Mobile data/Internet",Yes,Yes,High costs/pricing,6.59
+Male,College of Art and Built Environment,Yes,500,Off-campus,No,Occasionally,3,"None of the above, SMS/Text messaging, Mobile data/Internet",Yes,No,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",10.12
+Female,College of Engineering,Yes,300,Off-campus,No,Occasionally,4,"Voice Calls, None of the above, Mobile data/Internet",No,Yes,High costs/pricing,8.69
+Female,College of Humanity and Social Science,No,300,Off-campus,Yes,Daily,5,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",3.36
+Male,College of Science,No,600,Off-campus,No,Occasionally,5,"None of the above, Voice Calls, SMS/Text messaging",Yes,Yes,"High costs/pricing, Insufficient data allowance",2.5
+Female,College of Engineering,No,200,Off-campus,No,Never,4,"Voice Calls, SMS/Text messaging, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance",6.83
+Female,School of Business,Yes,200,Off-campus,No,Daily,4,"None of the above, Voice Calls, SMS/Text messaging, Mobile data/Internet",No,Yes,Poor network quality/coverage,1.09
+Male,College of Science,No,400,Off-campus,Yes,Daily,2,"SMS/Text messaging, Voice Calls",No,Yes,High costs/pricing,10.1
+Male,College of Agriculture and Natural Resources,No,100,On-campus,No,Several times a week,2,"SMS/Text messaging, Voice Calls, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",8.38
+Male,College of Art and Built Environment,Yes,400,Off-campus,No,Occasionally,5,Mobile data/Internet,No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",2.0
+Male,School of Business,No,300,Off-campus,Yes,Several times a week,2,"Mobile data/Internet, Voice Calls, None of the above, SMS/Text messaging",Yes,Yes,High costs/pricing,2.86
+Female,College of Humanity and Social Science,No,400,Off-campus,No,Several times a week,1,"Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",5.49
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Never,4,"Mobile data/Internet, SMS/Text messaging, Voice Calls",No,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",8.6
+Male,School of Business,Yes,100,Off-campus,No,Several times a week,2,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",No,No,Unsatisfactory customer service,9.19
+Male,College of Science,Yes,500,Off-campus,No,Several times a week,4,"SMS/Text messaging, Mobile data/Internet, None of the above",Yes,No,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",9.53
+Male,College of Humanity and Social Science,No,200,On-campus,Yes,Several times a week,1,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",5.97
+Female,College of Science,Yes,300,Off-campus,Yes,Several times a week,1,"SMS/Text messaging, Voice Calls, None of the above",No,Yes,High costs/pricing,6.43
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Daily,3,Voice Calls,Yes,Yes,Poor network quality/coverage,5.66
+Female,College of Science,Yes,100,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, None of the above, SMS/Text messaging",Yes,Yes,None,3.18
+Male,College of Science,Yes,100,Off-campus,Yes,Several times a week,2,"Voice Calls, None of the above, SMS/Text messaging, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",9.73
+Male,College of Humanity and Social Science,No,500,Off-campus,No,Daily,5,"SMS/Text messaging, None of the above",Yes,Yes,Poor network quality/coverage,7.79
+Female,School of Business,Yes,300,Off-campus,Yes,Daily,4,None of the above,No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",3.05
+Female,College of Humanity and Social Science,Yes,300,Off-campus,Yes,Several times a week,6,"Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,Yes,Poor network quality/coverage,5.4
+Male,College of Science,Yes,500,On-campus,No,Daily,3,"None of the above, SMS/Text messaging, Voice Calls",Yes,Yes,Insufficient data allowance,7.69
+Male,School of Business,Yes,100,Off-campus,Yes,Daily,4,"Mobile data/Internet, Voice Calls, SMS/Text messaging",No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",6.31
+Female,College of Engineering,Yes,100,Off-campus,No,Daily,2,SMS/Text messaging,No,Yes,None,8.07
+Female,School of Business,Yes,100,On-campus,Yes,Occasionally,1,"Mobile data/Internet, None of the above",Yes,Yes,Poor network quality/coverage,9.47
+Female,College of Humanity and Social Science,Yes,200,On-campus,No,Never,6,"Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance",4.21
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Occasionally,6,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",1.42
+Male,School of Business,Yes,500,Off-campus,No,Rarely,2,"SMS/Text messaging, Mobile data/Internet",Yes,No,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",4.03
+Male,School of Business,Yes,400,On-campus,Yes,Several times a week,4,None of the above,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",8.16
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Several times a week,5,"None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",8.84
+Female,School of Business,Yes,600,Off-campus,Yes,Occasionally,6,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,None,0.5
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,5,"Voice Calls, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",3.31
+Female,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Occasionally,2,SMS/Text messaging,No,Yes,Poor network quality/coverage,6.66
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,5,"Voice Calls, None of the above, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",3.05
+Male,College of Science,Yes,300,Off-campus,Yes,Several times a week,6,Voice Calls,Yes,Yes,"High costs/pricing, Insufficient data allowance",2.38
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Daily,2,None of the above,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",1.05
+Male,College of Engineering,Yes,500,On-campus,No,Occasionally,1,"Mobile data/Internet, None of the above",Yes,No,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",2.15
+Male,College of Humanity and Social Science,Yes,200,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, Voice Calls, None of the above",No,Yes,"High costs/pricing, Insufficient data allowance",6.6
+Male,College of Science,No,500,Off-campus,Yes,Several times a week,4,"Voice Calls, None of the above, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Insufficient data allowance, High costs/pricing",9.04
+Male,School of Business,Yes,200,Off-campus,Yes,Several times a week,5,None of the above,No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",4.79
+Male,College of Humanity and Social Science,No,300,Off-campus,No,Several times a week,4,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",2.74
+Female,College of Science,Yes,200,Off-campus,Yes,Occasionally,2,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,High costs/pricing,9.01
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Occasionally,6,Mobile data/Internet,No,Yes,Insufficient data allowance,0.69
+Male,College of Engineering,Yes,500,Off-campus,Yes,Several times a week,1,"SMS/Text messaging, Voice Calls",Yes,No,"Insufficient data allowance, Poor network quality/coverage",6.69
+Male,College of Art and Built Environment,No,500,On-campus,Yes,Occasionally,3,Mobile data/Internet,No,Yes,"Poor network quality/coverage, High costs/pricing",9.37
+Female,College of Science,Yes,400,Off-campus,Yes,Occasionally,4,SMS/Text messaging,No,No,Insufficient data allowance,6.94
+Female,School of Business,No,200,On-campus,No,Daily,2,"None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",3.59
+Female,College of Engineering,No,400,On-campus,Yes,Occasionally,3,Voice Calls,Yes,No,Insufficient data allowance,9.09
+Female,School of Business,Yes,100,Off-campus,Yes,Daily,1,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",7.15
+Female,College of Science,No,400,Off-campus,No,Rarely,4,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",1.62
+Female,College of Engineering,No,100,Off-campus,Yes,Daily,3,"None of the above, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",9.2
+Female,College of Engineering,No,100,On-campus,No,Occasionally,4,"Mobile data/Internet, Voice Calls, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",5.91
+Female,School of Business,Yes,300,Off-campus,No,Several times a week,3,None of the above,No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",8.01
+Male,College of Humanity and Social Science,No,400,Off-campus,Yes,Daily,1,"SMS/Text messaging, None of the above, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",1.01
+Female,School of Business,Yes,200,Off-campus,Yes,Daily,6,"SMS/Text messaging, Mobile data/Internet",No,No,Unsatisfactory customer service,6.15
+Female,College of Agriculture and Natural Resources,No,500,Off-campus,Yes,Several times a week,6,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",4.86
+Female,College of Science,No,400,Off-campus,No,Daily,1,Mobile data/Internet,Yes,Yes,"Poor network quality/coverage, Insufficient data allowance",8.63
+Male,College of Engineering,No,200,Off-campus,Yes,Occasionally,1,Mobile data/Internet,No,Yes,"High costs/pricing, Unsatisfactory customer service",1.93
+Female,College of Humanity and Social Science,Yes,100,On-campus,Yes,Daily,1,SMS/Text messaging,No,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",6.8
+Female,College of Engineering,Yes,100,Off-campus,No,Daily,3,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",9.09
+Male,College of Engineering,Yes,600,Off-campus,No,Daily,4,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",No,No,"Insufficient data allowance, Poor network quality/coverage",4.37
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Occasionally,4,"None of the above, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",5.88
+Female,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Several times a week,5,"Voice Calls, SMS/Text messaging, None of the above, Mobile data/Internet",Yes,No,"High costs/pricing, Poor network quality/coverage",1.39
+Female,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Occasionally,2,"Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,Poor network quality/coverage,7.49
+Female,College of Science,Yes,300,Off-campus,No,Several times a week,2,"None of the above, Mobile data/Internet, Voice Calls",No,Yes,"Insufficient data allowance, Unsatisfactory customer service",4.24
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Occasionally,2,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",3.5
+Female,School of Business,Yes,400,On-campus,No,Several times a week,3,"Mobile data/Internet, Voice Calls, SMS/Text messaging, None of the above",No,No,"Poor network quality/coverage, Unsatisfactory customer service",8.4
+Male,College of Science,No,200,Off-campus,No,Rarely,1,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,High costs/pricing,6.3
+Female,College of Art and Built Environment,No,200,On-campus,Yes,Several times a week,4,Mobile data/Internet,Yes,Yes,Poor network quality/coverage,6.76
+Male,College of Engineering,Yes,300,Off-campus,No,Daily,1,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",9.12
+Male,College of Engineering,Yes,100,Off-campus,No,Daily,2,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",2.5
+Male,College of Engineering,Yes,300,Off-campus,No,Occasionally,3,"None of the above, Voice Calls",No,No,Poor network quality/coverage,9.58
+Male,School of Business,No,400,Off-campus,Yes,Several times a week,1,"Mobile data/Internet, Voice Calls, None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",0.5
+Female,College of Art and Built Environment,Yes,400,Off-campus,Yes,Daily,5,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",No,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",9.13
+Male,College of Engineering,Yes,400,Off-campus,No,Daily,1,None of the above,Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",9.81
+Female,College of Engineering,No,300,On-campus,No,Occasionally,1,SMS/Text messaging,Yes,Yes,Insufficient data allowance,2.36
+Female,College of Engineering,Yes,300,On-campus,Yes,Several times a week,1,"Mobile data/Internet, SMS/Text messaging, Voice Calls",No,Yes,"Insufficient data allowance, Poor network quality/coverage",3.23
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,4,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",8.28
+Female,College of Engineering,Yes,500,Off-campus,No,Several times a week,4,"Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,Insufficient data allowance,8.17
+Female,College of Art and Built Environment,Yes,400,On-campus,No,Several times a week,1,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,"Unsatisfactory customer service, High costs/pricing",2.41
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,2,"Mobile data/Internet, SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",2.8
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,1,"Mobile data/Internet, Voice Calls, None of the above",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing, Insufficient data allowance",3.74
+Female,College of Humanity and Social Science,Yes,300,Off-campus,No,Several times a week,4,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",3.31
+Male,College of Engineering,Yes,200,Off-campus,Yes,Daily,4,"Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,Poor network quality/coverage,3.74
+Female,College of Engineering,Yes,400,Off-campus,Yes,Occasionally,5,"Mobile data/Internet, Voice Calls",Yes,No,"Poor network quality/coverage, Insufficient data allowance",8.03
+Female,School of Business,Yes,600,Off-campus,Yes,Several times a week,4,"None of the above, SMS/Text messaging, Mobile data/Internet",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",7.52
+Male,College of Science,No,300,Off-campus,Yes,Occasionally,4,"None of the above, Voice Calls, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service",0.82
+Male,College of Science,Yes,200,Off-campus,No,Several times a week,5,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance",4.94
+Male,College of Art and Built Environment,No,500,Off-campus,Yes,Occasionally,3,"None of the above, Mobile data/Internet, SMS/Text messaging",Yes,No,Poor network quality/coverage,4.21
+Female,College of Science,Yes,500,Off-campus,Yes,Several times a week,2,"Voice Calls, SMS/Text messaging, Mobile data/Internet",No,Yes,None,5.5
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,1,"Mobile data/Internet, SMS/Text messaging",No,Yes,"High costs/pricing, Insufficient data allowance",7.23
+Female,College of Science,Yes,300,Off-campus,No,Daily,1,"SMS/Text messaging, Mobile data/Internet, Voice Calls, None of the above",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",4.76
+Female,College of Science,No,400,Off-campus,No,Several times a week,2,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",No,No,"High costs/pricing, Poor network quality/coverage",2.87
+Female,College of Science,Yes,400,Off-campus,Yes,Several times a week,1,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",0.66
+Male,College of Humanity and Social Science,No,300,On-campus,No,Several times a week,5,"SMS/Text messaging, None of the above",Yes,Yes,Insufficient data allowance,2.07
+Male,College of Engineering,Yes,400,Off-campus,Yes,Never,4,"SMS/Text messaging, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",0.93
+Female,College of Engineering,Yes,400,On-campus,No,Several times a week,1,"Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",1.29
+Female,College of Science,Yes,400,Off-campus,No,Daily,4,SMS/Text messaging,No,Yes,Insufficient data allowance,8.64
+Male,School of Business,Yes,300,Off-campus,No,Several times a week,3,SMS/Text messaging,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",7.89
+Male,College of Engineering,No,200,Off-campus,Yes,Never,4,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",4.54
+Male,College of Science,Yes,300,Off-campus,No,Occasionally,5,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",6.73
+Male,College of Engineering,No,200,Off-campus,Yes,Occasionally,6,"None of the above, Voice Calls",No,Yes,"High costs/pricing, Insufficient data allowance",2.78
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Rarely,2,SMS/Text messaging,Yes,No,"High costs/pricing, Insufficient data allowance",1.57
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, Voice Calls, SMS/Text messaging",Yes,Yes,Insufficient data allowance,4.95
+Female,College of Science,Yes,600,Off-campus,Yes,Several times a week,2,Mobile data/Internet,Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",5.61
+Female,College of Engineering,Yes,400,On-campus,Yes,Several times a week,3,"Mobile data/Internet, Voice Calls",No,Yes,Insufficient data allowance,5.68
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,5,"Voice Calls, None of the above, Mobile data/Internet",No,Yes,"Insufficient data allowance, Poor network quality/coverage",1.36
+Male,School of Business,No,200,Off-campus,Yes,Occasionally,3,Voice Calls,No,Yes,Poor network quality/coverage,6.76
+Female,College of Science,Yes,100,On-campus,No,Daily,2,"SMS/Text messaging, Voice Calls, None of the above",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",8.49
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,2,"None of the above, Voice Calls, Mobile data/Internet",Yes,Yes,Insufficient data allowance,1.47
+Female,College of Science,Yes,600,Off-campus,Yes,Daily,4,"Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",2.73
+Female,College of Agriculture and Natural Resources,No,500,Off-campus,Yes,Several times a week,1,"Voice Calls, SMS/Text messaging",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",6.23
+Female,College of Science,No,100,On-campus,No,Never,2,"Mobile data/Internet, Voice Calls",No,Yes,"Insufficient data allowance, Unsatisfactory customer service",2.6
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,1,SMS/Text messaging,Yes,No,Poor network quality/coverage,3.95
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Daily,4,"SMS/Text messaging, Mobile data/Internet, Voice Calls, None of the above",No,Yes,Poor network quality/coverage,3.43
+Male,School of Business,Yes,100,Off-campus,No,Rarely,1,"Mobile data/Internet, SMS/Text messaging, None of the above",Yes,Yes,Poor network quality/coverage,3.66
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Daily,3,"SMS/Text messaging, Mobile data/Internet, Voice Calls, None of the above",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",8.28
+Male,College of Science,Yes,300,On-campus,No,Occasionally,3,SMS/Text messaging,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",0.84
+Female,College of Engineering,Yes,100,On-campus,No,Occasionally,3,"None of the above, SMS/Text messaging, Voice Calls",No,Yes,Unsatisfactory customer service,2.18
+Male,College of Art and Built Environment,Yes,600,On-campus,No,Occasionally,1,None of the above,No,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance, Poor network quality/coverage",5.4
+Male,College of Science,No,400,On-campus,Yes,Occasionally,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging, None of the above",No,No,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",3.86
+Male,School of Business,No,300,Off-campus,No,Daily,3,"None of the above, Mobile data/Internet, Voice Calls, SMS/Text messaging",No,No,Poor network quality/coverage,2.47
+Female,School of Business,Yes,300,Off-campus,No,Several times a week,2,"Mobile data/Internet, Voice Calls, None of the above, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, Insufficient data allowance",1.66
+Female,School of Business,Yes,600,Off-campus,Yes,Occasionally,1,"Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,Poor network quality/coverage,9.81
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Never,3,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",No,Yes,"Insufficient data allowance, Poor network quality/coverage",7.13
+Female,College of Engineering,No,100,Off-campus,Yes,Several times a week,5,Voice Calls,Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",8.81
+Female,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Several times a week,1,"Voice Calls, SMS/Text messaging, Mobile data/Internet",Yes,No,High costs/pricing,3.47
+Female,College of Art and Built Environment,No,400,On-campus,No,Daily,1,"Voice Calls, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",0.52
+Female,College of Art and Built Environment,Yes,100,Off-campus,Yes,Several times a week,5,"Mobile data/Internet, SMS/Text messaging",No,Yes,Poor network quality/coverage,5.98
+Male,College of Humanity and Social Science,Yes,200,Off-campus,No,Daily,5,"Mobile data/Internet, SMS/Text messaging",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage",6.27
+Male,College of Engineering,Yes,300,Off-campus,Yes,Daily,5,SMS/Text messaging,Yes,Yes,Insufficient data allowance,5.44
+Female,College of Science,Yes,500,Off-campus,No,Daily,3,None of the above,No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",9.26
+Female,College of Humanity and Social Science,No,200,On-campus,No,Several times a week,5,"Voice Calls, SMS/Text messaging",Yes,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",0.5
+Male,College of Agriculture and Natural Resources,No,500,Off-campus,Yes,Occasionally,3,None of the above,Yes,Yes,Poor network quality/coverage,5.53
+Female,College of Engineering,Yes,300,Off-campus,Yes,Several times a week,4,Mobile data/Internet,No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",3.5
+Male,College of Science,No,400,Off-campus,Yes,Daily,4,Mobile data/Internet,No,Yes,"High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",8.64
+Female,College of Agriculture and Natural Resources,Yes,200,On-campus,No,Several times a week,4,"SMS/Text messaging, Voice Calls",Yes,Yes,"High costs/pricing, Poor network quality/coverage",5.7
+Male,College of Science,No,400,Off-campus,No,Never,4,"SMS/Text messaging, None of the above",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",9.0
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Rarely,4,"SMS/Text messaging, Mobile data/Internet, Voice Calls, None of the above",Yes,Yes,Unsatisfactory customer service,9.36
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",No,Yes,"Insufficient data allowance, Unsatisfactory customer service",4.3
+Female,College of Science,Yes,200,Off-campus,Yes,Occasionally,3,Mobile data/Internet,No,No,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance, High costs/pricing",0.83
+Male,College of Engineering,Yes,400,Off-campus,No,Occasionally,6,"Voice Calls, None of the above, Mobile data/Internet",Yes,No,"Insufficient data allowance, Poor network quality/coverage",6.91
+Female,College of Humanity and Social Science,No,600,Off-campus,No,Occasionally,4,"Mobile data/Internet, SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",2.82
+Male,College of Science,Yes,400,Off-campus,Yes,Daily,4,Mobile data/Internet,Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",8.7
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Several times a week,4,None of the above,No,Yes,"Insufficient data allowance, High costs/pricing",1.85
+Male,College of Science,No,400,On-campus,Yes,Rarely,1,None of the above,Yes,No,Poor network quality/coverage,2.45
+Male,College of Art and Built Environment,Yes,400,Off-campus,Yes,Several times a week,4,"None of the above, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",1.27
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Occasionally,2,"SMS/Text messaging, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",4.13
+Female,College of Humanity and Social Science,Yes,300,Off-campus,Yes,Daily,2,"None of the above, Voice Calls, SMS/Text messaging",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",8.45
+Female,College of Art and Built Environment,Yes,200,Off-campus,Yes,Several times a week,4,"Mobile data/Internet, Voice Calls, None of the above, SMS/Text messaging",No,No,"Poor network quality/coverage, Unsatisfactory customer service",1.96
+Female,College of Art and Built Environment,Yes,600,Off-campus,No,Several times a week,3,None of the above,No,Yes,Poor network quality/coverage,4.6
+Male,College of Agriculture and Natural Resources,Yes,300,On-campus,Yes,Occasionally,4,"SMS/Text messaging, None of the above",Yes,Yes,High costs/pricing,8.58
+Male,College of Engineering,Yes,200,On-campus,Yes,Several times a week,2,"SMS/Text messaging, Mobile data/Internet",Yes,No,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",8.79
+Female,College of Humanity and Social Science,Yes,600,Off-campus,No,Occasionally,5,Voice Calls,No,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",4.99
+Male,College of Humanity and Social Science,Yes,500,Off-campus,Yes,Daily,4,SMS/Text messaging,No,Yes,Unsatisfactory customer service,2.44
+Female,College of Art and Built Environment,Yes,200,Off-campus,Yes,Several times a week,1,SMS/Text messaging,No,Yes,Insufficient data allowance,6.83
+Male,School of Business,No,500,Off-campus,Yes,Occasionally,1,"Mobile data/Internet, SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Unsatisfactory customer service, Insufficient data allowance",1.03
+Female,School of Business,No,300,Off-campus,Yes,Several times a week,5,SMS/Text messaging,Yes,No,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",1.53
+Female,School of Business,No,400,On-campus,Yes,Occasionally,2,"Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,Insufficient data allowance,5.4
+Male,College of Engineering,No,400,Off-campus,Yes,Daily,1,"Mobile data/Internet, None of the above",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service",1.19
+Male,College of Art and Built Environment,No,200,Off-campus,No,Several times a week,3,"Mobile data/Internet, SMS/Text messaging",No,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage",6.47
+Female,School of Business,Yes,600,Off-campus,No,Occasionally,3,Voice Calls,No,No,"Unsatisfactory customer service, Insufficient data allowance",3.28
+Female,College of Humanity and Social Science,Yes,300,Off-campus,Yes,Rarely,2,"None of the above, Voice Calls",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",6.14
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Rarely,3,"Voice Calls, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",9.22
+Male,College of Engineering,Yes,400,Off-campus,Yes,Several times a week,4,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance, High costs/pricing",0.57
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Occasionally,4,"None of the above, Mobile data/Internet, Voice Calls, SMS/Text messaging",Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service",1.33
+Female,College of Engineering,Yes,200,On-campus,Yes,Several times a week,3,"SMS/Text messaging, None of the above",No,Yes,Poor network quality/coverage,6.45
+Male,College of Science,Yes,100,Off-campus,No,Occasionally,5,"Mobile data/Internet, Voice Calls, SMS/Text messaging, None of the above",Yes,Yes,High costs/pricing,9.65
+Male,School of Business,Yes,600,Off-campus,No,Several times a week,3,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",No,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",9.36
+Male,School of Business,Yes,500,Off-campus,No,Occasionally,2,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,"High costs/pricing, Unsatisfactory customer service",0.97
+Female,School of Business,Yes,400,Off-campus,No,Occasionally,4,None of the above,Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",3.48
+Female,College of Humanity and Social Science,Yes,400,Off-campus,Yes,Daily,2,"Mobile data/Internet, None of the above",No,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",2.27
+Female,College of Science,Yes,200,Off-campus,Yes,Daily,6,"Mobile data/Internet, None of the above",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",3.17
+Female,School of Business,Yes,400,On-campus,Yes,Daily,1,None of the above,Yes,Yes,None,8.8
+Male,College of Science,Yes,600,Off-campus,Yes,Occasionally,2,SMS/Text messaging,Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service",6.08
+Male,College of Engineering,No,400,Off-campus,Yes,Daily,2,SMS/Text messaging,No,Yes,Insufficient data allowance,7.13
+Female,College of Engineering,No,300,Off-campus,No,Occasionally,6,"SMS/Text messaging, None of the above, Voice Calls, Mobile data/Internet",Yes,No,"Insufficient data allowance, High costs/pricing",6.69
+Male,College of Engineering,Yes,500,Off-campus,No,Several times a week,1,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,High costs/pricing,8.4
+Male,College of Science,No,200,On-campus,Yes,Daily,5,"None of the above, SMS/Text messaging, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",6.69
+Male,College of Humanity and Social Science,Yes,600,Off-campus,No,Several times a week,1,Mobile data/Internet,No,Yes,Unsatisfactory customer service,4.81
+Female,College of Humanity and Social Science,Yes,300,On-campus,Yes,Daily,1,"Voice Calls, SMS/Text messaging, Mobile data/Internet",No,No,Unsatisfactory customer service,8.08
+Female,School of Business,Yes,600,On-campus,Yes,Occasionally,3,"Mobile data/Internet, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",3.52
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Daily,1,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,None,6.89
+Male,College of Engineering,Yes,400,Off-campus,No,Rarely,4,"SMS/Text messaging, Voice Calls",No,Yes,High costs/pricing,4.18
+Female,College of Science,Yes,300,Off-campus,No,Several times a week,2,None of the above,No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",3.56
+Female,College of Science,No,400,Off-campus,No,Occasionally,1,"Mobile data/Internet, SMS/Text messaging, Voice Calls",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",1.93
+Female,College of Humanity and Social Science,Yes,500,Off-campus,Yes,Several times a week,5,"Voice Calls, Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",9.62
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Several times a week,2,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",1.86
+Male,College of Art and Built Environment,No,100,Off-campus,Yes,Occasionally,5,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",2.27
+Female,College of Humanity and Social Science,Yes,600,On-campus,Yes,Several times a week,6,"None of the above, SMS/Text messaging, Mobile data/Internet",Yes,Yes,Poor network quality/coverage,1.82
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,No,Several times a week,1,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",Yes,Yes,Poor network quality/coverage,6.98
+Male,College of Engineering,No,200,Off-campus,No,Occasionally,5,"Voice Calls, SMS/Text messaging, None of the above",No,No,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",1.95
+Male,College of Engineering,No,500,Off-campus,No,Daily,3,"Mobile data/Internet, None of the above",Yes,Yes,High costs/pricing,7.01
+Female,College of Science,Yes,600,On-campus,Yes,Never,4,"None of the above, SMS/Text messaging",Yes,No,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",1.41
+Male,School of Business,Yes,200,Off-campus,Yes,Daily,2,None of the above,Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",7.92
+Male,College of Humanity and Social Science,Yes,500,Off-campus,Yes,Occasionally,2,"Mobile data/Internet, Voice Calls, None of the above, SMS/Text messaging",Yes,Yes,Poor network quality/coverage,2.51
+Male,College of Art and Built Environment,Yes,300,Off-campus,Yes,Several times a week,2,None of the above,No,Yes,"High costs/pricing, Unsatisfactory customer service",4.88
+Male,College of Art and Built Environment,Yes,600,Off-campus,No,Occasionally,1,"None of the above, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing",4.1
+Female,College of Science,Yes,300,Off-campus,Yes,Daily,1,"SMS/Text messaging, Voice Calls, None of the above",Yes,Yes,"Unsatisfactory customer service, High costs/pricing",0.5
+Male,College of Engineering,Yes,500,On-campus,No,Occasionally,2,Voice Calls,No,Yes,"High costs/pricing, Unsatisfactory customer service",4.43
+Male,College of Art and Built Environment,No,100,Off-campus,No,Daily,2,"Mobile data/Internet, None of the above",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, Poor network quality/coverage",8.06
+Female,College of Science,Yes,400,Off-campus,No,Occasionally,1,"SMS/Text messaging, Mobile data/Internet",Yes,Yes,High costs/pricing,8.57
+Female,College of Engineering,No,200,On-campus,No,Daily,3,"Mobile data/Internet, SMS/Text messaging, None of the above",Yes,No,"Insufficient data allowance, Unsatisfactory customer service",8.58
+Male,College of Humanity and Social Science,Yes,200,On-campus,Yes,Several times a week,2,Voice Calls,No,Yes,"Poor network quality/coverage, Insufficient data allowance",8.08
+Female,College of Humanity and Social Science,No,400,Off-campus,Yes,Daily,5,"SMS/Text messaging, None of the above, Voice Calls",No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",7.54
+Female,College of Engineering,Yes,600,On-campus,No,Several times a week,1,"Mobile data/Internet, SMS/Text messaging, None of the above",Yes,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",3.85
+Female,School of Business,No,100,Off-campus,Yes,Several times a week,6,SMS/Text messaging,Yes,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",8.06
+Male,College of Science,Yes,600,Off-campus,No,Occasionally,2,Voice Calls,Yes,No,"High costs/pricing, Unsatisfactory customer service",6.24
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Daily,2,"Mobile data/Internet, SMS/Text messaging, Voice Calls, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",9.97
+Male,College of Science,Yes,400,On-campus,Yes,Occasionally,5,"Mobile data/Internet, Voice Calls",No,Yes,Insufficient data allowance,8.85
+Female,College of Engineering,No,500,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, None of the above, SMS/Text messaging",No,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",6.99
+Female,College of Art and Built Environment,No,600,Off-campus,No,Several times a week,5,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service",7.73
+Male,School of Business,Yes,400,On-campus,Yes,Rarely,3,SMS/Text messaging,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage",2.14
+Male,College of Engineering,Yes,100,On-campus,No,Daily,1,"SMS/Text messaging, Voice Calls, Mobile data/Internet, None of the above",Yes,Yes,Insufficient data allowance,5.89
+Male,College of Engineering,Yes,200,Off-campus,Yes,Several times a week,2,"None of the above, SMS/Text messaging",No,Yes,"High costs/pricing, Unsatisfactory customer service",2.09
+Female,School of Business,No,300,Off-campus,No,Daily,2,"SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,"Poor network quality/coverage, Insufficient data allowance, High costs/pricing",1.88
+Female,College of Humanity and Social Science,Yes,400,On-campus,Yes,Several times a week,4,"SMS/Text messaging, None of the above, Mobile data/Internet, Voice Calls",Yes,Yes,Unsatisfactory customer service,7.58
+Female,College of Engineering,Yes,100,Off-campus,Yes,Occasionally,4,"SMS/Text messaging, Voice Calls",No,Yes,Poor network quality/coverage,2.76
+Male,College of Engineering,No,400,On-campus,No,Never,4,"None of the above, Mobile data/Internet, SMS/Text messaging, Voice Calls",Yes,Yes,High costs/pricing,7.21
+Female,College of Engineering,No,600,On-campus,No,Several times a week,1,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",0.58
+Female,College of Agriculture and Natural Resources,No,500,Off-campus,No,Daily,1,"Voice Calls, None of the above",No,No,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing",1.48
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Occasionally,4,"Voice Calls, Mobile data/Internet",Yes,Yes,High costs/pricing,3.24
+Male,School of Business,Yes,100,Off-campus,Yes,Daily,2,"None of the above, Voice Calls",No,Yes,Poor network quality/coverage,5.4
+Male,College of Humanity and Social Science,Yes,200,Off-campus,No,Occasionally,4,"None of the above, Voice Calls",Yes,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",3.24
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,6,"None of the above, SMS/Text messaging",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",3.12
+Female,College of Art and Built Environment,Yes,400,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, Voice Calls, None of the above",No,No,Unsatisfactory customer service,7.7
+Male,College of Humanity and Social Science,Yes,300,On-campus,No,Occasionally,5,Mobile data/Internet,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, Insufficient data allowance",2.43
+Female,College of Art and Built Environment,Yes,100,Off-campus,Yes,Daily,3,"Mobile data/Internet, None of the above",No,Yes,Poor network quality/coverage,3.52
+Male,College of Humanity and Social Science,Yes,300,Off-campus,No,Several times a week,1,Mobile data/Internet,No,Yes,"Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",4.18
+Male,College of Humanity and Social Science,Yes,100,Off-campus,No,Occasionally,4,Voice Calls,No,Yes,"Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",6.47
+Female,College of Humanity and Social Science,No,400,Off-campus,No,Several times a week,6,"Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,"High costs/pricing, Insufficient data allowance, Poor network quality/coverage",1.11
+Male,School of Business,No,300,Off-campus,Yes,Several times a week,1,Voice Calls,Yes,No,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance",4.64
+Male,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Occasionally,2,None of the above,No,Yes,"Poor network quality/coverage, Unsatisfactory customer service",7.82
+Female,College of Humanity and Social Science,Yes,500,Off-campus,No,Daily,1,SMS/Text messaging,Yes,No,Poor network quality/coverage,8.38
+Female,College of Engineering,Yes,300,On-campus,No,Several times a week,2,"SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,High costs/pricing,4.48
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Occasionally,4,"SMS/Text messaging, Voice Calls, Mobile data/Internet",No,Yes,"High costs/pricing, Insufficient data allowance",0.62
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Several times a week,3,None of the above,Yes,Yes,"Insufficient data allowance, Poor network quality/coverage, High costs/pricing",8.0
+Female,College of Science,Yes,100,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, SMS/Text messaging, Voice Calls, None of the above",No,Yes,Unsatisfactory customer service,2.0
+Male,College of Science,Yes,500,Off-campus,No,Daily,4,"Mobile data/Internet, None of the above, Voice Calls",No,Yes,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing, Poor network quality/coverage",10.24
+Male,College of Engineering,No,100,Off-campus,Yes,Occasionally,1,"Mobile data/Internet, None of the above, Voice Calls, SMS/Text messaging",No,Yes,Insufficient data allowance,5.02
+Male,School of Business,Yes,300,Off-campus,Yes,Occasionally,5,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, Poor network quality/coverage, High costs/pricing",9.36
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Daily,2,"None of the above, Voice Calls, Mobile data/Internet, SMS/Text messaging",No,No,"Insufficient data allowance, Poor network quality/coverage",5.74
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Daily,3,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",3.96
+Female,College of Engineering,Yes,500,Off-campus,No,Occasionally,1,"Voice Calls, None of the above",No,Yes,"Insufficient data allowance, Poor network quality/coverage",0.5
+Female,School of Business,Yes,100,Off-campus,Yes,Daily,3,"Voice Calls, None of the above",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance",9.68
+Female,College of Art and Built Environment,Yes,400,Off-campus,Yes,Occasionally,3,"Mobile data/Internet, Voice Calls",Yes,Yes,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",2.03
+Male,School of Business,Yes,200,Off-campus,Yes,Occasionally,1,"None of the above, Mobile data/Internet, Voice Calls, SMS/Text messaging",No,Yes,Unsatisfactory customer service,6.21
+Male,College of Art and Built Environment,No,200,Off-campus,No,Occasionally,3,Voice Calls,Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",3.43
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Rarely,1,None of the above,No,Yes,"High costs/pricing, Insufficient data allowance",7.1
+Female,College of Art and Built Environment,Yes,600,Off-campus,No,Daily,3,"Voice Calls, None of the above, SMS/Text messaging",No,Yes,High costs/pricing,1.19
+Female,College of Engineering,No,100,Off-campus,Yes,Several times a week,3,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,"High costs/pricing, Insufficient data allowance, Unsatisfactory customer service",3.58
+Female,College of Art and Built Environment,No,200,Off-campus,No,Several times a week,1,None of the above,No,Yes,Poor network quality/coverage,6.94
+Female,College of Science,Yes,400,Off-campus,No,Occasionally,1,"Voice Calls, None of the above, Mobile data/Internet, SMS/Text messaging",No,Yes,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage",5.33
+Female,College of Art and Built Environment,No,500,Off-campus,Yes,Occasionally,6,Mobile data/Internet,No,Yes,Unsatisfactory customer service,3.63
+Male,School of Business,No,100,Off-campus,Yes,Daily,2,SMS/Text messaging,Yes,Yes,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance",4.28
+Female,College of Art and Built Environment,Yes,100,Off-campus,Yes,Daily,4,"SMS/Text messaging, Mobile data/Internet, None of the above, Voice Calls",No,Yes,"Insufficient data allowance, Poor network quality/coverage",7.11
+Female,College of Science,Yes,400,Off-campus,No,Rarely,3,"Voice Calls, Mobile data/Internet, SMS/Text messaging",Yes,No,"Poor network quality/coverage, Unsatisfactory customer service",2.13
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Occasionally,1,None of the above,Yes,Yes,None,8.05
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Several times a week,1,SMS/Text messaging,Yes,Yes,"Insufficient data allowance, High costs/pricing, Unsatisfactory customer service, Poor network quality/coverage",1.72
+Male,College of Science,Yes,200,Off-campus,No,Occasionally,4,"None of the above, Voice Calls",No,Yes,Insufficient data allowance,4.31
+Male,School of Business,Yes,400,Off-campus,No,Several times a week,1,"Mobile data/Internet, None of the above, SMS/Text messaging, Voice Calls",No,Yes,"Poor network quality/coverage, High costs/pricing",5.26
+Male,College of Engineering,Yes,100,Off-campus,No,Several times a week,3,SMS/Text messaging,Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage",2.5
+Male,College of Science,No,400,Off-campus,No,Rarely,1,"None of the above, Mobile data/Internet, Voice Calls, SMS/Text messaging",No,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",0.5
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Daily,4,"SMS/Text messaging, Voice Calls, None of the above",No,No,"Insufficient data allowance, Poor network quality/coverage",1.7
+Male,College of Agriculture and Natural Resources,No,600,Off-campus,Yes,Rarely,3,"Mobile data/Internet, SMS/Text messaging, None of the above",No,Yes,"Unsatisfactory customer service, High costs/pricing, Poor network quality/coverage, Insufficient data allowance",2.31
+Female,College of Humanity and Social Science,Yes,100,Off-campus,Yes,Daily,1,None of the above,No,No,High costs/pricing,3.01
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Daily,2,"Voice Calls, SMS/Text messaging, Mobile data/Internet, None of the above",Yes,Yes,"Insufficient data allowance, Unsatisfactory customer service",4.38
+Male,College of Humanity and Social Science,No,500,Off-campus,No,Occasionally,3,"SMS/Text messaging, Voice Calls, None of the above, Mobile data/Internet",Yes,Yes,Insufficient data allowance,6.71
+Male,College of Humanity and Social Science,No,300,Off-campus,Yes,Daily,5,"Voice Calls, None of the above",No,Yes,High costs/pricing,4.13
+Male,School of Business,Yes,200,On-campus,No,Daily,2,SMS/Text messaging,Yes,Yes,"High costs/pricing, Unsatisfactory customer service",1.72
+Female,College of Art and Built Environment,Yes,200,Off-campus,Yes,Occasionally,3,Voice Calls,Yes,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance",3.97
+Female,College of Engineering,Yes,300,Off-campus,No,Rarely,4,"Voice Calls, SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,"Poor network quality/coverage, High costs/pricing, Insufficient data allowance",1.54
+Female,College of Humanity and Social Science,Yes,300,Off-campus,No,Daily,3,"SMS/Text messaging, Voice Calls, Mobile data/Internet",No,No,"High costs/pricing, Poor network quality/coverage, Insufficient data allowance, Unsatisfactory customer service",3.62
+Male,College of Engineering,Yes,300,Off-campus,Yes,Several times a week,1,Voice Calls,No,Yes,Unsatisfactory customer service,1.83
+Female,School of Business,Yes,300,Off-campus,No,Several times a week,5,"None of the above, Voice Calls",No,Yes,"Poor network quality/coverage, High costs/pricing",1.77
+Male,College of Agriculture and Natural Resources,Yes,600,Off-campus,Yes,Occasionally,1,"None of the above, Mobile data/Internet",Yes,Yes,"Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",6.69
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Daily,2,"None of the above, SMS/Text messaging, Voice Calls, Mobile data/Internet",Yes,Yes,"High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service, Insufficient data allowance",9.17
+Female,College of Engineering,Yes,100,Off-campus,Yes,Several times a week,2,SMS/Text messaging,No,No,"Poor network quality/coverage, High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",8.21
+Male,College of Art and Built Environment,Yes,100,On-campus,Yes,Occasionally,4,Mobile data/Internet,No,Yes,Insufficient data allowance,9.85
+Female,College of Science,Yes,100,Off-campus,No,Rarely,2,"SMS/Text messaging, None of the above",No,Yes,"Insufficient data allowance, Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing",8.42
+Male,College of Science,No,300,Off-campus,Yes,Daily,4,SMS/Text messaging,No,No,"Insufficient data allowance, High costs/pricing, Poor network quality/coverage, Unsatisfactory customer service",3.07
+Male,School of Business,Yes,400,Off-campus,No,Rarely,5,"Voice Calls, SMS/Text messaging, Mobile data/Internet, None of the above",No,Yes,"Insufficient data allowance, Unsatisfactory customer service",4.05
+Male,College of Humanity and Social Science,Yes,400,Off-campus,No,Occasionally,2,None of the above,No,Yes,High costs/pricing,1.29
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Occasionally,3,"None of the above, SMS/Text messaging, Mobile data/Internet, Voice Calls",Yes,No,Insufficient data allowance,7.11
+Male,College of Science,Yes,100,Off-campus,Yes,Several times a week,6,"None of the above, SMS/Text messaging",Yes,Yes,"High costs/pricing, Unsatisfactory customer service, Insufficient data allowance",9.29
+Male,College of Science,Yes,200,Off-campus,No,Several times a week,2,None of the above,Yes,Yes,"High costs/pricing, Insufficient data allowance",4.19
+Male,College of Agriculture and Natural Resources,Yes,100,On-campus,No,Daily,4,"None of the above, SMS/Text messaging, Voice Calls",No,No,"Unsatisfactory customer service, Insufficient data allowance, High costs/pricing",8.6
+Female,College of Agriculture and Natural Resources,No,600,Off-campus,No,Daily,2,"None of the above, Mobile data/Internet",No,Yes,"Unsatisfactory customer service, Insufficient data allowance",7.54
+Male,College of Art and Built Environment,Yes,300,Off-campus,No,Never,6,"None of the above, Voice Calls",No,Yes,Poor network quality/coverage,3.36
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,3,"Mobile data/Internet, None of the above, Voice Calls",No,Yes,"Poor network quality/coverage, Unsatisfactory customer service, High costs/pricing, Insufficient data allowance",7.7
