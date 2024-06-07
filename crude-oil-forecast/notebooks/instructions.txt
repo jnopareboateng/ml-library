@@ -1,0 +1,37 @@
+
+1. Introduction
+    
+    Briefly explain the purpose of the methodology section.
+	    
+    - Describe the overall approach and rationale for your research.
+2. Data Acquisition
+    
+    - Where did you get your data
+    - Why did you choose this data source
+    - How is the data relevant to your research
+3. Data Preprocessing
+    
+    - Describe the preprocessing steps you took, such as melting the dataframe, combining the year and month columns to form a date column, dropping unnecessary columns, and reindexing the dataframe.
+    - Explain why these preprocessing steps were necessary and how they helped in preparing the data for analysis.
+4. Model Implementation
+    
+    - ARIMA Model
+        - Explain why you chose the ARIMA model for your research.
+        - Describe how you implemented the ARIMA model, including how you determined the order of the AR and MA terms, how you fitted the model, and how you evaluated its performance.
+        - Discuss any challenges you encountered during the implementation and how you overcame them.
+    - Random Forest Model
+        - Explain why you chose the Random Forest model for your research.
+        - Describe how you implemented the Random Forest model, including how you transformed the data into timesteps, how you tuned the hyperparameters, how you fitted the model, and how you evaluated its performance.
+        - Discuss any challenges you encountered during the implementation and how you overcame them.
+5. Model Evaluation
+    
+    - Discuss how you evaluated the performance of the ARIMA and Random Forest models, including the metrics you used and why you chose them.
+    - Compare the performance of the two models and discuss which one performed better and why.
+6. Customization
+    
+    - Discuss how your group can customize this methodology for their own research.
+    - Identify the parts of the code or methodology that are most likely to need customization and provide guidance on how to customize them.
+7. Conclusion
+    
+    - Summarize the key points of your methodology.
+    - Discuss the potential implications of your research.
