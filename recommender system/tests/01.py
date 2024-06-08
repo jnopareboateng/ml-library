@@ -3,18 +3,21 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import silhouette_score
-from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, StandardScaler
 from typing import Any, Union, Callable
 
 # %%
-df = pd.read_csv('../dataset.csv')
+df = pd.read_csv('../data/dataset.csv')
 
 # %%
 df.head()
@@ -34,7 +37,7 @@ df_clean.shape
 
 
 # %%
-df = pd.read_csv('cleaned_data.csv')
+df = pd.read_csv('../data/cleaned_data.csv')
 
 # %%
 duplicate_records = df.duplicated().sum()
@@ -42,38 +45,9 @@ print(duplicate_records)
 
 
 # %%
-
-
-# %%
-# df['age_group'].value_counts()
-
-# %%
-# df['education'].value_counts()
-
-# %%
-# df['explicit'].value_counts()
-
-# %%
-# # Convert categorical variables
-
-# # One-hot encoding
-# df = pd.get_dummies(df, columns=['education', 'gender', 'country', 'genre', 'explicit'])
-
-
-# %%
 df.shape
 
 # %%
-# from sklearn.preprocessing import StandardScaler
-
-# scaler = StandardScaler()
-# df[['plays', 'artiste_popularity', 'audio_popularity', 'duration']] = scaler.fit_transform(df[['plays', 'artiste_popularity', 'audio_popularity', 'duration']])
-
-
-# %%
-import seaborn as sns
-import matplotlib.pyplot as plt
-
 # Summary statistics
 summary_stats = df.describe()
 
@@ -117,9 +91,6 @@ df['avg_audio_popularity'] = df.groupby(['age_group', 'gender'])['audio_populari
 
 # %% [markdown]
 # Summary Statistics for Audio Features by User
-
-# %%
-
 
 # %%
 audio_features = ['music_acousticness', 'danceability', 'energy', 'loudness', 'speechiness', 'instrumentalness', 'liveness', 'valence', 'tempo']
@@ -281,13 +252,6 @@ plt.title("Correlation Matrix of Numeric Features")
 plt.show()
 
 # %%
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-
 # Drop unnecessary columns
 df.drop(columns=['Unnamed: 0', 'usersha1'], inplace=True)
 
@@ -380,8 +344,18 @@ selected_columns = df.columns[indices]
 # Print the names of the selected columns
 print(selected_columns)
 
+# selecte columns are ['avg_music_acousticness_by_demo', 'avg_valence_by_demo', 'mode',
+    #    'avg_artiste_popularity', 'music_acousticness', 'plays',
+    #    'audio_popularity', 'artiste_popularity', 'loudness', 'danceability']
+
 
 # %%
 df.shape
+
+# %%
+df.to_csv('../data/preprocessed_data.csv')
+
+# %%
+
 
 
