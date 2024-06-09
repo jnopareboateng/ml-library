@@ -36,10 +36,9 @@ def register_user_interface(name, age, gender, country, edu_level):
     Returns:
         str: A message indicating successful registration or an error message.
     """
-    # Implementation here...
-    
-    if name in users:
-        return "User already exists. Please login."
+    # Check for unique user name and ID
+    if any(user['name'] == name for user in users.values()):
+        return "User name already exists. Please choose a different name."
     user_id = str(uuid.uuid4())
     users[user_id] = {
         "name": name,
@@ -47,13 +46,14 @@ def register_user_interface(name, age, gender, country, edu_level):
         "gender": gender,
         "country": country,
         "edu_level": edu_level,
-        "features": np.zeros(NFEATURE + 4, dtype=np.float64),
+        "features": np.zeros(NFEATURE + 4, dtype=np.float64).tolist(),
         "rated_songs": set()
     }
+    users[user_id] = list(users[user_id].items())
+    
     with open(f'user_data_{user_id}.json', 'w', encoding='utf-8') as file:
-        json.dump(users[user_id], file)
+        json.dump(users, file)
     return f"User {name} registered successfully. Your user ID is {user_id}"
-
 
 def login_user_interface(user_id):
     """
@@ -91,6 +91,11 @@ def compute_utility(user_features, song_features, epoch, s=S):
         float: The computed utility score.
     """
     # Implementation here...
+    if epoch < 0:
+        raise ValueError("Epoch must be a non-negative integer.")
+    if s <= 0:
+        raise ValueError("S must be a positive integer.")
+    
     user_features = user_features.copy()
     song_features = song_features.copy()
     dot = user_features.dot(song_features)
@@ -108,12 +113,13 @@ def get_song_features(song):
     """
     # Implementation here...
     if isinstance(song, pd.Series):
-        features = song[12:-48].values  # Exclude all columns before 'Artiste Popularity' and after 'Genre_world-music'
-        return features.astype(np.float64)  # Convert features to float64
+        features = song.iloc[12:-48].values
     elif isinstance(song, pd.DataFrame):
-        return get_song_features(pd.Series(song.loc[song.index[0]]))
+        features = song.iloc[0, 12:-48].values
     else:
-        raise TypeError("{} should be a Series or DataFrame".format(song))
+        raise TypeError("Song must be a pandas Series or DataFrame.")
+    return features.astype(np.float64)
+
 
 def update_features(user_features, song_features, rating, t):
     """
@@ -127,6 +133,14 @@ def update_features(user_features, song_features, rating, t):
         np.array: The updated feature vector of the user.
     """
     # Implementation here...
+    if rating < 1 or rating > 5:
+        raise ValueError("Rating must be an integer between 1 and 5.")
+    if t < 0:
+        raise ValueError("Total recommendations must be a non-negative integer.")
+    
+    user_features = np.array(user_features)
+    song_features = np.array(song_features)
+    
     impact_factor = (rating - 3) / 2  # Scale the impact factor based on the rating (-1 to 1)
     user_features[:-4] = user_features[:-4].astype(np.float64)  # Convert user_features[:-4] to float64
     
@@ -289,7 +303,7 @@ def initialize_q_table():
         np.array: The initialized Q-table.
     """
     # Implementation here...
-    q_table = np.zeros(NFEATURE + 4)
+    q_table = np.zeros((len(Songs), NFEATURE + 4))
     return q_table
 
 
@@ -361,40 +375,52 @@ def gradio_get_recommendations(user_id):
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
-
 # Streamlit app
 import streamlit as st
 unique_countries = Songs['country'].unique().tolist()
 def streamlit_app():
-    st.title('Music Recommendation System')
-    with st.form("register_user"):
-        st.subheader("Register New User")
-        name = st.text_input("Name")
-        age = st.number_input("Age", min_value=0)
-        gender = st.radio("Gender", ["Male", "Female", "Other"])
-        country = st.selectbox("Country", unique_countries)
-        edu_level = st.text_input("Education Level")
-        submit_button = st.form_submit_button("Register")
+    """
+    Streamlit application for the music recommendation system.
+    """
+    try:
+        registration_message = ""
+        st.title('Music Recommendation System')
+        # User registration
+        with st.form("register_user"):
+            st.subheader("Register New User")
+            name = st.text_input("Name")
+            age = st.number_input("Age", min_value=0)
+            gender = st.radio("Gender", ["Male", "Female", "Other"])
+            country = st.selectbox("Country", unique_countries)
+            edu_level = st.text_input("Education Level")
+            submit_button = st.form_submit_button("Register")
 
-        if submit_button:
-            registration_message = register_user_interface(name, age, gender, country, edu_level)
-            st.success(registration_message)
+            if submit_button:
+                registration_message = register_user_interface(name, age, gender, country, edu_level)
+                if "registered successfully" in registration_message:
+                    st.success(registration_message)
+                    # Extract user ID from the registration message
+                    user_id = registration_message.split()[-1]
+                    st.info(f"Your User ID is: {user_id}")
+                else:
+                    st.error(registration_message)
 
-    # User login
-    with st.form("login_user"):
-        st.subheader("Login Existing User")
-        user_id = st.text_input("User ID")
-        login_button = st.form_submit_button("Login")
+        # User login
+        with st.form("login_user"):
+            st.subheader("Login Existing User")
+            user_id = st.text_input("User ID")
+            login_button = st.form_submit_button("Login")
 
-        if login_button:
-            login_message = login_user_interface(user_id)
-            if "Welcome back" in login_message:
-                st.success(login_message)
-            else:
-                st.error(login_message)
+            if login_button:
+                login_message = login_user_interface(user_id)
+                if "Welcome back" in login_message:
+                    st.success(login_message)
+                else:
+                    st.error(login_message)
+    except Exception as e:
+        st.error(f"An error occurred: {str(e)}")
 
     # Assume other Streamlit components for rating songs and getting recommendations are here...
-
 
 if __name__ == "__main__":
     streamlit_app()
