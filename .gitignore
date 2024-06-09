@@ -3,3 +3,4 @@
 # notebooks/
 msft-mlflow/dataset.csv
 msft-mlflow/config.ini
+*.html
