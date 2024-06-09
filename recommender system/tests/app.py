@@ -37,6 +37,7 @@ def register_user_interface(name, age, gender, country, edu_level):
         str: A message indicating successful registration or an error message.
     """
     # Implementation here...
+    
     if name in users:
         return "User already exists. Please login."
     user_id = str(uuid.uuid4())
@@ -49,8 +50,10 @@ def register_user_interface(name, age, gender, country, edu_level):
         "features": np.zeros(NFEATURE + 4, dtype=np.float64),
         "rated_songs": set()
     }
-    userRecommendations[user_id] = []
+    with open(f'user_data_{user_id}.json', 'w', encoding='utf-8') as file:
+        json.dump(users[user_id], file)
     return f"User {name} registered successfully. Your user ID is {user_id}"
+
 
 def login_user_interface(user_id):
     """
@@ -61,18 +64,21 @@ def login_user_interface(user_id):
         str: A welcome message or an error message if the user ID is invalid.
     """
     # Implementation here...
+
     if user_id not in users:
         return "Invalid user ID. Please register first."
     try:
-        with open(f"user_data_{user_id}.json", "r") as file:
+        with open(f"user_data_{user_id}.json", "r", encoding='utf-8') as file:
             user_data = json.load(file)
-            user_data["features"] = np.array(user_data["features"])
-            user_data["rated_songs"] = set(user_data["rated_songs"])
+            if "features" in user_data:
+                user_data["features"] = np.array(user_data["features"])
+            if "rated_songs" in user_data:
+                user_data["rated_songs"] = set(user_data["rated_songs"])
             users[user_id] = user_data
     except FileNotFoundError:
-        pass
-    return f"Welcome back, {users[user_id]['name']}!"
+        return "User data not found. Please register first."
 
+    return f"Welcome back, {users[user_id]['name']}!"
 def compute_utility(user_features, song_features, epoch, s=S):
     """
     Computes the utility score for a song based on user preferences.
@@ -356,3 +362,39 @@ def gradio_get_recommendations(user_id):
         return f"An error occurred: {str(e)}"
 
 
+# Streamlit app
+import streamlit as st
+unique_countries = Songs['country'].unique().tolist()
+def streamlit_app():
+    st.title('Music Recommendation System')
+    with st.form("register_user"):
+        st.subheader("Register New User")
+        name = st.text_input("Name")
+        age = st.number_input("Age", min_value=0)
+        gender = st.radio("Gender", ["Male", "Female", "Other"])
+        country = st.selectbox("Country", unique_countries)
+        edu_level = st.text_input("Education Level")
+        submit_button = st.form_submit_button("Register")
+
+        if submit_button:
+            registration_message = register_user_interface(name, age, gender, country, edu_level)
+            st.success(registration_message)
+
+    # User login
+    with st.form("login_user"):
+        st.subheader("Login Existing User")
+        user_id = st.text_input("User ID")
+        login_button = st.form_submit_button("Login")
+
+        if login_button:
+            login_message = login_user_interface(user_id)
+            if "Welcome back" in login_message:
+                st.success(login_message)
+            else:
+                st.error(login_message)
+
+    # Assume other Streamlit components for rating songs and getting recommendations are here...
+
+
+if __name__ == "__main__":
+    streamlit_app()
