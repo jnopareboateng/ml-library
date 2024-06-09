@@ -3,6 +3,8 @@ import numpy as np
 import uuid
 import json
 import math
+import pyperclip
+import streamlit as st
 
 # Load dataset
 SONGS_FILE = "../../data/Spotify_MPD_Feature_Engineered.csv"
@@ -17,14 +19,9 @@ userRecommendations = {}  # Store user recommendations
 users = {}
 Q = {}  # Initialize Q-table
 
-# Function definitions (same as before)
-# ... (include all the function definitions here) ...
-
-
-
 # Function definitions
 
-def register_user_interface(name, age, gender, country, edu_level):
+def register_user(name, age, gender, country, edu_level, fav_genre, fav_artist):
     """
     Registers a new user in the system.
     Parameters:
@@ -33,36 +30,67 @@ def register_user_interface(name, age, gender, country, edu_level):
         gender (str): The gender of the user.
         country (str): The country of the user.
         edu_level (str): The education level of the user.
+        fav_genre (str): The favorite genre of the user.
+        fav_artist (str): The favorite artist of the user.
     Returns:
         str: A message indicating successful registration or an error message.
     """
     # Check for unique user name and ID
     if any(user['name'] == name for user in users.values()):
         return "User name already exists. Please choose a different name."
-    user_id = str(uuid.uuid4())
-    users[user_id] = {
+    # Create new user ID is a 5 digit number
+    user_id = str(uuid.uuid4().fields[-1])[:5]
+    while user_id in users:
+        user_id = str(uuid.uuid4().fields[-1])[:5]
+    
+
+    # Create new user dictionary
+    user_data = {
         "name": name,
         "age": age,
         "gender": gender,
         "country": country,
         "edu_level": edu_level,
+        "fav_genre": fav_genre,
+        "fav_artist": fav_artist,
         "features": np.zeros(NFEATURE + 4, dtype=np.float64).tolist(),
         "rated_songs": list(set())
     }
 
-    with open(f'user_data_{user_id}.json', 'w', encoding='utf-8') as file:
-        json.dump(users[user_id], file)
-    return f"User {name} registered successfully. Your user ID is {user_id}"
+    # Append the new user to the Songs dataset
+    new_row = pd.Series({
+        'user_id': user_id,
+        'name': name,
+        'age': age,
+        'gender': gender,
+        'country': country,
+        'edu_level': edu_level,
+        'fav_genre': fav_genre,
+        'fav_artist': fav_artist,
+    })
+
+    # Append new row to the dataset
+    Songs = Songs.append(new_row, ignore_index=True)
+
+    # Update the main dataset (Songs) with the new user's data (features, rated songs)
+    users[user_id] = user_data
+
+    # with open(f'user_data_{user_id}.json', 'w', encoding='utf-8') as file:
+    #     json.dump(users[user_id], file)
+    return f"User {name} registered successfully. Your user ID is: {user_id}"
 
 
-def login_user_interface(user_id):
+
+def login_user(user_id, epsilon=0.1):
     """
-    Logs in an existing user.
+    Logs in an existing user and provides song recommendations.
     Parameters:
         user_id (str): The unique identifier of the user.
+        epsilon (float): The exploration rate for song recommendations.
     Returns:
-        str: A welcome message or an error message if the user ID is invalid.
+        str: A welcome message with song recommendations or an error message if the user ID is invalid.
     """
+    user_id = str(user_id)
     if user_id not in users:
         return "Invalid user ID. Please register first."
     try:
@@ -76,7 +104,21 @@ def login_user_interface(user_id):
     except FileNotFoundError:
         return "User data not found. Please register first."
 
-    return f"Welcome back, {users[user_id]['name']}!"
+    # Get song recommendations
+    recommendations = get_recommendations(user_id, epsilon)
+    if not recommendations:
+        return f"Welcome back, {users[user_id]['name']}!\nYour User ID: {user_id}\nNo recommendations available at the moment."
+
+    recommendations_df = Songs.loc[recommendations, ['Music', 'artname', 'featured_artists']]
+    recommendations_df = recommendations_df.reset_index(drop=True)
+
+    return f"Welcome back, {users[user_id]['name']}!\nYour User ID: {user_id}\n\nRecommended Songs:", st.table(recommendations_df)
+    # recommendations_str = ', '.join(recommendations)
+
+    # # Copy user ID to clipboard
+    # pyperclip.copy(user_id)
+
+    # return f"Welcome back, {users[user_id]['name']}!\nYour User ID: {user_id} (copied to clipboard)\nHere are some song recommendations for you: {recommendations_str}"
 
 
 def compute_utility(user_features, song_features, epoch, s=S):
@@ -97,6 +139,12 @@ def compute_utility(user_features, song_features, epoch, s=S):
 
     user_features = user_features.copy()
     song_features = song_features.copy()
+
+    # Ensure that user_features and song_features have the same shape
+    min_length = min(len(user_features), len(song_features))
+    user_features = user_features[:min_length]
+    song_features = song_features[:min_length]
+
     dot = user_features.dot(song_features)
     ee = (1.0 - 1.0 * math.exp(-1.0 * epoch / s))
     res = dot * ee
@@ -149,7 +197,7 @@ def update_features(user_features, song_features, rating, t):
     return user_features
 
 
-def rate_song_interface(user_id, song_id, rating):
+def rate_song(user_id, song_id, rating):
     """
     Rates a song and updates the user's preferences.
     Parameters:
@@ -242,7 +290,7 @@ def choose_action(user_id, user_features, epsilon, rated_songs, t):
         return best_song
 
 
-def get_recommendations_interface(user_id, epsilon):
+def get_recommendations(user_id, epsilon):
     """
     Provides song recommendations for a user.
     Parameters:

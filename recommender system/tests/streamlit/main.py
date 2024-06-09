@@ -1,9 +1,10 @@
+from numpy import rec
 import streamlit as st
 from core_functions import (
-    register_user_interface,
-    login_user_interface,
-    rate_song_interface,
-    get_recommendations_interface,
+    register_user,
+    login_user,
+    rate_song,
+    get_recommendations,
 )
 from streamlit_interfaces import (
     register_user_interface_st,
@@ -20,8 +21,9 @@ def main():
     """
     st.title("Music Recommendation System")
 
-    menu = ["Register", "Login", "Recommendation"]
+    menu = ["Register", "Login",]
     choice = st.sidebar.selectbox("Menu", menu)
+
 
     if choice == "Register":
         register_user_interface_st(st)
@@ -34,8 +36,8 @@ def main():
             rate_song_interface_st(st, user_id)
             get_recommendations_interface_st(st, user_id)
 
-    elif choice == "Recommendation":
-        st.warning("Please login first.")
+    # elif choice == "Recommendation":
+    #     st.warning("Please login first.")
 
 if __name__ == "__main__":
     main()
