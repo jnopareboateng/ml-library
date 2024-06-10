@@ -9,7 +9,7 @@ from tqdm import tqdm
 from sklearn.metrics import mean_squared_error
 from scipy.stats import spearmanr
 from multiprocessing import Pool, cpu_count
-import uuid
+# import uuid
 import logging
 import json
 
@@ -18,13 +18,13 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Create a simple plot
-fig = go.Figure(data=[go.Scatter(x=[1, 2, 3], y=[4, 5, 6])])
+# fig = go.Figure(data=[go.Scatter(x=[1, 2, 3], y=[4, 5, 6])])
 
 # Save the plot as an HTML file
-pio.write_html(fig, file='plot.html', auto_open=False)
+# pio.write_html(fig, file='plot.html', auto_open=False)
 
 # Assuming the dataset is in the same directory
-SONGS_FILE = "Spotify_MPD_Feature_Engineered.csv"
+SONGS_FILE = "data/Spotify_MPD_Feature_Engineered.csv"
 S = 50  # Hyper Parameter
 totReco = 0  # Number of total recommendation till now
 startConstant = 5  # for low penalty in starting phase
