@@ -9,7 +9,7 @@ from tqdm import tqdm
 from sklearn.metrics import mean_squared_error
 from scipy.stats import spearmanr
 from multiprocessing import Pool, cpu_count
-# import uuid
+import uuid
 import logging
 import json
 
