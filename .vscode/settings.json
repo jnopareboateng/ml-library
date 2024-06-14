@@ -1,6 +1,6 @@
 {
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": true,
-  "python.defaultInterpreterPath": "D:\\Projects\\Research Paper Final year 4\\.venv\\Scripts\\python.exe"
-  // "python.formatting.provider": "black",
+  "python.defaultInterpreterPath": "D:\\Projects\\Research Paper Final year 4\\.venv\\Scripts\\python.exe",
+  "notebook.defaultFormatter": "ms-python.black-formatter"
 }

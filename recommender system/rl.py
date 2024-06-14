@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 # pio.write_html(fig, file='plot.html', auto_open=False)
 
 # Assuming the dataset is in the same directory
-SONGS_FILE = "Spotify_MPD_Feature_Engineered.csv"
+SONGS_FILE = "data/Spotify_MPD_Feature_Engineered.csv"
 S = 50  # Hyper Parameter
 totReco = 0  # Number of total recommendation till now
 startConstant = 5  # for low penalty in starting phase
