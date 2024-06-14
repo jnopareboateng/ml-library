@@ -1,0 +1,846 @@
+# %% [markdown]
+# **<center><span style="font-family:serif; font-size:34px;"> Decoding Student Retention and Churn Predictive Analytics in the Telecommunication Service Sectors - A Case Study of Vodafone (Telecel) </span>
+# <a id = "missingvalue" ></a><center>**
+
+# %% [markdown]
+# <center><span style="font-family:Palatino; font-size:22px;"><i> Did you know that attracting a new customer costs <span style="color:#DC143C;">five times</span> as much as keeping an existing one? Pfeifer (2005)</i></span> </center>
+
+# %% [markdown]
+# <a id = "7" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Data Description </span>
+# <a id = "missingvalue" ></a>
+
+# %% [markdown]
+# - **Gender**: The students's gender.
+# - **College**: The specific college within the university.
+# - **Churn**: Indicates whether the student has churned ("Yes" or "No").
+# - **Level**: The academic level of the student.
+# - **Residence**: Whether the student lives on-campus or off-campus.
+# - **SIM_Usage**: Whether the student uses a vodafone sim card.
+# - **Usage_Freq**: Frequency of SIM usage.
+# - **Network_Strength**: Quality of the network (on a scale).
+# - **Voice_Calls**: Whether the student makes voice calls.
+# - **Mobile_Data_Internet**: Whether the student uses mobile data.
+# - **SMS_Text_Messaging**: Whether the student sends SMS texts.
+# - **Data_Exhaustion**: Whether the student experiences data exhaustion.
+# - **Other_Networks**: Whether the student uses other networks.
+# - **Poor_Network_Quality_Coverage**: Whether the student experiences poor network quality.
+# - **Insufficient_Data_Allowance**: Whether the student's data allowance is insufficient.
+# - **Unsatisfactory_Customer_Service**: Whether the student is dissatisfied with customer service.
+# - **High_Costs_Pricing**: Whether the student finds the pricing high.
+# - **Monthly_Data_Usage**: Amount of data used monthly.
+# 
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "5" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Loading libraries and data</span>
+# <a id="loading"></a>
+
+# %%
+import pandas as pd
+from sklearn.model_selection import train_test_split
+import numpy as np
+import seaborn as sns
+import missingno as msno #for missing data
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import plotly.express as px #for histogram
+
+
+# %%
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import RandomizedSearchCV
+from scipy.stats import uniform, randint
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+# !pip install lightgbm
+from lightgbm import LGBMClassifier
+from sklearn.neighbors import KNeighborsClassifier
+# format to 3 dp
+pd.set_option('display.float_format', lambda x: '%.3f' % x)
+
+# %%
+data = pd.read_csv('../data/reData.csv')
+# data = pd.read_csv('/content/drive/MyDrive/Research Paper Final year 4/Python Scripts/telecel/data/reData.csv')
+
+# %%
+data.head()
+
+# %% [markdown]
+# >**The data set includes information about:**
+# 
+# 
+# * **Demographic info about students** – gender, college, and residence
+# * **Students account information** - how long they’ve been using the sim card(level) and their usage
+# * **Students who no longer use their sim** – the column is called Churn
+# * **Services that each student uses** – voice call, mobile data and sms texting
+# * **Factors influence discountinuation** – multiple networks, network coverage, customer service, data allowance, high cost of services
+# * **Data Activity**  - data usage, exhaust monthly data
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "6" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Undertanding the data</span>
+# <a id = "Undertanding the data" ></a>
+
+# %%
+data.shape
+
+# %%
+data.columns.values
+
+# %%
+data.info()
+
+# %%
+data.describe()
+# data.describe(include=["object", "bool"]) # For non-numeric
+
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "7" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Checking missing values </span>
+# <a id = "missingvalue" ></a>
+
+# %%
+data.isnull().sum()
+
+# %%
+# Visualize missing values as a matrix
+msno.matrix(data);
+
+# %% [markdown]
+# > Using this matrix we can very quickly find the pattern of missingness in the dataset.
+# * From the above visualisation we can observe that it has no peculiar pattern that stands out. In fact there is no missing data.
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "8" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Data Manipulation </span>
+# <a id = "8" ></a>
+
+# %%
+# Assuming 'data' is your DataFrame
+college_mapping = {
+    'College of Agriculture and Natural Resources': 'CANARSA',
+    'College of Science': 'COS',
+    'College of Engineering': 'COE',
+    'College of Art and Built Environment': 'CABE',
+    'College of Humanities and Social Science': 'COHSS',
+    'College of Health Sciences': 'COH'
+
+}
+
+data['College'] = data['College'].replace(college_mapping, regex=True)
+
+# %% [markdown]
+# >Shorten the colleges names to abbreviations
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "8" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Data Visualization </span>
+# <a id = "8" ></a>
+
+# %%
+g_labels = ['Male', 'Female']
+c_labels = ['No', 'Yes']
+# Create subplots: use 'domain' type for Pie subplot
+fig = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
+fig.add_trace(go.Pie(labels=g_labels, values=data['Gender'].value_counts(), name="Gender"),
+              1, 1)
+fig.add_trace(go.Pie(labels=c_labels, values=data['Churn'].value_counts(), name="Churn"),
+              1, 2)
+
+# Use `hole` to create a donut-like pie chart
+fig.update_traces(hole=.4, hoverinfo="label+percent+name", textfont_size=16)
+
+fig.update_layout(
+    title_text="Gender and Churn Distributions of Students",
+    # Add annotations in the center of the donut pies.
+    annotations=[dict(text='Gender', x=0.16, y=0.5, font_size=20, showarrow=False),
+                 dict(text='Churn', x=0.84, y=0.5, font_size=20, showarrow=False)])
+fig.show()
+
+# %% [markdown]
+# * Only 32% of students switched to another firm.
+# * Students are 47.4 % female and 52.5 % male.
+
+# %%
+# # Count the number of 'No Churn' and 'Churn' cases for each gender
+# no_churn = data["Churn"][data["Churn"] == "No"].groupby(by=data["Gender"]).count().reset_index()
+# yes_churn = data["Churn"][data["Churn"] == "Yes"].groupby(by=data["Gender"]).count().reset_index()
+
+# # Rename columns
+# no_churn.columns = ["Gender", "No Churn"]
+# yes_churn.columns = ["Gender", "Churn"]
+
+# # Merge the two DataFrames
+# churn_table = pd.merge(no_churn, yes_churn, on="Gender", how="outer")
+
+# # Calculate the total
+# churn_table["Total"] = churn_table["No Churn"] + churn_table["Churn"]
+# churn_table
+
+
+# %%
+plt.figure(figsize=(6, 6))
+labels =["Churn: No","Churn:Yes"]
+values = [522,246]
+labels_gender = ["F","M","F","M"]
+sizes_gender = [281,241 , 122,124]
+colors = ['#ff6666', '#66b3ff']
+colors_gender = ['#c2c2f0','#ffb3e6', '#c2c2f0','#ffb3e6']
+explode = (0.3,0.3) 
+explode_gender = (0.1,0.1,0.1,0.1)
+textprops = {"fontsize":15}
+#Plot
+plt.pie(values, labels=labels,autopct='%1.1f%%',pctdistance=1.08, labeldistance=0.8,colors=colors, startangle=90,frame=True, explode=explode,radius=10, textprops =textprops, counterclock = True, )
+plt.pie(sizes_gender,labels=labels_gender,colors=colors_gender,startangle=90, explode=explode_gender,radius=7, textprops =textprops, counterclock = True, )
+#Draw circle
+centre_circle = plt.Circle((0,0),5,color='black', fc='white',linewidth=0)
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+plt.title('Churn Distribution with Gender: Male(M) and Female(F)', fontsize=15, y=1.1)
+
+# show plot 
+
+plt.axis('equal')
+plt.tight_layout()
+plt.show()
+
+pd.crosstab(data["Churn"], data["Gender"], margins=True)
+
+
+# %% [markdown]
+# >There is negligible difference in customer percentage who chanaged or terminated their vodafone service. Both genders behaved in similar fashion when it comes to migrating to another service provider or stop using the vodafone.
+
+# %%
+fig = px.histogram(data, x="Churn", color="College", barmode="group", title="<b>College Churn distribution<b>")
+fig.update_layout(width=700, height=500, bargap=0.1)
+fig.show()
+
+# %% [markdown]
+# **Distribution By Colleges**
+# 
+# - College of Agriculture and Natural Resources: CANARSA
+# - College of Science: COS  
+# - College of Engineering: COE  
+# - College of Art and Built Environment: CABE  
+# - College of Humanities and Social Science: COHSS  
+# - College of Health Sciences: COH
+# > COS and CABE tend to have very high churn rates
+
+# %%
+# # Boxplot
+
+# # Calculate the count of levels for each College
+# level_counts = data.groupby(['College', 'Level']).size().reset_index(name='Count')
+
+# # Create the grouped box plot
+# fig = px.box(data, x="College", y="Level", color="College", title="<b>College Churn Distribution</b>")
+
+# # Add annotations for level counts
+# for college, level, count in zip(level_counts['College'], level_counts['Level'], level_counts['Count']):
+#     fig.add_annotation(
+#         x=college,
+#         y=level,
+#         text=str(count),
+#         showarrow=False,
+#         font=dict(size=12, color='black')
+#     )
+# # Customize layout
+# fig.update_layout(width=700, height=500)
+# # Show the plot
+# fig.show()
+
+# # Histogram
+# # fig = px.histogram(data, x="College", color="Level", barmode="group", title="<b>College Churn distribution<b>")
+# # fig.update_layout(width=700, height=500, bargap=0.1)
+# # fig.show()
+
+# # Violin
+# # fig = px.violin(data, x="College", y="Level", box=True, points="all", title="<b>College Churn distribution<b>")
+# # fig.update_layout(width=700, height=500)
+# # fig.show()
+
+
+# %%
+color_map = {"Yes": '#FFA15A', "No": '#00CC96'}
+fig = px.histogram(data, x="Churn", color="Residence",  title="<b>Churn distribution by Residence</b>", color_discrete_map=color_map)
+fig.update_layout(width=700, height=500, bargap=0.1)
+fig.show()
+
+# %%
+import plotly.graph_objects as go
+
+labels = data['Usage_Freq'].unique()
+values = data['Usage_Freq'].value_counts()
+
+# Define explode values; set non-zero values for the slices you want to explode
+explode = [0.1 if label in ['Rarely', 'Daily'] else 0 for label in labels]
+
+fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent+value',
+                             hole=.5, pull=explode,
+                             textposition='outside')])
+
+fig.update_layout(title_text="<b>Usage Frequency Distribution</b>")
+
+fig.show()
+
+
+# %%
+fig = px.histogram(data, x="Churn", color="Usage_Freq", title="<b>Usage Frequency Distribution with Churn included </b>")
+fig.update_layout(width=700, height=500, bargap=0.1)
+fig.show()
+
+# %%
+
+labels = data['Other_Networks'].unique()
+values = data['Other_Networks'].value_counts()
+
+fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3, textinfo='label+percent+value')])
+
+fig.update_layout(title_text="<b>Multiple Network Distribution</b>")
+
+fig.show()
+
+
+# %%
+fig = go.Figure(data=[go.Bar(x=data['Network_Strength'].value_counts().index,
+                             y=data['Network_Strength'].value_counts().values,
+                             marker=dict(color=px.colors.sequential.Plasma))])
+
+fig.update_layout(title_text="<b> Network_Strength Distribution</b>",
+                  xaxis_title="Network Strength",
+                  yaxis_title="Count")
+
+fig.show()
+
+
+
+# %% [markdown]
+# Churn Distribution w.r.t. Voice Calls, Mobile Data Internet, and SMS Text Messaging
+
+# %%
+
+# Create a list of unique values in the 'Churn' column
+churn_values = ['Yes', 'No']
+voice = data['Voice_Calls'].value_counts()
+mobile_data = data['Mobile_Data_Internet'].value_counts()
+SMS_messaging = data['SMS_Text_Messaging'].value_counts()
+fig = go.Figure()
+
+# Voice Calls
+fig.add_trace(go.Bar(
+    x=churn_values,
+    y=voice,
+    name='Voice Calls'
+))
+
+# Mobile Data Internet
+fig.add_trace(go.Bar(
+    x=churn_values,
+    y=mobile_data,
+    name='Mobile Data Internet'
+))
+
+# SMS Text Messaging
+fig.add_trace(go.Bar(
+    x=churn_values,
+    y=SMS_messaging,
+    name='SMS Text Messaging'
+))
+
+fig.update_layout(title_text="<b>Churn Distribution w.r.t. Voice Calls, Mobile Data Internet, and SMS Text Messaging</b>")
+
+fig.show()
+# data['SMS_Text_Messaging'].value_counts()
+# fig = go.Figure()
+
+# fig.add_trace(go.Bar(
+#   x = [['Churn:No', 'Churn:No', 'Churn:Yes', 'Churn:Yes'],
+#        ["Female", "Male", "Female", "Male"]],
+#   y = [965, 992, 219, 240],
+#   name = 'DSL',
+# ))
+
+# fig.add_trace(go.Bar(
+#   x = [['Churn:No', 'Churn:No', 'Churn:Yes', 'Churn:Yes'],
+#        ["Female", "Male", "Female", "Male"]],
+#   y = [889, 910, 664, 633],
+#   name = 'Fiber optic',
+# ))
+
+# fig.add_trace(go.Bar(
+#   x = [['Churn:No', 'Churn:No', 'Churn:Yes', 'Churn:Yes'],
+#        ["Female", "Male", "Female", "Male"]],
+#   y = [690, 717, 56, 57],
+#   name = 'No Internet',
+# ))
+
+# fig.update_layout(title_text="<b>Churn Distribution w.r.t. Internet Service and Gender</b>")
+
+# fig.show()
+
+# %%
+# combined_df = pd.concat([data['Gender'],data['Voice_Calls'], data['Mobile_Data_Internet'], data['SMS_Text_Messaging']], axis=1)
+# a=combined_df[combined_df["Gender"]=="Male"][["Voice_Calls"]].value_counts()
+# b=combined_df[combined_df["Gender"]=="Male"][["Mobile_Data_Internet"]].value_counts()
+# c=combined_df[combined_df["Gender"]=="Male"][["SMS_Text_Messaging"]].value_counts()
+# combined_value_counts = pd.DataFrame({'Voice_Calls': a, 'Mobile_Data_Internet': b, 'SMS_Text_Messaging': c})
+# combined_value_counts['Total'] = combined_value_counts.sum(axis=1)
+# combined_value_counts
+
+
+# %%
+# combined_df = pd.concat([data['Gender'],data['Voice_Calls'], data['Mobile_Data_Internet'], data['SMS_Text_Messaging']], axis=1)
+# a=combined_df[combined_df["Gender"]=="Female"][["Voice_Calls"]].value_counts()
+# b=combined_df[combined_df["Gender"]=="Female"][["Mobile_Data_Internet"]].value_counts()
+# c=combined_df[combined_df["Gender"]=="Female"][["SMS_Text_Messaging"]].value_counts()
+# combined_value_counts = pd.DataFrame({'Voice_Calls': a, 'Mobile_Data_Internet': b, 'SMS_Text_Messaging': c})
+# combined_value_counts['Total'] = combined_value_counts.sum(axis=1)
+# combined_value_counts
+
+
+# %%
+fig = go.Figure()
+
+# Poor_Network_Quality_Coverage
+fig.add_trace(go.Bar(
+  x = ['Churn:No', 'Churn:Yes'],
+  y = data[data['Voice_Calls'] == 'Yes']['Churn'].value_counts().tolist(),
+  name = 'Poor_Network_Quality_Coverage',
+))
+
+# Insufficient_Data_Allowance
+fig.add_trace(go.Bar(
+  x = ['Churn:No', 'Churn:Yes'],
+  y = data[data['Mobile_Data_Internet'] == 'Yes']['Churn'].value_counts().tolist(),
+  name = 'Mobile Data Internet',
+))
+
+# Unsatisfactory_Customer_Service
+fig.add_trace(go.Bar(
+  x = ['Churn:No', 'Churn:Yes'],
+  y = data[data['SMS_Text_Messaging'] == 'Yes']['Churn'].value_counts().tolist(),
+  name = 'Unsatisfactory_Customer_Service',
+))
+# High_Costs_Pricing
+fig.add_trace(go.Bar(
+  x = ['Churn:No', 'Churn:Yes'],
+  y = data[data['SMS_Text_Messaging'] == 'Yes']['Churn'].value_counts().tolist(),
+  name = 'High_Costs_Pricing',
+))
+
+
+fig.update_layout(title_text="<b>Churn Distribution w.r.t. Poor_Network_Quality_Coverage, Insufficient_Data_Allowance,Unsatisfactory_Customer_Service and High_Costs_Pricing</b>")
+
+fig.show()
+
+
+# %%
+import plotly.express as px
+
+fig = px.violin(data, x='Churn', y='Level', box=True)
+
+# Update yaxis properties
+fig.update_yaxes(title_text='Level (Year)', row=1, col=1)
+
+# Update xaxis properties
+fig.update_xaxes(title_text='Churn', row=1, col=1)
+
+# Update size and title
+fig.update_layout(autosize=True, width=750, height=600,
+                  title_font=dict(size=25, family='Courier'),
+                  title='<b>Level vs Churn</b>')
+
+fig.show()
+
+# %% [markdown]
+# * The shapes of the two violins are quite similar, suggesting that the overall distribution of "Level" is comparable for both categories of "Churn".
+# * The median "Level" (the thick horizontal line inside the box) appears to be slightly higher for the "Yes" category compared to the "NO" category.
+# * The interquartile ranges (the boxes) and the whiskers (extending to the minimum and maximum values) also seem to be relatively similar for both categories, indicating that the spread and range of "Level" values are Yest vastly different.
+
+# %% [markdown]
+# **Distribution of Monthly_Data_Usage by Data_Exhaustion**
+
+# %%
+ax = sns.kdeplot(data.Monthly_Data_Usage[(data["Data_Exhaustion"] == 'No') ],
+                color="Gold", fill = True);
+ax = sns.kdeplot(data.Monthly_Data_Usage[(data["Data_Exhaustion"] == 'Yes') ],
+                ax =ax, color="Green", fill= True);
+ax.legend(["Not Data_Exhaustion","Data_Exhaustion"],loc='upper right');
+ax.set_ylabel('Density');
+ax.set_xlabel('Monthly_Data_Usage');
+ax.set_title('Distribution of Monthly_Data_Usage by Data_Exhaustion');
+
+
+# %% [markdown]
+# * Data_Exhaustion (Green): Peaks at a value of 2 on the Monthly_Data_Usage axis, indicating that users experiencing data exhaustion tend to use around this amount of data before their data runs out.
+# * Not Data_Exhaustion (Yellow): Has a peak slightly to the right of the Data_Exhaustion peak, suggesting that users who do not churn generally consume more data.
+
+# %%
+sns.set_context("paper",font_scale=1.1)
+ax = sns.kdeplot(data.Monthly_Data_Usage[(data["Churn"] == 'No') ],
+                color="Red", fill = True);
+ax = sns.kdeplot(data.Monthly_Data_Usage[(data["Churn"] == 'Yes') ],
+                ax =ax, color="Blue", fill= True);
+ax.legend(["Not Churn","Churn"],loc='upper right');
+ax.set_ylabel('Density');
+ax.set_xlabel('Monthly_Data_Usage');
+ax.set_title('Distribution of monthly charges by churn');
+
+
+# %% [markdown]
+# * The distributions for both groups are unimodal, meaning they have a single peak or mode.
+# * The distribution for the "Not Churn" group (purple curve) is slightly shifted to the right compared to the "Churn" group (blue curve). This suggests that customers who did not churn tend to have higher monthly data usage on average.
+# * The peak of the "Not Churn" distribution is lower and wider than the peak of the "Churn" distribution. This indicates that the monthly data usage for customers who did not churn is more spread out or has a higher variance compared to the customers who churned.
+# * The overlap between the two distributions is significant, which means that there is a considerable amount of similarity in the monthly data usage patterns between the two groups.
+
+# %% [markdown]
+# Imagine you have a big jar of jellybeans. Some jellybeans are yellow, and some are green. If we take out the jellybeans one by one and sort them into two piles based on their colors, we can see how many of each color we have. The yellow jellybeans are like the people who keep using their phone data without running out, and the green jellybeans are like the people who use up all their data and can't use the internet anymore.
+# 
+# The graph you showed me is like those piles of jellybeans. It has two hills: one for the yellow jellybeans and one for the green jellybeans. The taller the hill, the more jellybeans there are in that pile. So, by looking at the hills, we can tell which color of jellybeans - or which group of people - has more or less phone data used. It's like a game to see who uses their phone data the most! 📊📱
+
+# %%
+plt.figure(figsize=(25, 10))
+corr = data.apply(lambda x: pd.factorize(x)[0]).corr()
+mask = np.triu(np.ones_like(corr, dtype=bool))
+ax = sns.heatmap(corr, mask=mask, xticklabels=corr.columns, yticklabels=corr.columns, annot=True, linewidths=.2, cmap='coolwarm', vmin=-1, vmax=1)
+# sns.heatmap(data.corr(), annot=True, fmt='.2f', cmap='coolwarm')
+
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "6" ></a>
+# # <span style="font-family:serif; font-size:28px;">Model Preprocessing</span>
+# <a id = Model Preprocessing ></a>
+
+# %%
+# Create a DataFrame to store the encoded values
+encoded_values = pd.DataFrame(columns=['Feature', 'Category', 'Encoded Value'])
+# Get all the categorical columns
+category_feature = data.select_dtypes(include=['object']).columns
+
+# Create a LabelEncoder object
+le = LabelEncoder()
+
+# Iterate through each categorical feature
+for feature in category_feature:
+    # Fit the LabelEncoder on the current feature and transform the data
+    data[feature] = le.fit_transform(data[feature])
+
+    # Get the encoded values for the current feature
+    for category, encoded_value in zip(le.classes_, le.transform(le.classes_)):
+        # Create a temporary DataFrame to hold the current row
+        temp_df = pd.DataFrame([{'Feature': feature, 'Category': category, 'Encoded Value': encoded_value}])
+
+        # Append the temporary DataFrame to the main DataFrame
+        encoded_values = pd.concat([encoded_values, temp_df], ignore_index=True)
+
+
+# %%
+# Display the encoded values
+encoded_values
+
+# %%
+# Now your data is ready for machine learning algorithms
+data.head()
+
+# %%
+# Splitting the data into training and test sets
+X = data.drop('Churn', axis=1)
+y = data['Churn']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+print("Data preprocessing completed!")
+
+# %%
+plt.figure(figsize=(14,7))
+data.corr()['Churn'].sort_values(ascending = False)
+
+# %%
+# def distplot(feature, frame, color='r'):
+#     # plt.figure(figsize=(8,3))
+#     plt.title("Distribution for {}".format(feature))
+#     ax = sns.distplot(frame[feature], color= color)
+
+# %%
+# num_cols = [ 'Network_Strength', 'Monthly_Data_Usage']
+# for feat in num_cols: distplot(feat, data)
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
+# <a id = "11" ></a>
+# # <span style="font-family:serif; font-size:28px;"> Machine Learning Model Evaluations and Predictions</span>
+# <a id = "modelprediction" ></a>
+
+# %%
+# Initialize the models
+lr = LogisticRegression(random_state=42, solver='liblinear')
+rf = RandomForestClassifier(random_state=42)
+knn = KNeighborsClassifier()
+svm = SVC(random_state=42)
+gb = GradientBoostingClassifier(random_state=42)
+nn = MLPClassifier(random_state=42, max_iter=1000)
+lgbm = LGBMClassifier(random_state=42)
+# lightgbm.basic.Booster.silent = True
+
+# List of models
+models = [lr,rf,knn, svm, gb, nn, lgbm]
+# Define the hyperparameters for each model``
+hyperparameters = {
+    'LogisticRegression': {
+        'C': uniform(0.1, 10),
+        'penalty': ['l1', 'l2']
+    },
+    'RandomForestClassifier': {
+        'n_estimators': randint(50, 200),
+       'max_depth': randint(1, 10)
+    },
+    'KNeighborsClassifier': {
+        'n_neighbors': randint(1, 10)
+    },
+    'SVC': {
+        'C': uniform(0.1, 10),
+        'gamma': uniform(0.001, 1)
+    },
+    'GradientBoostingClassifier': {
+        'n_estimators': randint(50, 200),
+       'max_depth': randint(1, 10),
+        'learning_rate': uniform(0.01, 0.3)
+    },
+    'MLPClassifier': {
+        'hidden_layer_sizes': (randint(10, 100).rvs(), randint(10, 100).rvs()),
+        'alpha': uniform(0.0001, 0.1)
+    },
+    'LGBMClassifier': {
+        'n_estimators': randint(50, 200),
+       'max_depth': randint(1, 10),
+        'learning_rate': uniform(0.01, 0.3)
+    }
+}
+
+# # Perform a randomized search for each model
+# for model in models:
+#     model_name = model.__class__.__name__
+#     print(f"\nTuning {model_name}...")
+
+#     # Initialize a RandomizedSearchCV object
+#     rs = RandomizedSearchCV(rf, hyperparameters['RandomForestClassifier'], n_iter=10, cv=5, random_state=42, n_jobs=-1, error_score='raise')
+#     # Fit the RandomizedSearchCV object to the data
+#     rs.fit(X_train, y_train)
+
+#     # Print the best parameters and the best score
+#     print(f"Best parameters: {rs.best_params_}")
+#     # print(f"Best score: {rs.best_score_}")
+
+# %%
+import lightgbm
+
+# Perform a randomized search for each model
+for model in models:
+    model_name = model.__class__.__name__
+    print(f"\nTuning {model_name}...")
+
+    # Initialize a RandomizedSearchCV object
+    rs = RandomizedSearchCV(model, hyperparameters[model_name], n_iter=10, cv=5, random_state=42, n_jobs=-1)
+
+    # Fit the RandomizedSearchCV object to the data
+    rs.fit(X_train, y_train)
+
+    # Print the best parameters and the best score
+    print(f"Best parameters: {rs.best_params_}")
+    print(f"Best score: {rs.best_score_}")
+
+    # Make predictions on the test set
+    y_pred = rs.best_estimator_.predict(X_test)
+
+    # Print the confusion matrix
+    print(f"Confusion matrix for {model_name}:")
+    print(confusion_matrix(y_test, y_pred))
+    print("\n")
+
+# %%
+# confusion matrix for each model
+for model in models:
+    model_name = model.__class__.__name__
+    print(f"\nTuning {model_name}...")
+
+    # Initialize a RandomizedSearchCV object
+    rs = RandomizedSearchCV(model, hyperparameters[model_name], n_iter=10, cv=5, random_state=42, n_jobs=-1)
+
+    # Fit the RandomizedSearchCV object to the data
+    rs.fit(X_train, y_train)
+
+    # Print the best parameters and the best score
+    print(f"Best parameters: {rs.best_params_}")
+    print(f"Best score: {rs.best_score_}")
+
+    # Make predictions on the test set
+    y_pred = rs.best_estimator_.predict(X_test)
+
+    # Print the confusion matrix
+    print(f"Confusion matrix for {model_name}:")
+    print(confusion_matrix(y_test, y_pred))
+    print("\n")
+
+    # Print the classification report
+    print(f"Classification report for {model_name}:")
+    print(classification_report(y_test, y_pred))
+    print("\n")
+
+# %%
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Perform a randomized search for each model
+for model in models:
+    model_name = model.__class__.__name__
+    print(f"\nTuning {model_name}...")
+
+    # Initialize a RandomizedSearchCV object
+    rs = RandomizedSearchCV(model, hyperparameters[model_name], n_iter=10, cv=5, random_state=42, n_jobs=-1)
+
+    # Fit the RandomizedSearchCV object to the data
+    rs.fit(X_train, y_train)
+
+    # Print the best parameters and the best score
+    print(f"Best parameters: {rs.best_params_}")
+    print(f"Best score: {rs.best_score_}")
+
+    # Make predictions on the test set
+    y_pred = rs.best_estimator_.predict(X_test)
+
+    # Print the confusion matrix
+    print(f"Confusion matrix for {model_name}:")
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    print(conf_matrix)
+    print("\n")
+
+    # Print the classification report
+    print(f"Classification report for {model_name}:")
+    print(classification_report(y_test, y_pred))
+    print("\n")
+
+    # Generate heatmap for confusion matrix
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='g')
+    plt.title(f'Confusion Matrix for {model_name}')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    plt.show()
+
+# %% [markdown]
+# - True Negatives (top-left): The value 40 represents the number of instances that were correctly predicted as negative (0).
+# - False Positives (top-right): The value 3 represents the number of instances that were incorrectly predicted as positive (1) when they were actually negative (0).
+# - False Negatives (bottom-left): The value 0 represents the number of instances that were incorrectly predicted as negative (0) when they were actually positive (1).
+# - True Positives (bottom-right): The value 111 represents the number of instances that were correctly predicted as positive (1).
+# 
+# - Based on this confusion matrix, we can calculate various performance metrics for the logistic regression model, such as:
+# 
+# - Accuracy: The overall accuracy of the model, calculated as (True - Positives + True Negatives) / Total instances.
+# - Precision: The proportion of positive predictions that were actually correct, calculated as True Positives / (True Positives + False Positives).
+# - Recall (Sensitivity): The proportion of actual positive instances that were correctly identified, calculated as True Positives / (True Positives + False Negatives).
+# - Specificity: The proportion of actual negative instances that were correctly identified, calculated as True Negatives / (True Negatives + False Positives).
+
+# %%
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+# from matplotlib.gridspec import GridSpec
+
+# # Perform a randomized search for each model
+# num_models = len(models)
+# fig = plt.figure(figsize=(20, 5 * num_models))
+# gs = GridSpec(num_models, 1)
+
+# for i, model in enumerate(models):
+#     model_name = model.__class__.__name__
+#     print(f"\nTuning {model_name}...")
+
+#     # Initialize a RandomizedSearchCV object
+#     rs = RandomizedSearchCV(model, hyperparameters[model_name], n_iter=10, cv=5, random_state=42, n_jobs=-1)
+
+#     # Fit the RandomizedSearchCV object to the data
+#     rs.fit(X_train, y_train)
+
+#     # Print the best parameters and the best score
+#     print(f"Best parameters: {rs.best_params_}")
+#     print(f"Best score: {rs.best_score_}")
+
+#     # Make predictions on the test set
+#     y_pred = rs.best_estimator_.predict(X_test)
+
+#     # Print the confusion matrix
+#     print(f"Confusion matrix for {model_name}:")
+#     conf_matrix = confusion_matrix(y_test, y_pred)
+#     print(conf_matrix)
+#     print("\n")
+
+#     # Print the classification report
+#     print(f"Classification report for {model_name}:")
+#     print(classification_report(y_test, y_pred))
+#     print("\n")
+
+#     # Generate heatmap for confusion matrix
+#     ax = fig.add_subplot(gs[i, 0])
+#     sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='g', ax=ax)
+#     ax.set_title(f'Confusion Matrix for {model_name}')
+#     ax.set_xlabel('Predicted')
+#     ax.set_ylabel('Actual')
+
+# plt.tight_layout()
+# plt.show()
+
+# %%
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+
+# # Distribution of numerical features
+# data.hist(figsize=(10, 10))
+# plt.show()
+
+# # Correlation heatmap
+# plt.figure(figsize=(12, 8))
+# sns.heatmap(data.corr(), annot=True, fmt='.2f', cmap='coolwarm')
+# plt.show()
+
+
+# %%
+# plt.figure(figsize=(20, 10))
+
+# sns.heatmap(data.corr(), annot=True, fmt='.2f', cmap='coolwarm')
+
+
+# %% [markdown]
+# ***
+
+
