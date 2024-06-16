@@ -70,7 +70,7 @@ w <- as.matrix(y)
 sort <- w[, order(-w [1, ])]
 
 # Singular Value Decomposition (SVD)
-trajectory <- t(sort) %*% sort
+trajectory <- t(sort) %*% sort 
 e.values <- eigen(trajectory)$values
 
 # Grouping and Reconstruction
@@ -90,19 +90,21 @@ combined_forecast <- trend_forecast + seasonal_forecast
 # Plot the forecasts
 plot(combined_forecast, main = "SSA Forecast", xlab = "Year", ylab = "Price")
 
+
+
 # Prophet Modeling and Forecasting
 
 # Load prophet data
-prophet_data <- read.csv("TBill Data(2013-2022) - Prophet.csv")
+prophet_data <- read.csv("data/Pre-processed.csv")
 
 # Building the Prophet model
 prophet_model <- prophet(prophet_data)
-future <- make_future_dataframe(prophet_model, periods = 12)
+future <- make_future_dataframe(prophet_model, periods = 12, freq = "month")
 forecast <- predict(prophet_model, future)
 
 # Prophet model accuracy
 actual <- prophet_data$y
-predicted <- forecast$yhat [-(1:365)]
+predicted <- forecast$yhat [-(1:365)] # Exclude training data  
 
 mae <- mean(abs(actual - predicted))
 rmse <- sqrt(mean((actual - predicted)^2))
