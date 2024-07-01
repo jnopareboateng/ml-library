@@ -140,3 +140,6 @@ ggplot() +
 
 # Evaluate the forecast accuracy
 forecast_accuracy <- accuracy(ssa_forecast, crude_ts)
+
+# Print the forecast accuracy
+print(forecast_accuracy)
