@@ -11,7 +11,7 @@ install_if_missing <- function(libraries) {
 install_if_missing(libraries)
 
 # Load data
-crude_data <- read_csv("D:/DEV WORK/Data Science Library/ml-library/crude-oil-forecast/Modified_Data.csv")
+crude_data <- read_csv("D:/DEV WORK/Data Science Library/ml-library/crude-oil-forecast/data/Modified_Data.csv")
 
 # Explore the data
 str(crude_data)
@@ -63,40 +63,59 @@ decomposition_diff <- perform_decomposition(diff_crude_ts)
 split_ratio <- 0.8
 
 # Calculate the index to split the data
-split_index <- floor(length(diff_crude_ts) * split_ratio)
+split_index <- floor(length(crude_ts) * split_ratio)
 
 # Split the data into training and testing sets
-train_diff_crude_ts <- window(diff_crude_ts, end = c(time(diff_crude_ts)[split_index]))
-test_diff_crude_ts <- window(diff_crude_ts, start = c(time(diff_crude_ts)[split_index + 1]))
+train_crude_ts <- window(crude_ts, end = c(time(crude_ts)[split_index]))
+test_crude_ts <- window(crude_ts, start = c(time(crude_ts)[split_index + 1]))
 
 # Check the lengths of the splits
-length(train_diff_crude_ts)
-length(test_diff_crude_ts)
+length(train_crude_ts)
+length(test_crude_ts)
 
 # ACF and PACF plots
 acf2(diff_crude_ts, main = "ACF and PACF of Differenced Crude Oil Prices")
 
+# Fitting competing models
+sarima(diff_crude_ts, 1, 0, 0) # $AIC[1] 6.275165 $AICc [1] 6.275358 $BIC [1] 6.275358
+
+sarima(diff_crude_ts, 6, 0, 0) # $AIC[1] 6.286514 $AICc [1] 6.28835 $BIC [1] 6.398879
+
+sarima(diff_crude_ts, 0, 0, 1) # $AIC[1] 6.29456 $AICc [1] 6.294753 $BIC [1] 6.336697
+
+sarima(diff_crude_ts, 0, 0, 6) # $AIC [1] 6.283195 $AICc [1] 6.285031 $BIC [1] 6.39556
+
+sarima(diff_crude_ts, 1, 0, 1) # $AIC [1] 6.282598 $AICc [1] 6.282985 $BIC [1] 6.33878
+
+sarima(diff_crude_ts, 1, 0, 6) # $AIC [1] 6.288729 $AICc [1] 6.291099 $BIC [1] 6.415139
+
 # Fit an ARIMA model
-arima_model <- auto.arima(train_diff_crude_ts)
+arima_model <- auto.arima(crude_ts, d = d, seasonal = FALSE, stepwise = TRUE)
 print(arima_model)
 
 # Check the residuals
 checkresiduals(arima_model)
 
-# Forecast
-forecast_arima <- forecast(arima_model, h = length(test_diff_crude_ts))
-print(forecast_arima)
+# Predict on the Test data
+forecast_test <- forecast(arima_model, h = length(test_crude_ts))
+print(forecast_test)
 
 # Plot the forecast
-autoplot(forecast_arima) + autolayer(test_diff_crude_ts, series = "Test Data")
+autoplot(forecast_test) + autolayer(test_crude_ts, series = "Test Data")
 
 # Forecast plot with legends
-plot(forecast_arima, main = "Forecasted vs Actual Crude Oil Prices")
-lines(test_diff_crude_ts, col = "red")
+plot(forecast_test, main = "Forecasted vs Actual Crude Oil Prices")
+lines(test_crude_ts, col = "red")
 legend("topleft", legend = c("Forecasted", "Actual"), col = c("black", "red"), lty = 1)
 
 # check accuracy of the model
-accuracy_arima <- accuracy(forecast_arima, test_diff_crude_ts)
+accuracy_arima <- accuracy(forecast_test, test_crude_ts)
+print(accuracy_arima)
+
+forecast_full <- forecast(auto.arima(crude_ts, d = d), h = 24)
+
+# Plot the full forecast
+autoplot(forecast_full) + autolayer(crude_ts, series = "Crude Oil Prices")
 
 # Singular Spectrum Analysis (SSA) and forecasting
 
