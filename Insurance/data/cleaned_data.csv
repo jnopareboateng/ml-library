@@ -1,4 +1,4 @@
-,policy_number,policyholder,gender,occupation,branch,inst,plan,proposals,inception_date,expiry_date,monthly_premium,policy_value,paid_premium,premium,total_premium
+,policy_number,policyholder,gender,occupation,branch,inst,plan,proposals,inception_date,expiry_date,monthly_premium,policy_value,premiums_paid,premium,total_premium
 1,UKS2023T03696,BEATRICE,FEMALE,OFFICER,ACCRA NO BRANCH,7010101,FAMILY SECURITY PLAN,12-Dec-23,1-Jul-18,1-Sep-27,30,500,87.3,3,"1,891.50"
 2,UKS2023T03701,DANIEL,MALE,TEACHER,ACCRA NO BRANCH,7010101,FAMILY SECURITY PLAN,7-Dec-23,1-Sep-21,1-Feb-48,60,"2,000.00",174.6,3,"1,687.80"
 3,UKS2024T00359,JEMIMA,FEMALE,TEACHING,ACCRA NO BRANCH,7010101,FAMILY SECURITY PLAN,25-Jan-24,1-Dec-21,1-Dec-52,150,"2,000.00",436.5,3,"3,783.00"

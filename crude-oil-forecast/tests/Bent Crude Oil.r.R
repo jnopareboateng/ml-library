@@ -219,10 +219,10 @@ plot(s, type = "paired", idx = 1:(10)) # (1:L-1)
 
 
 # 2 GROUPING #####
-r <- reconstruct(s, groups = list(Trend = c(1), seasonal = c(2, 3), season2 = c(4)), len = p)
+r <- reconstruct(s, groups = list(Trend = c(1), seasonal = c(2, 4), season2 = c(5)), len = p)
 r
 
-plot(wcor(s, groups = list(Trend = c(1), seasonal = c(2, 3), season2 = c(4)), len = p))
+plot(wcor(s, groups = list(Trend = c(1), seasonal = c(2, 4), season2 = c(5)), len = p))
 
 
 ## Diagonal Averaging
@@ -233,7 +233,7 @@ diagonal.averaging
 
 
 ## Reccurent Forecasting
-forecast <- rforecast(s, groups = list(Trend = c(1), seasonal = c(2, 3), season2 = c(4)), len = p)
+forecast <- rforecast(s, groups = list(Trend = c(1), seasonal = c(2, 4), season2 = c(5)), len = p)
 forecast
 
 # Forecast results
@@ -250,11 +250,11 @@ residual
 ## cumulative variance of the data explained from the eigenvector, then compositional grouping in
 
 s.complete <- ssa(ssa_data.ts, L = L, kind = "1d-ssa")
-r.complete <- reconstruct(s.complete, groups = list(Trend = c(1), seasonal = c(2, 3), season2 = c(4)), len = 12) # Forcasting 12 months ahead.
+r.complete <- reconstruct(s.complete, groups = list(Trend = c(1), seasonal = c(2, 4), season2 = c(5)), len = 12) # Forcasting 12 months ahead.
 component.complete <- cbind(r.complete$Trend, r.complete$seasonal, r.complete$season2)
 diag.avr.complete <- rowSums(component.complete)
 
-complete.forecast <- rforecast(s.complete, groups = list(Trend = c(1), seasonal = c(2, 3), season2 = c(4)), len = 12)
+complete.forecast <- rforecast(s.complete, groups = list(Trend = c(1), seasonal = c(2, 4), season2 = c(5)), len = 12)
 
 complete.forecast.results <- as.matrix(complete.forecast$Trend + complete.forecast$seasonal + complete.forecast$season2)
 complete.forecast.results # forecasted values for 2023

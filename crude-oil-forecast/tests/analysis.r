@@ -112,7 +112,11 @@ L <- floor(length(train_crude_ts) / 2) # Window length
 ssa_obj <- ssa(train_crude_ts, L = L)
 
 # Embedding of Henkel matrix
-Z 
+H <- embed(ssa_obj, groups = list(Trend = 1:2))
+
+# Plot the Henkel matrix
+plot(H, type = "l")
+
 # Plot the singular values
 plot(ssa_obj, type = "values")
 
