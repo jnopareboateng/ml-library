@@ -127,7 +127,7 @@ train_crude_ts <- window(crude_ts, end = c(time(crude_ts)[split_index_ssa]))
 test_crude_ts <- window(crude_ts, start = c(time(crude_ts)[split_index_ssa + 1]))
 
 # Perform SSA on the training data
-L <- floor(length(train_crude_ts) / 2) # Window length
+L <- floor(length(train_crude_ts) / 5) # Window length
 ssa_obj <- ssa(train_crude_ts, L = L)
 
 # Embedding of Henkel matrix
@@ -217,3 +217,22 @@ actual <- test_prophet_data$y
 forecast_values <- forecast_prophet$yhat[forecast_prophet$ds >= test_start_date]
 forecast_accuracy_prophet <- accuracy(forecast_values, actual)
 print(forecast_accuracy_prophet)
+
+# Forecast into the future for the next 24 months after the last data point in the test set
+future_forecast <- make_future_dataframe(prophet_model, periods = 24, freq = "month")
+forecast_prophet_future <- predict(prophet_model, future_forecast)
+
+# Plot the Prophet forecast
+plot(prophet_model, forecast_prophet_future)
+
+# Plot the Prophet forecast with actual data
+prophet_plot <- prophet_data %>% ggplot(aes(ds, y)) +
+    geom_line() +
+    geom_point(data = forecast_prophet, aes(x = ds, y = yhat), color = "blue") +
+    geom_point(data = forecast_prophet_future, aes(x = ds, y = yhat), color = "red") +
+    labs(
+        title = "Prophet Forecast vs Actual Crude Oil Prices",
+        x = "Date",
+        y = "Price (USD)"
+    ) +
+    theme_minimal()
