@@ -4,7 +4,7 @@ matplotlib==3.9.0
 sklearn==1.4.0
 statsmodels==0.14.2
 pmdarima==2.0.4
-plotly==5.22.0
+plotly==5.23.0
 prophet==1.1.5
 xgboost==2.0.3
 statsmodels==0.14.2
