@@ -1,6 +1,7 @@
-.venv/
-# *.ipynb
-# notebooks/
-msft-mlflow/dataset.csv
-msft-mlflow/config.ini
+*.png
+*.pdf
 *.html
+recommender system/
+.venv/
+recommender system/data/dataset.csv
+msft-mlflow/
