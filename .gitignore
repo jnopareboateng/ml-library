@@ -1,7 +1,14 @@
 *.png
 *.pdf
 *.html
+*.pptx
 recommender system/
 .venv/
 recommender system/data/dataset.csv
 msft-mlflow/
+*.docx
+*.sav
+.vscode/
+*.bib
+*.txt
+*.zip

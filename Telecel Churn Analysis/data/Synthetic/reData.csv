@@ -1,0 +1,769 @@
+Gender,College,Churn,Level,Residence,SIM_Usage,Usage_Freq,Network_Strength,Voice_Calls,Mobile_Data_Internet,SMS_Text_Messaging,Data_Exhaustion,Other_Networks,Poor_Network_Quality_Coverage,Insufficient_Data_Allowance,Unsatisfactory_Customer_Service,High_Costs_Pricing,Monthly_Data_Usage
+Female,College of Humanities and Social Sciences,No,100,On-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.68
+Male,College of Humanities and Social Sciences,Yes,100,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,1.74
+Male,College of Art and Built Environment,No,200,Off-campus,No,Never,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.25
+Female,College of Humanities and Social Sciences,No,400,On-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.67
+Female,College of Humanities and Social Sciences,Yes,400,On-campus,Yes,Occasionally,5,No,No,Yes,Yes,Yes,No,No,No,Yes,0.5
+Male,College of Science,No,600,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.4
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Daily,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,0.58
+Female,College of Health Sciences,No,300,Off-campus,Yes,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.87
+Male,College of Engineering,Yes,200,Off-campus,Yes,Several times a week,3,No,Yes,No,No,Yes,No,No,No,No,2.54
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Several times a week,1,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.13
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Daily,3,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,3.12
+Male,College of Health Sciences,Yes,100,On-campus,Yes,Occasionally,1,Yes,No,Yes,Yes,Yes,Yes,No,No,No,9.1
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.32
+Female,College of Science,No,400,Off-campus,Yes,Occasionally,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.45
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Never,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.75
+Male,College of Science,Yes,400,Off-campus,No,Daily,4,Yes,Yes,No,Yes,Yes,No,No,No,No,9.23
+Male,College of Science,No,400,Off-campus,Yes,Several times a week,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.03
+Female,College of Art and Built Environment,Yes,100,Off-campus,Yes,Occasionally,1,No,Yes,Yes,No,Yes,No,No,No,No,2.92
+Female,College of Engineering,No,200,Off-campus,No,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.74
+Female,College of Health Sciences,No,600,Off-campus,No,Occasionally,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,1.44
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,5,Yes,Yes,Yes,Yes,Yes,No,No,No,No,6.72
+Male,College of Science,No,100,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,3.08
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.14
+Male,College of Art and Built Environment,No,300,Off-campus,No,Rarely,2,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,5.9
+Male,College of Engineering,No,300,Off-campus,No,Several times a week,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,6.17
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,No,No,No,No,3.24
+Female,College of Humanities and Social Sciences,No,400,On-campus,Yes,Several times a week,4,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,No,Occasionally,4,No,No,No,No,Yes,Yes,Yes,Yes,Yes,6.97
+Male,College of Health Sciences,No,200,Off-campus,No,Occasionally,2,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,3.68
+Female,College of Science,No,500,Off-campus,No,Rarely,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.54
+Female,College of Humanities and Social Sciences,Yes,100,Off-campus,No,Daily,4,Yes,No,No,Yes,Yes,No,Yes,No,No,6.97
+Male,College of Engineering,Yes,100,Off-campus,No,Several times a week,3,Yes,No,Yes,Yes,Yes,Yes,No,No,No,8.76
+Female,College of Engineering,Yes,300,Off-campus,Yes,Daily,5,Yes,No,Yes,No,Yes,Yes,No,No,No,3.96
+Male,College of Humanities and Social Sciences,No,200,On-campus,No,Several times a week,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.33
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.93
+Female,College of Health Sciences,Yes,300,Off-campus,Yes,Daily,4,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,0.71
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.94
+Male,College of Health Sciences,No,500,On-campus,No,Occasionally,1,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,5.28
+Female,College of Health Sciences,No,400,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.0
+Female,College of Art and Built Environment,No,100,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.96
+Male,College of Humanities and Social Sciences,Yes,400,On-campus,No,Several times a week,2,Yes,No,Yes,No,Yes,No,No,Yes,Yes,4.4
+Male,College of Humanities and Social Sciences,No,300,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10.3
+Female,College of Humanities and Social Sciences,No,100,On-campus,Yes,Several times a week,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.41
+Female,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Several times a week,1,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.87
+Male,College of Health Sciences,No,200,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,2.66
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,9.47
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.22
+Female,College of Art and Built Environment,No,200,Off-campus,No,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.07
+Male,College of Health Sciences,No,400,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,5.85
+Female,College of Health Sciences,No,200,Off-campus,No,Several times a week,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,1.73
+Female,College of Engineering,No,300,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.35
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Daily,5,Yes,Yes,No,Yes,Yes,No,No,No,No,7.8
+Male,College of Health Sciences,No,100,Off-campus,Yes,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.79
+Female,College of Humanities and Social Sciences,No,400,Off-campus,No,Never,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.04
+Male,College of Health Sciences,Yes,500,Off-campus,No,Several times a week,1,Yes,Yes,No,Yes,Yes,No,No,No,No,3.82
+Male,College of Science,Yes,500,On-campus,No,Several times a week,4,No,No,Yes,Yes,Yes,No,No,No,Yes,6.63
+Male,College of Health Sciences,No,100,On-campus,No,Occasionally,4,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,0.72
+Male,College of Humanities and Social Sciences,No,200,On-campus,Yes,Several times a week,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.58
+Male,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.34
+Male,College of Art and Built Environment,No,300,Off-campus,No,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.53
+Female,College of Health Sciences,Yes,100,Off-campus,No,Daily,4,No,Yes,Yes,No,Yes,Yes,No,Yes,No,6.67
+Male,College of Engineering,Yes,200,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,4.77
+Male,College of Engineering,Yes,400,Off-campus,Yes,Occasionally,5,Yes,No,Yes,No,Yes,Yes,No,No,No,5.7
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Daily,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,1.26
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,0.99
+Male,College of Science,No,100,On-campus,No,Occasionally,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.07
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Never,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.74
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Never,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,4.02
+Female,College of Art and Built Environment,No,400,Off-campus,Yes,Several times a week,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.84
+Female,College of Humanities and Social Sciences,Yes,200,Off-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,No,No,No,No,9.94
+Female,College of Engineering,No,300,On-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.22
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Daily,3,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,3.31
+Female,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Several times a week,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.15
+Female,College of Art and Built Environment,No,300,On-campus,No,Several times a week,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.24
+Female,College of Health Sciences,No,200,On-campus,Yes,Occasionally,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,1.03
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.68
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Daily,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,8.44
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,8.14
+Male,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.42
+Female,College of Engineering,Yes,400,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,No,Yes,No,No,Yes,No,1.74
+Female,College of Health Sciences,No,100,Off-campus,Yes,Several times a week,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.5
+Female,College of Health Sciences,Yes,100,On-campus,No,Several times a week,2,Yes,Yes,Yes,No,Yes,No,No,No,Yes,4.46
+Male,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Rarely,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.89
+Male,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.82
+Female,College of Art and Built Environment,No,100,Off-campus,No,Occasionally,4,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,1.67
+Male,College of Engineering,No,300,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,4.21
+Female,College of Engineering,No,300,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.57
+Male,College of Science,Yes,600,On-campus,Yes,Several times a week,1,Yes,Yes,Yes,No,Yes,No,No,Yes,No,1.11
+Female,College of Science,No,400,On-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.84
+Female,College of Health Sciences,No,300,Off-campus,Yes,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,3.02
+Male,College of Art and Built Environment,No,300,Off-campus,No,Several times a week,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.21
+Female,College of Science,No,400,Off-campus,No,Several times a week,1,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,5.99
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.76
+Female,College of Humanities and Social Sciences,No,200,Off-campus,No,Several times a week,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.35
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Never,5,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,0.59
+Male,College of Art and Built Environment,Yes,300,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,1.44
+Female,College of Art and Built Environment,No,300,On-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.68
+Male,College of Art and Built Environment,No,400,Off-campus,No,Never,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.9
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.73
+Male,College of Engineering,No,200,Off-campus,Yes,Several times a week,4,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.89
+Female,College of Humanities and Social Sciences,Yes,200,On-campus,Yes,Several times a week,1,Yes,Yes,Yes,No,No,Yes,No,No,No,5.48
+Female,College of Art and Built Environment,No,400,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.57
+Female,College of Science,No,400,Off-campus,Yes,Several times a week,3,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,3.8
+Male,College of Science,No,100,Off-campus,No,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.39
+Female,College of Art and Built Environment,No,400,Off-campus,No,Occasionally,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,9.71
+Male,College of Health Sciences,Yes,100,Off-campus,Yes,Several times a week,3,No,Yes,Yes,No,Yes,No,Yes,No,No,7.85
+Female,College of Engineering,No,300,Off-campus,No,Several times a week,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.21
+Female,College of Art and Built Environment,No,400,Off-campus,No,Several times a week,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.67
+Female,College of Engineering,No,200,Off-campus,No,Several times a week,1,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.07
+Male,College of Engineering,No,300,Off-campus,Yes,Several times a week,2,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.0
+Female,College of Health Sciences,No,100,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.39
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,3,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.65
+Male,College of Science,Yes,500,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,2.84
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Rarely,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.98
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Several times a week,4,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,8.32
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Occasionally,5,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,4.86
+Male,College of Humanities and Social Sciences,No,200,Off-campus,Yes,Several times a week,1,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,8.25
+Female,College of Art and Built Environment,No,200,On-campus,No,Occasionally,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,7.52
+Female,College of Humanities and Social Sciences,No,400,On-campus,No,Daily,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,4.45
+Female,College of Engineering,Yes,300,On-campus,No,Never,2,Yes,Yes,No,Yes,No,No,No,No,No,1.72
+Male,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Daily,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,8.72
+Male,College of Humanities and Social Sciences,No,100,Off-campus,No,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.13
+Male,College of Health Sciences,Yes,100,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,Yes,No,No,No,No,1.25
+Male,College of Engineering,No,100,On-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.83
+Female,College of Humanities and Social Sciences,No,200,On-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.93
+Male,College of Humanities and Social Sciences,No,400,On-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.87
+Female,College of Art and Built Environment,No,100,Off-campus,No,Occasionally,4,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,7.13
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Several times a week,2,Yes,Yes,Yes,No,Yes,No,No,Yes,No,3.31
+Male,College of Engineering,Yes,100,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,2.34
+Female,College of Engineering,Yes,100,Off-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,10.21
+Male,College of Humanities and Social Sciences,Yes,400,Off-campus,Yes,Occasionally,2,No,Yes,Yes,Yes,Yes,No,No,No,No,3.9
+Female,College of Health Sciences,No,100,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.76
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,1,Yes,No,Yes,No,Yes,No,Yes,No,Yes,3.4
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Occasionally,1,No,Yes,Yes,Yes,Yes,No,No,Yes,No,5.46
+Female,College of Art and Built Environment,No,400,On-campus,No,Daily,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.7
+Female,College of Health Sciences,No,500,Off-campus,No,Several times a week,4,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,5.08
+Female,College of Engineering,Yes,100,Off-campus,No,Rarely,3,Yes,No,Yes,Yes,No,Yes,Yes,No,No,4.83
+Female,College of Agriculture and Natural Resources,No,200,On-campus,No,Occasionally,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,6.83
+Female,College of Engineering,No,100,Off-campus,No,Occasionally,3,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Science,Yes,500,On-campus,No,Occasionally,4,Yes,Yes,Yes,No,Yes,No,No,No,Yes,4.96
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,No,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.85
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Rarely,1,No,Yes,Yes,No,Yes,Yes,Yes,No,No,2.88
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Daily,1,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,3.83
+Female,College of Health Sciences,No,200,On-campus,No,Rarely,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.53
+Female,College of Art and Built Environment,No,400,Off-campus,No,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.33
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,4.15
+Male,College of Engineering,No,300,Off-campus,Yes,Several times a week,1,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,5.17
+Female,College of Science,No,100,Off-campus,No,Daily,3,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,7.32
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.43
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Several times a week,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.63
+Male,College of Science,Yes,400,Off-campus,No,Occasionally,1,Yes,No,Yes,No,Yes,Yes,No,No,No,10.27
+Male,College of Science,Yes,300,Off-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,No,No,No,No,7.11
+Female,College of Agriculture and Natural Resources,No,100,On-campus,No,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,8.47
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Daily,5,No,Yes,Yes,No,Yes,Yes,No,No,Yes,5.78
+Female,College of Science,Yes,200,Off-campus,Yes,Occasionally,1,Yes,No,Yes,No,Yes,No,No,Yes,No,5.82
+Female,College of Science,No,100,Off-campus,No,Several times a week,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,6.22
+Male,College of Health Sciences,No,100,Off-campus,Yes,Several times a week,5,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,8.99
+Female,College of Health Sciences,No,100,Off-campus,No,Never,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,9.9
+Male,College of Art and Built Environment,Yes,100,On-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,1.37
+Male,College of Science,No,400,Off-campus,No,Several times a week,3,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.6
+Female,College of Art and Built Environment,No,200,On-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.79
+Male,College of Agriculture and Natural Resources,No,200,On-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.33
+Female,College of Science,No,100,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.44
+Male,College of Art and Built Environment,No,200,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.63
+Male,College of Health Sciences,Yes,200,Off-campus,No,Daily,5,Yes,Yes,No,Yes,Yes,No,No,No,No,5.84
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Daily,3,Yes,Yes,Yes,No,No,No,No,No,No,3.91
+Female,College of Health Sciences,No,300,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.76
+Female,College of Science,No,100,Off-campus,No,Occasionally,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,1.14
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,Yes,Occasionally,2,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,1.21
+Male,College of Humanities and Social Sciences,Yes,200,On-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,No,No,No,No,6.98
+Male,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Daily,1,No,Yes,Yes,Yes,Yes,No,No,No,No,9.79
+Female,College of Art and Built Environment,No,400,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.94
+Male,College of Humanities and Social Sciences,No,400,Off-campus,No,Never,1,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.25
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.75
+Male,College of Science,No,400,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.79
+Male,College of Humanities and Social Sciences,No,100,On-campus,No,Occasionally,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Engineering,No,200,Off-campus,No,Never,1,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,4.22
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.23
+Female,College of Agriculture and Natural Resources,No,400,On-campus,Yes,Daily,4,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.51
+Male,College of Humanities and Social Sciences,No,400,On-campus,Yes,Daily,2,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,6.56
+Female,College of Health Sciences,No,100,On-campus,No,Several times a week,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.29
+Female,College of Science,Yes,100,Off-campus,Yes,Daily,5,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,7.87
+Male,College of Health Sciences,Yes,200,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,9.33
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.05
+Female,College of Engineering,Yes,400,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,No,Yes,No,No,No,No,5.97
+Female,College of Science,Yes,200,Off-campus,No,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,1.37
+Male,College of Engineering,Yes,400,Off-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,8.68
+Male,College of Health Sciences,No,600,Off-campus,No,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.61
+Female,College of Science,No,200,Off-campus,No,Several times a week,5,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,3.16
+Male,College of Science,Yes,400,Off-campus,No,Occasionally,2,Yes,No,Yes,Yes,Yes,No,No,No,Yes,7.3
+Female,College of Science,Yes,200,Off-campus,No,Several times a week,2,No,Yes,No,Yes,Yes,No,No,No,No,3.69
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,No,No,Yes,No,1.98
+Male,College of Engineering,Yes,400,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,No,No,No,No,8.79
+Female,College of Art and Built Environment,No,400,Off-campus,No,Daily,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,2.83
+Female,College of Engineering,No,400,On-campus,Yes,Several times a week,1,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,1.45
+Female,College of Science,Yes,200,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,4.91
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,No,Yes,No,No,No,Yes,0.71
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Several times a week,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,4.37
+Female,College of Engineering,No,200,On-campus,Yes,Daily,3,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.32
+Female,College of Science,Yes,600,Off-campus,No,Occasionally,2,Yes,Yes,Yes,No,Yes,No,No,Yes,No,9.4
+Female,College of Agriculture and Natural Resources,No,200,On-campus,No,Several times a week,2,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.78
+Male,College of Engineering,Yes,200,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,5.21
+Female,College of Health Sciences,Yes,100,Off-campus,Yes,Rarely,1,Yes,Yes,No,No,Yes,Yes,No,No,No,6.9
+Male,College of Art and Built Environment,No,100,On-campus,No,Daily,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,4.74
+Male,College of Humanities and Social Sciences,No,400,Off-campus,No,Never,2,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,5.62
+Female,College of Health Sciences,Yes,600,Off-campus,No,Daily,2,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,3.92
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,1,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,6.22
+Female,College of Engineering,No,100,Off-campus,Yes,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.81
+Male,College of Humanities and Social Sciences,No,400,On-campus,Yes,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.08
+Male,College of Humanities and Social Sciences,No,100,On-campus,No,Occasionally,2,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.48
+Male,College of Engineering,No,100,Off-campus,Yes,Never,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.26
+Male,College of Humanities and Social Sciences,Yes,200,Off-campus,Yes,Rarely,3,Yes,No,Yes,No,Yes,Yes,No,Yes,No,6.61
+Male,College of Art and Built Environment,No,300,On-campus,No,Several times a week,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.92
+Female,College of Health Sciences,No,200,Off-campus,Yes,Daily,3,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.97
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,No,No,No,No,6.17
+Female,College of Engineering,No,400,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.57
+Male,College of Science,No,100,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.79
+Female,College of Art and Built Environment,No,400,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.3
+Female,College of Engineering,No,400,Off-campus,No,Occasionally,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.53
+Female,College of Humanities and Social Sciences,No,400,Off-campus,No,Daily,2,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.41
+Female,College of Science,No,300,Off-campus,No,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.27
+Male,College of Humanities and Social Sciences,No,300,On-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.43
+Male,College of Health Sciences,No,200,On-campus,No,Daily,1,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.01
+Female,College of Science,Yes,600,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,No,No,No,No,8.93
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Daily,3,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.52
+Female,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.3
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,Yes,No,No,No,No,4.85
+Female,College of Health Sciences,No,200,Off-campus,No,Occasionally,2,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.26
+Male,College of Science,Yes,400,On-campus,No,Daily,2,No,Yes,Yes,Yes,Yes,No,No,No,Yes,8.21
+Male,College of Health Sciences,Yes,200,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,3.09
+Female,College of Engineering,Yes,100,Off-campus,Yes,Never,3,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,1.8
+Female,College of Humanities and Social Sciences,Yes,100,Off-campus,No,Never,2,Yes,Yes,Yes,No,Yes,No,No,No,No,4.01
+Female,College of Science,No,200,Off-campus,No,Rarely,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.8
+Male,College of Humanities and Social Sciences,No,400,Off-campus,No,Daily,3,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,8.06
+Female,College of Art and Built Environment,Yes,400,Off-campus,Yes,Never,5,Yes,Yes,Yes,Yes,Yes,No,No,No,No,1.4
+Male,College of Science,Yes,400,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,No,No,No,4.54
+Male,College of Science,No,200,Off-campus,Yes,Daily,3,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,3.85
+Male,College of Science,No,100,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.96
+Male,College of Science,Yes,300,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,No,No,No,Yes,No,7.88
+Male,College of Science,No,300,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.69
+Male,College of Health Sciences,Yes,400,Off-campus,Yes,Occasionally,2,Yes,Yes,No,Yes,Yes,Yes,No,No,No,8.15
+Female,College of Engineering,Yes,400,On-campus,Yes,Several times a week,4,Yes,Yes,No,No,Yes,No,No,No,No,9.22
+Male,College of Science,No,200,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.62
+Female,College of Agriculture and Natural Resources,No,300,On-campus,Yes,Occasionally,2,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,3.51
+Female,College of Health Sciences,Yes,300,Off-campus,Yes,Never,1,Yes,Yes,Yes,No,No,Yes,No,No,No,2.8
+Female,College of Health Sciences,No,600,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.77
+Male,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Daily,1,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,6.19
+Male,College of Humanities and Social Sciences,Yes,200,On-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,1.94
+Female,College of Agriculture and Natural Resources,No,100,On-campus,Yes,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.98
+Male,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Daily,1,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,3.9
+Male,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Daily,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.5
+Female,College of Engineering,No,200,Off-campus,No,Occasionally,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.37
+Female,College of Science,No,400,Off-campus,No,Occasionally,3,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,8.09
+Male,College of Science,Yes,500,On-campus,Yes,Daily,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.39
+Female,College of Health Sciences,No,200,Off-campus,No,Daily,2,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,2.44
+Female,College of Health Sciences,Yes,500,On-campus,Yes,Several times a week,1,No,Yes,Yes,Yes,No,Yes,No,No,No,7.6
+Male,College of Engineering,No,100,Off-campus,No,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.12
+Male,College of Art and Built Environment,No,400,Off-campus,Yes,Several times a week,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.07
+Female,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.92
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,2,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,2.18
+Female,College of Art and Built Environment,Yes,400,Off-campus,No,Occasionally,4,Yes,No,No,Yes,Yes,No,No,No,Yes,7.68
+Female,College of Engineering,No,200,Off-campus,Yes,Several times a week,4,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,6.42
+Male,College of Engineering,No,400,On-campus,Yes,Several times a week,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.21
+Male,College of Engineering,Yes,200,On-campus,Yes,Several times a week,3,Yes,Yes,Yes,Yes,No,No,Yes,No,No,7.88
+Male,College of Art and Built Environment,No,400,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.03
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Several times a week,2,No,Yes,Yes,No,Yes,Yes,No,No,No,6.9
+Male,College of Science,No,300,Off-campus,No,Occasionally,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.71
+Female,College of Engineering,No,100,On-campus,Yes,Rarely,3,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.89
+Male,College of Health Sciences,No,300,Off-campus,Yes,Occasionally,1,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,1.78
+Male,College of Engineering,Yes,300,Off-campus,No,Several times a week,1,Yes,Yes,Yes,No,No,No,No,No,No,7.67
+Female,College of Science,No,100,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.27
+Male,College of Humanities and Social Sciences,Yes,400,Off-campus,Yes,Occasionally,1,No,Yes,Yes,No,Yes,No,Yes,No,No,8.95
+Female,College of Engineering,No,200,Off-campus,No,Several times a week,3,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.68
+Female,College of Science,No,600,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.46
+Male,College of Science,No,100,Off-campus,No,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.86
+Male,College of Science,Yes,300,On-campus,No,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,6.36
+Male,College of Engineering,Yes,300,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,No,No,No,Yes,No,2.33
+Female,College of Science,No,300,On-campus,No,Daily,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.61
+Female,College of Health Sciences,No,100,Off-campus,Yes,Occasionally,2,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.02
+Female,College of Health Sciences,No,500,Off-campus,No,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.24
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Occasionally,5,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,9.44
+Female,College of Engineering,No,100,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.26
+Male,College of Health Sciences,No,400,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.27
+Male,College of Engineering,No,300,Off-campus,No,Occasionally,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.73
+Male,College of Science,Yes,600,Off-campus,Yes,Occasionally,2,No,Yes,Yes,Yes,No,No,Yes,No,No,9.87
+Male,College of Science,No,200,Off-campus,Yes,Occasionally,1,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Female,College of Art and Built Environment,Yes,400,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,5.78
+Male,College of Art and Built Environment,No,300,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.07
+Female,College of Science,No,200,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,1.45
+Female,College of Health Sciences,No,200,Off-campus,Yes,Never,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.82
+Male,College of Engineering,No,100,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.74
+Male,College of Science,No,200,On-campus,Yes,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.41
+Female,College of Humanities and Social Sciences,No,100,Off-campus,No,Daily,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,9.03
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,3.05
+Female,College of Humanities and Social Sciences,Yes,100,On-campus,No,Several times a week,3,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,10.05
+Male,College of Art and Built Environment,No,100,Off-campus,No,Never,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,6.24
+Male,College of Health Sciences,No,200,Off-campus,No,Occasionally,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,5.64
+Female,College of Engineering,No,100,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.7
+Female,College of Engineering,Yes,200,Off-campus,Yes,Rarely,2,Yes,Yes,Yes,No,Yes,No,No,No,Yes,5.87
+Female,College of Art and Built Environment,No,400,Off-campus,No,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.41
+Male,College of Engineering,No,200,Off-campus,No,Occasionally,5,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,3.75
+Male,College of Health Sciences,Yes,300,Off-campus,No,Rarely,4,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,7.52
+Female,College of Humanities and Social Sciences,Yes,300,On-campus,Yes,Occasionally,2,Yes,Yes,Yes,No,Yes,No,No,No,Yes,2.34
+Female,College of Health Sciences,No,600,Off-campus,No,Daily,4,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,8.87
+Female,College of Science,No,300,Off-campus,No,Occasionally,4,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,5.98
+Female,College of Health Sciences,No,300,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,10.33
+Female,College of Health Sciences,Yes,100,Off-campus,No,Never,4,No,Yes,No,No,Yes,Yes,No,No,Yes,2.61
+Female,College of Engineering,Yes,100,On-campus,Yes,Daily,2,Yes,Yes,No,No,Yes,Yes,No,No,No,1.08
+Female,College of Science,Yes,400,Off-campus,No,Several times a week,3,Yes,Yes,No,No,Yes,Yes,Yes,No,No,5.24
+Female,College of Science,No,100,Off-campus,No,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.36
+Male,College of Science,No,400,Off-campus,No,Several times a week,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,7.32
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,10.45
+Female,College of Engineering,No,300,On-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.67
+Female,College of Science,Yes,300,Off-campus,Yes,Several times a week,1,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,2.73
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,3.62
+Female,College of Science,Yes,400,On-campus,No,Occasionally,5,Yes,No,Yes,No,Yes,No,No,No,Yes,5.79
+Male,College of Art and Built Environment,Yes,400,Off-campus,No,Daily,3,Yes,No,Yes,No,Yes,No,No,No,No,4.57
+Female,College of Engineering,No,400,Off-campus,No,Daily,2,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,8.31
+Male,College of Health Sciences,No,200,On-campus,No,Occasionally,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.89
+Male,College of Health Sciences,No,200,Off-campus,No,Occasionally,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.18
+Female,College of Health Sciences,No,300,On-campus,No,Occasionally,4,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,7.64
+Male,College of Humanities and Social Sciences,No,300,On-campus,No,Never,3,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,3.83
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Never,2,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,7.9
+Female,College of Humanities and Social Sciences,Yes,200,On-campus,Yes,Several times a week,4,Yes,No,Yes,No,Yes,No,No,No,No,7.32
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.14
+Male,College of Humanities and Social Sciences,No,300,Off-campus,No,Occasionally,5,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.7
+Male,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.13
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Several times a week,5,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.0
+Female,College of Science,Yes,200,On-campus,Yes,Daily,4,No,Yes,No,No,Yes,No,No,No,No,2.68
+Male,College of Art and Built Environment,Yes,100,On-campus,Yes,Daily,2,No,No,Yes,No,No,Yes,Yes,No,No,4.77
+Male,College of Agriculture and Natural Resources,Yes,100,On-campus,Yes,Daily,2,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,8.87
+Female,College of Humanities and Social Sciences,No,200,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.79
+Male,College of Engineering,Yes,300,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,6.72
+Male,College of Engineering,No,200,Off-campus,Yes,Several times a week,2,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,1.92
+Female,College of Health Sciences,No,400,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.59
+Female,College of Engineering,Yes,300,Off-campus,No,Never,2,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,4.92
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,5.34
+Male,College of Health Sciences,No,600,Off-campus,Yes,Daily,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.45
+Female,College of Health Sciences,No,200,Off-campus,Yes,Rarely,2,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,4.51
+Female,College of Science,No,200,Off-campus,No,Several times a week,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,6.35
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Several times a week,3,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,3.16
+Female,College of Science,No,300,Off-campus,Yes,Several times a week,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,3.04
+Female,College of Science,Yes,100,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,7.9
+Male,College of Engineering,No,400,On-campus,Yes,Occasionally,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Art and Built Environment,No,200,Off-campus,No,Occasionally,1,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.04
+Male,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Several times a week,5,No,Yes,Yes,No,Yes,No,No,No,No,8.14
+Female,College of Engineering,Yes,300,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,Yes,No,Yes,No,No,7.23
+Male,College of Art and Built Environment,Yes,300,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,6.0
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Daily,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,4.95
+Male,College of Art and Built Environment,No,100,Off-campus,No,Several times a week,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,1.92
+Male,College of Science,No,400,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,3.88
+Female,College of Art and Built Environment,No,300,Off-campus,No,Occasionally,3,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,0.72
+Female,College of Science,Yes,300,Off-campus,Yes,Several times a week,3,Yes,Yes,No,No,Yes,Yes,No,No,Yes,8.95
+Male,College of Science,No,200,Off-campus,Yes,Never,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,4.38
+Male,College of Humanities and Social Sciences,Yes,200,On-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,No,No,No,3.23
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Occasionally,5,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,1.08
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Daily,5,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,3.59
+Male,College of Science,No,300,Off-campus,No,Daily,5,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,3.62
+Male,College of Science,No,300,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.03
+Female,College of Engineering,No,400,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.4
+Female,College of Agriculture and Natural Resources,No,200,On-campus,No,Several times a week,5,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,5.16
+Female,College of Health Sciences,No,100,Off-campus,No,Daily,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.17
+Female,College of Humanities and Social Sciences,No,200,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.39
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Rarely,2,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,8.36
+Male,College of Health Sciences,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.65
+Male,College of Engineering,No,300,Off-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.96
+Female,College of Science,No,400,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.95
+Male,College of Humanities and Social Sciences,No,400,Off-campus,No,Several times a week,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,1.06
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,0.83
+Male,College of Art and Built Environment,Yes,200,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,No,No,No,9.74
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,Yes,Rarely,3,Yes,Yes,Yes,Yes,No,No,No,No,Yes,5.58
+Female,College of Art and Built Environment,Yes,200,Off-campus,No,Several times a week,1,Yes,Yes,Yes,Yes,Yes,No,No,No,No,9.52
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.92
+Male,College of Science,No,600,Off-campus,No,Daily,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.79
+Male,College of Engineering,No,100,Off-campus,No,Several times a week,1,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,1.06
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Several times a week,4,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,3.61
+Female,College of Engineering,No,300,Off-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.67
+Male,College of Engineering,Yes,300,Off-campus,No,Occasionally,1,No,Yes,No,No,No,Yes,No,No,No,5.53
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Occasionally,3,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,0.58
+Female,College of Science,Yes,200,Off-campus,No,Occasionally,4,Yes,Yes,Yes,No,Yes,No,No,Yes,No,4.03
+Female,College of Science,Yes,300,Off-campus,No,Daily,1,No,Yes,Yes,Yes,Yes,No,No,No,No,6.61
+Male,College of Health Sciences,Yes,200,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,8.76
+Female,College of Science,No,100,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.5
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,9.02
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.1
+Female,College of Engineering,Yes,200,Off-campus,No,Several times a week,3,No,No,Yes,Yes,No,No,Yes,No,No,6.33
+Female,College of Science,Yes,300,Off-campus,Yes,Several times a week,4,Yes,Yes,No,Yes,No,No,Yes,Yes,No,1.2
+Male,College of Science,No,200,Off-campus,Yes,Daily,2,No,Yes,No,No,No,Yes,Yes,Yes,Yes,9.93
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,No,Occasionally,2,Yes,No,Yes,Yes,Yes,No,No,No,Yes,5.75
+Male,College of Science,No,200,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,0.58
+Male,College of Art and Built Environment,No,200,On-campus,No,Occasionally,3,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,4.2
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Occasionally,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,3.75
+Female,College of Art and Built Environment,No,200,Off-campus,No,Rarely,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.21
+Male,College of Science,No,200,Off-campus,No,Daily,2,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.23
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.48
+Male,College of Humanities and Social Sciences,No,100,On-campus,No,Daily,1,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10.31
+Female,College of Humanities and Social Sciences,No,100,Off-campus,No,Several times a week,5,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,2.79
+Male,College of Science,Yes,100,On-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,No,No,Yes,No,9.26
+Male,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Rarely,3,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,8.45
+Female,College of Agriculture and Natural Resources,Yes,100,On-campus,Yes,Several times a week,2,No,No,No,No,Yes,No,Yes,No,Yes,3.59
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Rarely,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.24
+Female,College of Science,No,200,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.26
+Female,College of Engineering,Yes,300,Off-campus,No,Several times a week,2,Yes,Yes,Yes,Yes,Yes,No,No,No,No,3.71
+Male,College of Art and Built Environment,No,200,On-campus,No,Occasionally,5,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,6.53
+Female,College of Health Sciences,Yes,200,Off-campus,Yes,Occasionally,5,No,Yes,Yes,No,Yes,No,No,No,No,9.27
+Male,College of Agriculture and Natural Resources,No,400,On-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.64
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,No,Never,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.56
+Female,College of Humanities and Social Sciences,Yes,100,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,No,No,Yes,No,1.94
+Female,College of Engineering,No,300,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.51
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Several times a week,1,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,8.76
+Female,College of Humanities and Social Sciences,No,300,Off-campus,No,Daily,2,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,1.69
+Male,College of Health Sciences,No,400,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.94
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,No,Occasionally,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.86
+Female,College of Engineering,No,100,Off-campus,Yes,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.51
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.3
+Female,College of Science,No,400,On-campus,Yes,Several times a week,5,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,5.74
+Male,College of Health Sciences,No,200,Off-campus,Yes,Several times a week,4,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.15
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.38
+Female,College of Agriculture and Natural Resources,No,100,On-campus,Yes,Several times a week,3,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.97
+Male,College of Agriculture and Natural Resources,No,300,On-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.76
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.31
+Male,College of Art and Built Environment,No,200,On-campus,Yes,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.07
+Male,College of Engineering,No,400,On-campus,Yes,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.41
+Male,College of Engineering,No,100,Off-campus,No,Daily,2,No,No,No,No,Yes,Yes,Yes,Yes,Yes,8.3
+Male,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Several times a week,3,Yes,Yes,Yes,Yes,Yes,No,No,No,No,4.64
+Female,College of Science,No,400,Off-campus,No,Never,1,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.43
+Male,College of Art and Built Environment,Yes,300,On-campus,No,Rarely,2,No,Yes,Yes,Yes,Yes,No,Yes,No,Yes,5.31
+Male,College of Art and Built Environment,No,200,Off-campus,No,Daily,4,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,9.06
+Female,College of Science,No,600,Off-campus,No,Daily,3,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,3.75
+Female,College of Art and Built Environment,Yes,200,Off-campus,Yes,Occasionally,5,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,6.01
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,Yes,Several times a week,4,Yes,No,Yes,No,Yes,No,No,No,No,5.39
+Female,College of Engineering,No,100,Off-campus,No,Several times a week,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.61
+Female,College of Engineering,No,100,Off-campus,No,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.66
+Male,College of Science,Yes,100,Off-campus,No,Occasionally,4,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,4.26
+Male,College of Health Sciences,Yes,100,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,No,Yes,No,No,Yes,4.96
+Female,College of Agriculture and Natural Resources,Yes,100,On-campus,No,Daily,5,Yes,Yes,Yes,Yes,Yes,No,No,No,No,9.41
+Female,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Occasionally,2,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.34
+Male,College of Health Sciences,No,200,Off-campus,No,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,10.2
+Female,College of Engineering,No,400,Off-campus,Yes,Never,4,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,1.62
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Rarely,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,4.43
+Female,College of Art and Built Environment,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,4.0
+Female,College of Health Sciences,No,100,On-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.0
+Female,College of Humanities and Social Sciences,No,200,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.2
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Several times a week,3,Yes,Yes,Yes,No,Yes,No,No,No,No,4.65
+Female,College of Engineering,Yes,100,Off-campus,Yes,Daily,5,Yes,No,Yes,Yes,Yes,No,Yes,No,No,8.0
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.71
+Female,College of Agriculture and Natural Resources,Yes,400,On-campus,No,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,0.5
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Daily,2,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.88
+Male,College of Art and Built Environment,No,400,On-campus,No,Rarely,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.33
+Male,College of Health Sciences,No,300,On-campus,No,Several times a week,4,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.27
+Male,College of Humanities and Social Sciences,No,400,Off-campus,No,Daily,1,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.36
+Female,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Several times a week,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,6.62
+Male,College of Science,No,200,Off-campus,No,Several times a week,1,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.23
+Female,College of Science,Yes,600,Off-campus,Yes,Rarely,2,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,3.4
+Female,College of Health Sciences,No,300,On-campus,Yes,Rarely,4,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,7.94
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Several times a week,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.73
+Female,College of Science,No,400,Off-campus,No,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.92
+Female,College of Science,Yes,200,Off-campus,No,Daily,4,No,Yes,No,No,Yes,No,No,No,No,1.23
+Female,College of Humanities and Social Sciences,Yes,100,Off-campus,Yes,Daily,1,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,1.32
+Female,College of Health Sciences,No,200,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.71
+Female,College of Health Sciences,No,200,Off-campus,No,Occasionally,4,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.69
+Female,College of Health Sciences,No,600,Off-campus,No,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.98
+Male,College of Engineering,No,100,Off-campus,No,Occasionally,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,9.31
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Occasionally,5,Yes,Yes,Yes,No,Yes,No,No,No,No,6.95
+Female,College of Health Sciences,Yes,300,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,8.89
+Male,College of Art and Built Environment,No,300,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.34
+Female,College of Engineering,No,200,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.88
+Female,College of Art and Built Environment,No,400,Off-campus,Yes,Never,1,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,1.89
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,3.12
+Male,College of Science,Yes,400,Off-campus,No,Occasionally,5,No,Yes,Yes,Yes,Yes,No,No,Yes,No,0.69
+Male,College of Art and Built Environment,Yes,200,On-campus,Yes,Several times a week,3,No,Yes,Yes,No,Yes,Yes,No,Yes,No,6.36
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.47
+Female,College of Humanities and Social Sciences,No,200,Off-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.04
+Female,College of Science,No,300,Off-campus,Yes,Never,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.07
+Male,College of Engineering,No,400,Off-campus,No,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.58
+Female,College of Art and Built Environment,Yes,200,On-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,9.49
+Male,College of Science,Yes,300,Off-campus,Yes,Several times a week,1,Yes,No,Yes,Yes,Yes,No,No,No,No,5.15
+Female,College of Science,No,500,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.01
+Male,College of Science,No,300,Off-campus,No,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.57
+Male,College of Health Sciences,No,400,Off-campus,Yes,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.58
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.3
+Female,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.03
+Male,College of Art and Built Environment,Yes,300,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,7.14
+Male,College of Health Sciences,No,400,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.7
+Female,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Never,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.72
+Female,College of Humanities and Social Sciences,No,300,Off-campus,No,Daily,3,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,5.61
+Female,College of Health Sciences,No,100,Off-campus,Yes,Several times a week,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.04
+Female,College of Science,No,100,Off-campus,Yes,Occasionally,3,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.69
+Male,College of Health Sciences,Yes,400,Off-campus,No,Daily,4,Yes,No,No,Yes,Yes,Yes,Yes,No,No,5.6
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Daily,2,Yes,Yes,Yes,No,Yes,No,No,No,No,5.73
+Female,College of Humanities and Social Sciences,No,100,Off-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.0
+Female,College of Health Sciences,No,200,Off-campus,No,Occasionally,5,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,6.27
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,1.36
+Male,College of Science,No,600,Off-campus,No,Occasionally,1,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,4.44
+Male,College of Science,Yes,200,Off-campus,No,Occasionally,1,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,3.5
+Male,College of Science,No,600,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.97
+Male,College of Health Sciences,Yes,400,Off-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,2.58
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Daily,4,Yes,No,Yes,No,Yes,No,Yes,No,No,2.32
+Male,College of Engineering,Yes,300,Off-campus,Yes,Never,3,Yes,Yes,Yes,No,Yes,No,Yes,No,No,5.29
+Male,College of Health Sciences,No,400,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.79
+Female,College of Science,No,300,Off-campus,No,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.75
+Male,College of Art and Built Environment,Yes,200,On-campus,No,Several times a week,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,1.68
+Male,College of Engineering,No,300,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.14
+Male,College of Art and Built Environment,No,300,On-campus,No,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.76
+Male,College of Art and Built Environment,No,400,Off-campus,Yes,Rarely,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.7
+Female,College of Health Sciences,No,100,Off-campus,Yes,Daily,5,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,1.33
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,No,Several times a week,3,Yes,Yes,Yes,No,Yes,No,No,Yes,No,5.61
+Male,College of Health Sciences,No,300,Off-campus,No,Daily,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.2
+Female,College of Science,No,100,Off-campus,Yes,Several times a week,1,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,1.63
+Female,College of Engineering,No,300,On-campus,No,Occasionally,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.34
+Female,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Occasionally,5,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.34
+Male,College of Health Sciences,No,500,Off-campus,No,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,7.56
+Female,College of Science,No,300,On-campus,No,Occasionally,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.58
+Male,College of Science,No,300,Off-campus,No,Daily,2,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.76
+Female,College of Health Sciences,No,300,On-campus,No,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.04
+Male,College of Humanities and Social Sciences,Yes,300,Off-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,5.56
+Male,College of Health Sciences,No,300,Off-campus,No,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.3
+Female,College of Humanities and Social Sciences,No,200,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.31
+Female,College of Humanities and Social Sciences,No,400,Off-campus,No,Occasionally,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.01
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Several times a week,3,No,Yes,No,Yes,No,Yes,Yes,No,No,5.92
+Male,College of Engineering,No,300,On-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Engineering,No,400,Off-campus,No,Daily,5,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,0.5
+Male,College of Humanities and Social Sciences,No,200,Off-campus,Yes,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.86
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,0.7
+Male,College of Humanities and Social Sciences,No,300,Off-campus,No,Several times a week,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,4.91
+Male,College of Humanities and Social Sciences,No,100,Off-campus,No,Several times a week,2,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,5.27
+Female,College of Agriculture and Natural Resources,Yes,100,On-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,No,No,No,No,5.51
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,No,Daily,3,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.34
+Male,College of Art and Built Environment,No,300,Off-campus,Yes,Several times a week,4,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,2.3
+Male,College of Engineering,No,200,On-campus,No,Several times a week,5,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,8.73
+Female,College of Engineering,No,200,Off-campus,Yes,Daily,2,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,2.03
+Male,College of Art and Built Environment,No,300,Off-campus,No,Daily,1,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,1.95
+Male,College of Engineering,No,200,On-campus,No,Daily,5,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,3.05
+Female,College of Art and Built Environment,No,100,Off-campus,No,Occasionally,1,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,7.4
+Female,College of Engineering,No,300,On-campus,No,Never,5,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,0.96
+Male,College of Health Sciences,Yes,300,Off-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,4.44
+Female,College of Science,No,100,Off-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.77
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Occasionally,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.22
+Male,College of Engineering,Yes,300,Off-campus,No,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,1.07
+Male,College of Art and Built Environment,No,100,Off-campus,No,Daily,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.01
+Male,College of Science,Yes,400,On-campus,No,Occasionally,5,Yes,Yes,Yes,Yes,No,Yes,No,No,No,4.82
+Female,College of Science,Yes,400,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,5.26
+Female,College of Health Sciences,No,100,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.6
+Female,College of Health Sciences,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.13
+Male,College of Art and Built Environment,No,400,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.4
+Female,College of Engineering,Yes,100,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,No,No,No,No,3.24
+Female,College of Science,No,500,Off-campus,Yes,Never,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,0.88
+Male,College of Science,No,200,Off-campus,Yes,Several times a week,4,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.92
+Female,College of Science,Yes,100,Off-campus,Yes,Several times a week,2,Yes,No,Yes,No,Yes,No,No,No,No,5.01
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.87
+Male,College of Engineering,No,300,Off-campus,No,Occasionally,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.75
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,No,Several times a week,1,Yes,No,Yes,No,Yes,No,Yes,Yes,No,5.32
+Female,College of Engineering,Yes,300,Off-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,0.65
+Male,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,2.69
+Male,College of Engineering,No,300,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.73
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.11
+Female,College of Humanities and Social Sciences,No,400,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,0.8
+Male,College of Science,Yes,200,Off-campus,Yes,Occasionally,3,No,No,Yes,Yes,Yes,No,No,No,No,8.71
+Female,College of Science,No,100,On-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.73
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,3,Yes,Yes,No,No,Yes,Yes,Yes,No,No,4.73
+Female,College of Humanities and Social Sciences,Yes,200,On-campus,No,Occasionally,4,Yes,Yes,Yes,No,No,Yes,Yes,No,No,7.1
+Female,College of Humanities and Social Sciences,Yes,200,Off-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,1.74
+Male,College of Health Sciences,Yes,100,Off-campus,No,Daily,1,No,No,No,Yes,Yes,No,No,No,No,3.64
+Male,College of Engineering,No,100,Off-campus,No,Several times a week,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Several times a week,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.56
+Female,College of Health Sciences,No,600,Off-campus,Yes,Daily,1,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.57
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,5.39
+Male,College of Art and Built Environment,No,300,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.14
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Daily,4,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,5.73
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Daily,2,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,4.16
+Female,College of Health Sciences,Yes,400,Off-campus,No,Several times a week,2,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,9.36
+Male,College of Science,Yes,300,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,No,Yes,No,No,No,Yes,7.98
+Male,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Several times a week,1,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,5.13
+Female,College of Science,Yes,400,Off-campus,Yes,Daily,4,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,1.94
+Female,College of Engineering,No,100,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.07
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.86
+Male,College of Art and Built Environment,No,100,Off-campus,Yes,Occasionally,1,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.75
+Female,College of Science,No,300,Off-campus,No,Occasionally,3,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,4.71
+Female,College of Art and Built Environment,No,100,Off-campus,No,Rarely,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.76
+Male,College of Agriculture and Natural Resources,Yes,300,Off-campus,Yes,Several times a week,3,Yes,Yes,No,No,Yes,No,No,Yes,No,9.23
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.34
+Female,College of Science,No,200,Off-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.76
+Female,College of Engineering,No,300,On-campus,No,Rarely,4,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,7.53
+Female,College of Health Sciences,Yes,400,Off-campus,Yes,Occasionally,4,Yes,No,Yes,No,Yes,No,No,No,No,4.25
+Male,College of Humanities and Social Sciences,Yes,300,On-campus,Yes,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,1.05
+Male,College of Health Sciences,No,100,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.41
+Female,College of Health Sciences,No,200,Off-campus,No,Occasionally,4,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.96
+Male,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Daily,5,Yes,Yes,Yes,No,Yes,No,No,No,No,1.82
+Female,College of Agriculture and Natural Resources,No,400,On-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.93
+Male,College of Art and Built Environment,Yes,300,On-campus,No,Occasionally,1,No,Yes,Yes,Yes,No,No,Yes,No,No,9.36
+Female,College of Humanities and Social Sciences,No,300,Off-campus,No,Several times a week,3,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.57
+Female,College of Health Sciences,No,300,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,0.78
+Female,College of Science,No,600,Off-campus,No,Occasionally,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.01
+Male,College of Art and Built Environment,No,100,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.54
+Male,College of Science,No,600,On-campus,No,Several times a week,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.36
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.98
+Female,College of Health Sciences,Yes,600,Off-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,Yes,No,No,No,No,10.28
+Male,College of Engineering,Yes,300,On-campus,Yes,Daily,4,Yes,No,Yes,Yes,Yes,No,No,No,No,6.32
+Female,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Several times a week,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.79
+Male,College of Science,Yes,300,Off-campus,No,Daily,3,Yes,No,Yes,Yes,Yes,No,No,No,No,3.91
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Several times a week,4,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,2.16
+Female,College of Engineering,No,200,Off-campus,Yes,Several times a week,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.76
+Female,College of Health Sciences,No,500,Off-campus,No,Occasionally,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.2
+Female,College of Science,Yes,300,Off-campus,No,Daily,3,Yes,Yes,No,No,Yes,Yes,No,Yes,No,0.5
+Female,College of Agriculture and Natural Resources,Yes,300,Off-campus,No,Several times a week,2,Yes,Yes,Yes,No,Yes,No,No,Yes,No,4.79
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Several times a week,5,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.56
+Female,College of Art and Built Environment,No,400,Off-campus,Yes,Occasionally,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,5.36
+Female,College of Humanities and Social Sciences,Yes,200,Off-campus,No,Occasionally,1,No,Yes,Yes,Yes,Yes,No,No,No,Yes,4.19
+Male,College of Humanities and Social Sciences,No,100,On-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.87
+Male,College of Science,Yes,300,Off-campus,No,Several times a week,2,No,Yes,Yes,Yes,Yes,Yes,No,No,No,5.97
+Male,College of Art and Built Environment,Yes,300,Off-campus,No,Daily,3,No,Yes,Yes,No,Yes,Yes,No,No,No,3.5
+Male,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Several times a week,1,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,9.02
+Female,College of Health Sciences,No,400,On-campus,No,Daily,5,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,4.8
+Female,College of Engineering,No,300,On-campus,Yes,Daily,1,No,No,Yes,No,No,Yes,Yes,Yes,Yes,3.24
+Female,College of Humanities and Social Sciences,No,400,Off-campus,No,Never,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.92
+Female,College of Engineering,No,200,Off-campus,No,Daily,3,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,7.91
+Male,College of Health Sciences,No,400,Off-campus,No,Daily,3,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,7.96
+Female,College of Science,Yes,300,Off-campus,Yes,Daily,2,Yes,No,No,No,Yes,Yes,No,No,No,2.16
+Female,College of Health Sciences,Yes,400,Off-campus,No,Several times a week,2,Yes,Yes,No,No,Yes,Yes,No,Yes,No,3.6
+Female,College of Engineering,No,400,Off-campus,No,Several times a week,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.47
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.03
+Male,College of Engineering,No,100,On-campus,No,Several times a week,5,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.22
+Female,College of Health Sciences,No,200,Off-campus,Yes,Occasionally,5,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,6.07
+Male,College of Engineering,No,300,Off-campus,Yes,Several times a week,4,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,9.66
+Male,College of Science,No,500,On-campus,Yes,Several times a week,3,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,9.28
+Female,College of Health Sciences,No,200,Off-campus,No,Several times a week,4,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,6.11
+Female,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.46
+Female,College of Art and Built Environment,No,100,Off-campus,No,Daily,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,1.72
+Female,College of Engineering,Yes,100,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,1.83
+Male,College of Art and Built Environment,No,300,On-campus,Yes,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.65
+Female,College of Humanities and Social Sciences,No,200,Off-campus,Yes,Daily,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,7.95
+Female,College of Engineering,No,300,Off-campus,Yes,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.85
+Male,College of Health Sciences,Yes,400,Off-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,No,No,No,No,7.44
+Female,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Occasionally,2,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.01
+Male,College of Engineering,No,100,On-campus,No,Daily,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.38
+Male,College of Health Sciences,No,100,Off-campus,No,Occasionally,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.06
+Male,College of Agriculture and Natural Resources,No,100,On-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.23
+Male,College of Science,Yes,300,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,9.54
+Female,College of Art and Built Environment,Yes,100,On-campus,Yes,Occasionally,1,Yes,Yes,Yes,No,Yes,No,No,No,Yes,1.98
+Female,College of Health Sciences,Yes,300,Off-campus,No,Several times a week,1,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,1.85
+Female,College of Health Sciences,No,500,Off-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.41
+Female,College of Science,No,200,On-campus,No,Occasionally,3,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.61
+Male,College of Humanities and Social Sciences,No,300,Off-campus,No,Occasionally,4,No,No,No,No,Yes,Yes,Yes,Yes,Yes,1.86
+Male,College of Art and Built Environment,Yes,200,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,Yes,No,Yes,No,No,7.79
+Male,College of Agriculture and Natural Resources,Yes,400,Off-campus,No,Daily,3,Yes,No,Yes,No,Yes,No,No,No,Yes,6.03
+Male,College of Science,No,100,On-campus,No,Occasionally,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Humanities and Social Sciences,Yes,300,Off-campus,Yes,Daily,5,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,7.44
+Male,College of Art and Built Environment,Yes,100,Off-campus,Yes,Several times a week,4,No,Yes,Yes,No,Yes,No,No,No,Yes,6.29
+Male,College of Health Sciences,No,600,Off-campus,Yes,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.59
+Female,College of Art and Built Environment,Yes,200,On-campus,No,Occasionally,4,No,Yes,Yes,Yes,Yes,No,No,Yes,No,4.05
+Male,College of Agriculture and Natural Resources,Yes,300,On-campus,No,Several times a week,2,Yes,No,Yes,Yes,Yes,No,No,No,No,1.93
+Male,College of Engineering,No,100,Off-campus,Yes,Daily,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.85
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,No,Occasionally,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,5.82
+Male,College of Agriculture and Natural Resources,No,300,Off-campus,No,Several times a week,4,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,3.13
+Female,College of Art and Built Environment,No,100,On-campus,Yes,Occasionally,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,7.56
+Male,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Never,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.6
+Male,College of Agriculture and Natural Resources,Yes,200,On-campus,Yes,Several times a week,3,No,Yes,Yes,No,Yes,No,No,No,Yes,0.92
+Female,College of Health Sciences,No,100,Off-campus,Yes,Daily,4,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,1.16
+Female,College of Humanities and Social Sciences,Yes,300,Off-campus,Yes,Several times a week,5,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,2.94
+Male,College of Engineering,Yes,400,Off-campus,No,Several times a week,1,Yes,No,Yes,No,No,No,Yes,No,No,2.69
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Daily,5,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,8.25
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,5.46
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Occasionally,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.62
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.19
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,No,No,No,Yes,9.48
+Female,College of Art and Built Environment,No,200,Off-campus,No,Daily,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.28
+Female,College of Engineering,No,100,Off-campus,No,Occasionally,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.15
+Male,College of Health Sciences,No,200,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.12
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.23
+Female,College of Science,No,300,On-campus,Yes,Rarely,3,No,Yes,No,No,No,Yes,Yes,Yes,Yes,5.24
+Male,College of Health Sciences,No,200,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.28
+Male,College of Science,No,100,On-campus,No,Rarely,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.16
+Female,College of Agriculture and Natural Resources,Yes,100,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,1.42
+Female,College of Art and Built Environment,No,200,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.52
+Male,College of Art and Built Environment,Yes,200,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,4.75
+Male,College of Humanities and Social Sciences,No,400,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,8.87
+Male,College of Engineering,Yes,200,Off-campus,No,Never,4,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,4.96
+Male,College of Science,No,300,Off-campus,No,Never,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.24
+Female,College of Art and Built Environment,Yes,300,Off-campus,Yes,Daily,2,No,Yes,Yes,No,Yes,Yes,No,No,No,6.07
+Male,College of Humanities and Social Sciences,Yes,300,On-campus,No,Occasionally,2,Yes,Yes,No,Yes,Yes,No,No,No,Yes,6.48
+Female,College of Science,No,100,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.64
+Male,College of Humanities and Social Sciences,Yes,200,On-campus,No,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,3.08
+Female,College of Health Sciences,No,600,Off-campus,No,Daily,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.25
+Male,College of Health Sciences,No,100,Off-campus,Yes,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,9.6
+Female,College of Art and Built Environment,No,100,Off-campus,No,Several times a week,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.19
+Female,College of Science,Yes,400,Off-campus,Yes,Rarely,2,Yes,Yes,Yes,No,Yes,No,Yes,No,No,9.88
+Male,College of Engineering,No,100,Off-campus,No,Daily,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.67
+Male,College of Engineering,No,400,Off-campus,No,Daily,2,No,No,Yes,No,No,Yes,Yes,Yes,Yes,3.92
+Male,College of Agriculture and Natural Resources,No,300,On-campus,Yes,Daily,1,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,2.2
+Female,College of Science,No,300,Off-campus,Yes,Never,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,7.5
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Occasionally,5,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,2.51
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.63
+Male,College of Art and Built Environment,Yes,100,Off-campus,No,Occasionally,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,3.04
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,7.36
+Male,College of Engineering,No,200,Off-campus,No,Daily,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,1.91
+Female,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Occasionally,2,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,2.75
+Male,College of Humanities and Social Sciences,No,100,On-campus,Yes,Several times a week,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.75
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,9.23
+Male,College of Humanities and Social Sciences,No,300,On-campus,Yes,Several times a week,5,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.53
+Male,College of Art and Built Environment,Yes,100,On-campus,No,Occasionally,2,Yes,Yes,No,Yes,Yes,No,No,No,Yes,1.08
+Female,College of Science,No,400,Off-campus,Yes,Several times a week,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,3.59
+Female,College of Art and Built Environment,No,400,Off-campus,Yes,Occasionally,1,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,9.92
+Male,College of Engineering,No,400,Off-campus,No,Occasionally,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.59
+Female,College of Health Sciences,Yes,200,Off-campus,Yes,Daily,2,Yes,Yes,Yes,No,Yes,Yes,No,No,No,9.53
+Male,College of Science,No,400,Off-campus,No,Daily,3,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,9.81
+Female,College of Agriculture and Natural Resources,Yes,400,Off-campus,Yes,Daily,3,Yes,Yes,Yes,Yes,Yes,No,No,No,No,8.14
+Female,College of Health Sciences,No,100,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,5.08
+Male,College of Agriculture and Natural Resources,No,100,On-campus,No,Several times a week,1,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.95
+Male,College of Art and Built Environment,No,100,On-campus,Yes,Rarely,3,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,0.5
+Male,College of Health Sciences,No,400,Off-campus,Yes,Several times a week,1,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,9.91
+Male,College of Science,No,200,Off-campus,Yes,Occasionally,5,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.25
+Female,College of Art and Built Environment,No,200,Off-campus,Yes,Rarely,1,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,5.16
+Female,College of Health Sciences,Yes,400,Off-campus,No,Rarely,1,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,5.51
+Male,College of Science,No,500,Off-campus,Yes,Daily,5,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,1.82
+Male,College of Art and Built Environment,No,200,On-campus,Yes,Several times a week,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.52
+Male,College of Art and Built Environment,No,100,On-campus,No,Daily,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,4.7
+Female,College of Science,No,500,Off-campus,No,Several times a week,5,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,6.24
+Female,College of Art and Built Environment,No,300,Off-campus,Yes,Daily,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,6.48
+Female,College of Humanities and Social Sciences,No,100,Off-campus,No,Daily,1,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,3.35
+Female,College of Engineering,No,400,On-campus,No,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.48
+Male,College of Humanities and Social Sciences,No,300,On-campus,No,Several times a week,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.55
+Female,College of Engineering,No,100,Off-campus,No,Several times a week,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,6.77
+Female,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Occasionally,4,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,1.89
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,Yes,Several times a week,1,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.92
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,No,Several times a week,1,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.5
+Male,College of Health Sciences,No,200,Off-campus,No,Several times a week,2,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,4.02
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Daily,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,0.88
+Female,College of Engineering,Yes,300,On-campus,No,Rarely,3,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,7.97
+Male,College of Science,No,100,Off-campus,Yes,Several times a week,4,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.93
+Male,College of Science,Yes,100,On-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,No,No,No,No,9.84
+Female,College of Art and Built Environment,No,100,Off-campus,No,Occasionally,2,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,8.95
+Male,College of Agriculture and Natural Resources,No,200,Off-campus,No,Occasionally,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,0.56
+Female,College of Health Sciences,No,300,Off-campus,Yes,Several times a week,1,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,0.5
+Male,College of Science,No,100,Off-campus,Yes,Several times a week,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.69
+Male,College of Health Sciences,Yes,100,On-campus,Yes,Occasionally,2,Yes,Yes,Yes,No,Yes,No,No,No,No,2.39
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Daily,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.94
+Male,College of Art and Built Environment,Yes,100,Off-campus,Yes,Several times a week,1,No,Yes,No,No,Yes,No,No,No,No,3.47
+Female,College of Engineering,No,200,On-campus,Yes,Never,5,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,5.74
+Female,College of Engineering,Yes,300,Off-campus,Yes,Occasionally,5,Yes,Yes,Yes,No,Yes,No,No,Yes,No,0.82
+Male,College of Humanities and Social Sciences,No,200,Off-campus,No,Occasionally,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,2.5
+Female,College of Agriculture and Natural Resources,No,400,Off-campus,No,Several times a week,3,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.8
+Female,College of Humanities and Social Sciences,No,100,Off-campus,Yes,Never,5,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,8.01
+Female,College of Science,No,300,Off-campus,Yes,Several times a week,4,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,2.12
+Female,College of Agriculture and Natural Resources,No,200,Off-campus,No,Several times a week,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,9.24
+Male,College of Science,No,200,On-campus,No,Several times a week,4,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,7.28
+Male,College of Health Sciences,Yes,200,Off-campus,No,Occasionally,1,No,No,Yes,Yes,Yes,No,Yes,No,No,6.26
+Female,College of Engineering,No,300,Off-campus,Yes,Occasionally,4,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,6.14
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Several times a week,3,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,0.61
+Male,College of Agriculture and Natural Resources,No,400,Off-campus,Yes,Daily,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,7.97
+Male,College of Humanities and Social Sciences,No,100,On-campus,Yes,Several times a week,3,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,0.82
+Male,College of Agriculture and Natural Resources,Yes,200,Off-campus,Yes,Several times a week,1,Yes,Yes,Yes,No,Yes,No,No,No,No,7.84
+Female,College of Engineering,Yes,200,Off-campus,No,Daily,2,Yes,Yes,No,Yes,Yes,Yes,No,No,No,4.41
+Male,College of Science,Yes,200,Off-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,No,No,No,No,2.58
+Male,College of Engineering,No,400,Off-campus,No,Daily,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8.04
+Male,College of Art and Built Environment,No,200,Off-campus,Yes,Occasionally,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,3.61
+Female,College of Art and Built Environment,No,400,Off-campus,No,Occasionally,5,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5.72
+Male,College of Agriculture and Natural Resources,No,100,Off-campus,Yes,Occasionally,3,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,2.49
+Male,College of Agriculture and Natural Resources,No,100,On-campus,Yes,Several times a week,3,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,6.38
+Female,College of Humanities and Social Sciences,Yes,400,Off-campus,No,Several times a week,5,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,7.67
+Female,College of Agriculture and Natural Resources,No,200,On-campus,No,Several times a week,2,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,5.63
+Female,College of Health Sciences,No,400,On-campus,Yes,Daily,3,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,1.67
+Female,College of Humanities and Social Sciences,No,300,Off-campus,Yes,Several times a week,2,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,6.48
+Male,College of Art and Built Environment,No,300,Off-campus,Yes,Rarely,1,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,9.19
+Female,College of Science,No,600,On-campus,No,Daily,4,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,7.71
+Male,College of Science,No,300,On-campus,Yes,Occasionally,5,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,4.49
+Female,College of Agriculture and Natural Resources,No,100,Off-campus,No,Occasionally,4,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,8.17
+Male,College of Science,No,300,Off-campus,No,Daily,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4.66
