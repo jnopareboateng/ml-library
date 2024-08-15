@@ -96,7 +96,7 @@ crude-oil-forecast/
 
 ---
 
-# Project 2: [`telecel`]("telecel")
+# Project 2: [`Telecel Churn Analysis`]("/Telecel Churn Analysis")
 
 ## Project Overview
 
@@ -190,7 +190,7 @@ telecel/
 
 ---
 
-# Project 3: [`mpr`]("mpr")
+# Project 3: [`Monetary Policy Rate Analysis`]("/Monetary Policy Rate Analysis")
 
 ## Project Overview
 
@@ -303,7 +303,7 @@ Workspace: Sure, here is the continuation of the documentation for the remaining
 
 ---
 
-# Project 4: [`msft-mlflow`]("msft-mlflow")
+# Project 4: [`msft-mlflow`]("/msft-mlflow")
 
 ## Project Overview
 
@@ -395,7 +395,7 @@ msft-mlflow/
 
 ---
 
-# Project 5: [`mtn`]("mtn")
+# Project 5: [`Stock Returns Analysis`]("/Stock Returns Analysis")
 
 ## Project Overview
 
@@ -489,7 +489,7 @@ mtn/
 
 ---
 
-# Project 6: [`NPL`]("NPL")
+# Project 6: [`Non Performing Loans Analysis`]("/Non Performing Loans")
 
 ## Project Overview
 
@@ -583,7 +583,7 @@ NPL/
 
 ---
 
-# Project 7: [`recommender system`](/recommender system")
+# Project 7: [`Music Recommender System`]("/Music Recommender System")
 
 ## Project Overview
 
@@ -704,7 +704,7 @@ recommender system/
 
 ---
 
-# Project 8: [`Banks`](/Banks)
+# Project 8: [`Banks`]("/")
 
 ## Project Overview
 
@@ -776,7 +776,7 @@ Banks/
 
 ---
 
-# Project 9: [`Burn out`](/Burn out)
+# Project 9: [`Burn out AnalysiS In Medical Imaging Students`]("/Burn out AnalysiS In Medical Imaging Students")
 
 ## Project Overview
 
