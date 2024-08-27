@@ -67,6 +67,10 @@ test_data <- window(crude_ts, start = c(2019, 1))
 length(train_data)
 length(test_data)
 
+# Check the order of ACF and PACF with train data
+train_data_diff <- diff(train_data)
+acf2(train_data_diff)
+
 # ACF and PACF plots
 acf2(diff_crude_ts, main = "ACF and PACF of Differenced Crude Oil Prices")
 
@@ -83,8 +87,16 @@ sarima(diff_crude_ts, 1, 0, 1) # $AIC [1] 6.282598 $AICc [1] 6.282985 $BIC [1] 6
 
 sarima(diff_crude_ts, 1, 0, 6) # $AIC [1] 6.288729 $AICc [1] 6.291099 $BIC [1] 6.415139
 
+sarima(diff_crude_ts, 2, 0, 2) # $AIC [1] 6.288729 $AICc [1] 6.291099 $BIC [1] 6.415139
+
+sarima(diff_crude_ts, 0, 0, 0) # $AIC [1] 6.288729 $AICc [1] 6.291099 $BIC [1] 6.415139
+
+sarima(diff_crude_ts, 2, 0, 0) # $AIC [1] 6.288729 $AICc [1] 6.291099 $BIC [1] 6.415139
+
+# sarima(diff_crude_ts, 1, 0, 6) # $AIC [1] 6.288729 $AICc [1] 6.291099 $BIC [1] 6.415139
+
 # Fit an ARIMA model
-arima_model <- auto.arima(train_data, d = d, seasonal = FALSE, stepwise = TRUE)
+arima_model <- auto.arima(crude_ts, d = d, seasonal = FALSE, stepwise = TRUE)
 print(arima_model)
 
 # Check the residuals
@@ -92,15 +104,17 @@ checkresiduals(arima_model)
 
 # Predict on the Test data
 forecast_test <- forecast(arima_model, h = length(test_data))
+# forecast_test <- sarima.for(train_data, length(test_data), 1, 0, 0)
 print(forecast_test)
 
 # Plot the forecast
 autoplot(forecast_test) + autolayer(test_data, series = "Test Data")
 
-forecast_full <- forecast(auto.arima(crude_ts, d = d), h = 24)
+# forecast_full <- forecast(auto.arima(crude_ts, d = d), h = 24)
+forecast_full <- sarima.for(crude_ts, 24, 1, 1, 0)
 
 # Plot the full forecast
-autoplot(forecast_full) + autolayer(crude_ts, series = "Crude Oil Prices")
+# autoplot(forecast_full) + autolayer(crude_ts, series = "Crude Oil Prices")
 
 # Print full forecasted prices
 print(forecast_full)
@@ -200,4 +214,3 @@ plot(prophet_model, forecast_prophet_future)
 
 # Plot model diagnostics
 prophet_plot_components(prophet_model, forecast_prophet_future)
-
