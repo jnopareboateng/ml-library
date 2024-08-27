@@ -1,0 +1,12 @@
+,policy_number,policyholder,gender,occupation,branch,inst,plan,proposals,inception_date,expiry_date,monthly_premium,policy_value,paid_premium,premiums_paid,total_premium
+count,614,614,614,614,614,614,614,614,614,614,614.0,614.0,614,614.0,614
+unique,614,286,2,104,1,13,5,68,19,194,,,99,,138
+top,UKS2023T03696,EMMANUEL,FEMALE,TEACHER,ACCRA NO BRANCH,7010101,FAMILY SECURITY PLAN,15-Feb-24,1-Nov-23,1-Nov-46,,,291,,291
+freq,1,22,331,259,614,571,312,30,160,14,,,88,,47
+mean,,,,,,,,,,,93.62052117263843,1860.0325732899023,,2.4283387622149837,
+std,,,,,,,,,,,66.18219182357865,364.0330537054358,,0.8280826588855219,
+min,,,,,,,,,,,30.0,0.0,,0.0,
+25%,,,,,,,,,,,50.0,2000.0,,2.0,
+50%,,,,,,,,,,,85.0,2000.0,,3.0,
+75%,,,,,,,,,,,100.0,2000.0,,3.0,
+max,,,,,,,,,,,500.0,5000.0,,4.0,

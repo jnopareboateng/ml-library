@@ -1,5 +1,6 @@
 import os
 import time
+import numpy as np
 import streamlit as st
 import joblib
 import pandas as pd
@@ -53,34 +54,45 @@ def user_input_features():
         ("Family Security Plan", "Education", "Flexi Child Education", "Ultimate Life"),
     )
 
-    # inception_date = st.sidebar.date_input(
-    #     "Date of Creating Policy", value=pd.to_datetime("2021-01-01")
-    # )
-    # end_date = st.sidebar.date_input(
-    #     "End Date of Policy", value=pd.to_datetime("2026-01-01")
-    # )
+    inception_date = st.sidebar.date_input(
+        "Date of Creating Policy", value=pd.to_datetime("2021-01-01")
+    )
 
-    # # Assuming inception_date and end_date are defined as before
-    # difference = relativedelta(end_date, inception_date)
-    # policy_duration = difference.years * 12 + difference.months
-    # policy_value = st.sidebar.number_input(
-    #     "Policy Value", min_value=0, max_value=5000, value=20
-    # )
+    is_life_insurance = st.sidebar.checkbox("Whole Life Insurance")
+
+    if is_life_insurance:
+        end_date = inception_date + relativedelta(
+            years=100
+        )  # Default end date for life insurance
+    else:
+        end_date = st.sidebar.date_input(
+            "End Date of Policy", value=pd.to_datetime("2026-01-01")
+        )
+
+    difference = relativedelta(end_date, inception_date)
+    policy_duration = difference.years + difference.months / 12.0
+
+    policy_value = st.sidebar.number_input(
+        "Policy Value", min_value=0.00, max_value=1e10
+    )
 
     data = {
         "gender": gender,
         "occupation_group": occupation.upper(),
         "plan": plan.upper(),
-        # "policy_value": policy_value,
-        # "policy_duration": policy_duration,  # To give us an approximate duration policy in months
+        "policy_value": policy_value,
+        "policy_duration_years": policy_duration,
+        "is_life_insurance": is_life_insurance,
     }
-
     features = pd.DataFrame(data, index=[0])
     return features
 
 
 df = user_input_features()
 
+
+# Display user input
+# st.subheader("User Input features")
 # Display user input
 st.subheader("User Input features")
 
@@ -130,9 +142,7 @@ if st.sidebar.button("Get Predictions"):
 
         # Display prediction
         st.subheader("Prediction")
-        st.write(f"Your estimated monthly premium is GH₵{prediction[0]:.2f}")
+        st.write(f"Your estimated monthly premium is GH₵ {prediction[0]:.2f}")
 
         # Display a success message
         st.success("Prediction generated successfully!")
-
-# Additional improvement: conditional formatting for user input display
